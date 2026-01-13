@@ -4,12 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Facware - Design & Sofware Development Consulting</title>
+    <title>Facware - Desarrollo de Software en Chihuahua | Software Development Consulting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Design & Sofware Development Consulting">
+    <meta name="description" content="Empresa de desarrollo de software en Chihuahua, México. Consultoría IT, desarrollo de aplicaciones móviles y web. Software development consulting in Chihuahua.">
     
-    
-    <meta name="keywords" content="software, api, app, android, ios, chihuahua, process, development, developer, architect, security, dns, database, cloud, IT, aws, azure, server, serverless" />
+    <!-- SEO Local Keywords -->
+    <meta name="keywords" content="desarrollo software chihuahua, desarrollo software chihuahua mexico, consultoria IT chihuahua, desarrollo aplicaciones moviles chihuahua, desarrollo web chihuahua, software developer chihuahua, programador chihuahua, IT consulting chihuahua, custom software development, desarrollo apps android ios chihuahua, cloud computing chihuahua, aws azure chihuahua" />
+    <meta name="geo.region" content="MX-CHH" />
+    <meta name="geo.placename" content="Chihuahua" />
+    <meta name="geo.position" content="28.6353;-106.0889" />
+    <meta name="ICBM" content="28.6353, -106.0889" />
     <meta name="description" content="At Facware, we specialize in the design and development of innovative software solutions and offer expert consulting services. Our team of seasoned professionals is dedicated to transforming your vision into reality through robust and scalable software products.">
     <meta name="author" content="facware.com"> 
     <!-- Favicon -->
@@ -48,6 +52,107 @@
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Custom Facware Styles -->
+    <link rel="stylesheet" href="assets/css/custom-facware.css">
+
+    <!-- SEO Meta Tags -->
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.facware.com/">
+    <meta property="og:title" content="Facware - Diseño y Desarrollo de Software | Software Design & Development">
+    <meta property="og:description" content="Consultoría profesional en diseño y desarrollo de software en Chihuahua, México. Soluciones innovadoras para tu negocio. | Professional software design and development consulting in Chihuahua, Mexico.">
+    <meta property="og:image" content="https://www.facware.com/assets/images/facware/business_solutions_home.jpg">
+    <link rel="canonical" href="https://www.facware.com/">
+    
+    <!-- Schema.org JSON-LD for Google My Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.facware.com",
+        "name": "Facware",
+        "alternateName": ["Facware Consulting", "Facware Software Development"],
+        "description": "Empresa de desarrollo de software y consultoría IT en Chihuahua, México. Especialistas en desarrollo de aplicaciones móviles, web y soluciones cloud.",
+        "url": "https://www.facware.com",
+        "telephone": "+52-614-XXX-XXXX",
+        "email": "contact@facware.com",
+        "logo": "https://www.facware.com/assets/images/facware/home_logo.png",
+        "image": "https://www.facware.com/assets/images/facware/business_solutions_home.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Chihuahua",
+            "addressLocality": "Chihuahua",
+            "addressRegion": "Chihuahua",
+            "postalCode": "31000",
+            "addressCountry": "MX"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.6353",
+            "longitude": "-106.0889"
+        },
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "28.6353",
+                "longitude": "-106.0889"
+            },
+            "geoRadius": "100000"
+        },
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.linkedin.com/company/facware",
+            "https://www.facebook.com/facware",
+            "https://twitter.com/facware"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "12"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Desarrollo de Software",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Desarrollo de Software Personalizado",
+                        "description": "Desarrollo de aplicaciones empresariales a medida"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Desarrollo de Aplicaciones Móviles",
+                        "description": "Apps nativas y multiplataforma para iOS y Android"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Consultoría IT",
+                        "description": "Asesoría tecnológica y arquitectura de software"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
 
 </head>
 
@@ -255,6 +360,11 @@
                             <!-- header right box -->
                             <div class="header-right-box">
                                 <div class="header-right-inner" id="hidden-icon-wrapper">
+                                    <!-- Language Switcher -->
+                                    <div class="language-switcher me-3">
+                                        <button class="lang-btn" data-lang="es" type="button">ES</button>
+                                        <button class="lang-btn" data-lang="en" type="button">EN</button>
+                                    </div>
 
                                     <!-- language-menu -->
                                     <div class="language-menu">
@@ -332,6 +442,219 @@
                         </div>
                     </div> -->
                 </div>
+
+                <!--===========  About Us Section Start =============-->
+                <div class="about-us-section section-space--ptb_100">
+                    <div class="container">
+                        <!-- Section Title -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-title-wrap text-center section-space--mb_60">
+                                    <h2 class="heading" data-i18n="about.title">Sobre Nosotros / About Us</h2>
+                                    <p class="sub-heading mt-3" data-i18n="about.subtitle">Transformando ideas en soluciones digitales desde Chihuahua, México / Transforming ideas into digital solutions from Chihuahua, Mexico</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Our Story -->
+                        <div class="row align-items-center section-space--mb_80">
+                            <div class="col-lg-6">
+                                <div class="about-content-wrap">
+                                    <div class="section-title mb-4">
+                                        <span class="badge bg-primary text-white mb-3 px-3 py-2">Nuestra Historia / Our Story</span>
+                                        <h3 class="heading mb-4" data-i18n="about.story.title">Construyendo el Futuro Digital</h3>
+                                    </div>
+                                    <div class="about-text">
+                                        <p class="mb-3 lang-es">Facware nace de la pasión por la tecnología y el compromiso de ayudar a las empresas a alcanzar su máximo potencial digital. Con sede en Chihuahua, México, hemos trabajado en proyectos que abarcan desde startups locales hasta empresas internacionales.</p>
+                                        <p class="mb-3 lang-en" style="display:none;">Facware was born from a passion for technology and a commitment to helping businesses reach their full digital potential. Based in Chihuahua, Mexico, we've worked on projects ranging from local startups to international enterprises.</p>
+                                        
+                                        <p class="mb-3 lang-es">Nuestro equipo combina experiencia técnica con un profundo entendimiento de las necesidades empresariales, ofreciendo soluciones que no solo funcionan, sino que impulsan el crecimiento y la innovación.</p>
+                                        <p class="mb-3 lang-en" style="display:none;">Our team combines technical expertise with a deep understanding of business needs, offering solutions that not only work but drive growth and innovation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="about-image-wrap">
+                                    <img src="assets/images/facware/business_solutions_home.jpg" alt="Facware Team" class="img-fluid rounded shadow-lg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mission & Vision -->
+                        <div class="row">
+                            <!-- Mission -->
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <div class="mission-vision-card h-100 p-5 bg-light rounded">
+                                    <div class="icon-wrapper mb-4">
+                                        <i class="fas fa-bullseye fa-3x text-color-primary"></i>
+                                    </div>
+                                    <h4 class="heading mb-4" data-i18n="about.mission.title">Nuestra Misión / Our Mission</h4>
+                                    <p class="lang-es mb-3"><strong>Empoderar a las empresas</strong> mediante soluciones tecnológicas innovadoras y personalizadas que optimicen sus procesos, mejoren su competitividad y les permitan alcanzar sus objetivos estratégicos.</p>
+                                    <p class="lang-en mb-3" style="display:none;"><strong>Empower businesses</strong> through innovative and customized technological solutions that optimize their processes, improve their competitiveness, and enable them to achieve their strategic objectives.</p>
+                                    
+                                    <ul class="list-unstyled mt-4">
+                                        <li class="mb-2 lang-es"><i class="fas fa-check text-color-primary me-2"></i> Soluciones personalizadas a medida</li>
+                                        <li class="mb-2 lang-es"><i class="fas fa-check text-color-primary me-2"></i> Tecnología de vanguardia</li>
+                                        <li class="mb-2 lang-es"><i class="fas fa-check text-color-primary me-2"></i> Soporte continuo y capacitación</li>
+                                        <li class="mb-2 lang-en" style="display:none;"><i class="fas fa-check text-color-primary me-2"></i> Customized tailored solutions</li>
+                                        <li class="mb-2 lang-en" style="display:none;"><i class="fas fa-check text-color-primary me-2"></i> Cutting-edge technology</li>
+                                        <li class="mb-2 lang-en" style="display:none;"><i class="fas fa-check text-color-primary me-2"></i> Continuous support and training</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Vision -->
+                            <div class="col-lg-6">
+                                <div class="mission-vision-card h-100 p-5 bg-primary text-white rounded">
+                                    <div class="icon-wrapper mb-4">
+                                        <i class="fas fa-eye fa-3x text-white"></i>
+                                    </div>
+                                    <h4 class="heading mb-4 text-white" data-i18n="about.vision.title">Nuestra Visión / Our Vision</h4>
+                                    <p class="lang-es mb-3">Ser <strong>el socio tecnológico de referencia</strong> en México y América Latina, reconocidos por nuestra excelencia técnica, compromiso con la innovación y capacidad de transformar desafíos empresariales en oportunidades digitales.</p>
+                                    <p class="lang-en mb-3" style="display:none;">To be <strong>the reference technology partner</strong> in Mexico and Latin America, recognized for our technical excellence, commitment to innovation, and ability to transform business challenges into digital opportunities.</p>
+                                    
+                                    <ul class="list-unstyled mt-4">
+                                        <li class="mb-2 lang-es"><i class="fas fa-star text-white me-2"></i> Liderazgo en innovación</li>
+                                        <li class="mb-2 lang-es"><i class="fas fa-star text-white me-2"></i> Expansión regional</li>
+                                        <li class="mb-2 lang-es"><i class="fas fa-star text-white me-2"></i> Excelencia en servicio al cliente</li>
+                                        <li class="mb-2 lang-en" style="display:none;"><i class="fas fa-star text-white me-2"></i> Leadership in innovation</li>
+                                        <li class="mb-2 lang-en" style="display:none;"><i class="fas fa-star text-white me-2"></i> Regional expansion</li>
+                                        <li class="mb-2 lang-en" style="display:none;"><i class="fas fa-star text-white me-2"></i> Excellence in customer service</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Core Values -->
+                        <div class="row section-space--mt_80">
+                            <div class="col-lg-12">
+                                <div class="section-title-wrap text-center section-space--mb_40">
+                                    <h3 class="heading" data-i18n="about.values.title">Nuestros Valores / Our Values</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card text-center p-4 h-100 border rounded">
+                                    <i class="fas fa-handshake fa-3x text-color-primary mb-3"></i>
+                                    <h5 class="mb-3 lang-es">Compromiso</h5>
+                                    <h5 class="mb-3 lang-en" style="display:none;">Commitment</h5>
+                                    <p class="lang-es">Con cada proyecto y cada cliente</p>
+                                    <p class="lang-en" style="display:none;">With every project and every client</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card text-center p-4 h-100 border rounded">
+                                    <i class="fas fa-lightbulb fa-3x text-color-primary mb-3"></i>
+                                    <h5 class="mb-3 lang-es">Innovación</h5>
+                                    <h5 class="mb-3 lang-en" style="display:none;">Innovation</h5>
+                                    <p class="lang-es">Soluciones creativas y efectivas</p>
+                                    <p class="lang-en" style="display:none;">Creative and effective solutions</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card text-center p-4 h-100 border rounded">
+                                    <i class="fas fa-shield-alt fa-3x text-color-primary mb-3"></i>
+                                    <h5 class="mb-3 lang-es">Integridad</h5>
+                                    <h5 class="mb-3 lang-en" style="display:none;">Integrity</h5>
+                                    <p class="lang-es">Transparencia en todo momento</p>
+                                    <p class="lang-en" style="display:none;">Transparency at all times</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card text-center p-4 h-100 border rounded">
+                                    <i class="fas fa-trophy fa-3x text-color-primary mb-3"></i>
+                                    <h5 class="mb-3 lang-es">Excelencia</h5>
+                                    <h5 class="mb-3 lang-en" style="display:none;">Excellence</h5>
+                                    <p class="lang-es">Calidad en cada detalle</p>
+                                    <p class="lang-en" style="display:none;">Quality in every detail</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--===========  About Us Section End =============-->
+
+                <!--===========  Certifications & Partners Section Start =============-->
+                <div class="certifications-section section-space--ptb_80 bg-gray">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-title-wrap text-center section-space--mb_40">
+                                    <h3 class="heading" data-i18n="certifications.title">Certificaciones y Partners / Certifications & Partners</h3>
+                                    <p class="sub-heading mt-3 lang-es">Trabajamos con las mejores tecnologías y plataformas del mercado</p>
+                                    <p class="sub-heading mt-3 lang-en" style="display:none;">We work with the best technologies and platforms in the market</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center justify-content-center">
+                            <!-- Microsoft Partner -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-microsoft fa-3x text-primary mb-2"></i>
+                                    <h6 class="mt-2 small">Microsoft Partner</h6>
+                                </div>
+                            </div>
+                            <!-- AWS -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-aws fa-3x" style="color: #FF9900;" aria-label="AWS"></i>
+                                    <h6 class="mt-2 small">AWS Cloud</h6>
+                                </div>
+                            </div>
+                            <!-- Azure -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-microsoft fa-3x" style="color: #0078D4;" aria-label="Azure"></i>
+                                    <h6 class="mt-2 small">Microsoft Azure</h6>
+                                </div>
+                            </div>
+                            <!-- Google Cloud -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-google fa-3x" style="color: #4285F4;" aria-label="Google Cloud"></i>
+                                    <h6 class="mt-2 small">Google Cloud</h6>
+                                </div>
+                            </div>
+                            <!-- GitHub -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-github fa-3x text-dark"></i>
+                                    <h6 class="mt-2 small">GitHub Partner</h6>
+                                </div>
+                            </div>
+                            <!-- Docker -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-docker fa-3x" style="color: #2496ED;" aria-label="Docker"></i>
+                                    <h6 class="mt-2 small">Docker</h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Technologies Row -->
+                        <div class="row mt-4">
+                            <div class="col-lg-12">
+                                <div class="text-center">
+                                    <p class="mb-3 lang-es"><strong>Tecnologías que dominamos:</strong></p>
+                                    <p class="mb-3 lang-en" style="display:none;"><strong>Technologies we master:</strong></p>
+                                    <div class="tech-stack-badges">
+                                        <span class="badge bg-primary me-2 mb-2 px-3 py-2">React</span>
+                                        <span class="badge bg-success me-2 mb-2 px-3 py-2">Node.js</span>
+                                        <span class="badge bg-info me-2 mb-2 px-3 py-2">Python</span>
+                                        <span class="badge bg-warning text-dark me-2 mb-2 px-3 py-2">JavaScript</span>
+                                        <span class="badge bg-danger me-2 mb-2 px-3 py-2">Angular</span>
+                                        <span class="badge bg-secondary me-2 mb-2 px-3 py-2">.NET</span>
+                                        <span class="badge bg-dark me-2 mb-2 px-3 py-2">MongoDB</span>
+                                        <span class="badge" style="background: #00758F;" aria-label="MySQL">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--===========  Certifications & Partners Section End =============-->
+
                 <!--===========  feature-large-images-wrapper  Start =============-->
                 <div class="feature-large-images-wrapper section-space--ptb_100">
                     <div class="container">
@@ -840,7 +1163,7 @@
                                     </div>
 
                                     <div class="contact-list-item">
-                                        <a href="tel:190068668" class="single-contact-list">
+                                        <!-- <a href="tel:190068668" class="single-contact-list">
                                             <div class="content-wrap">
                                                 <div class="content">
                                                     <div class="icon">
@@ -852,7 +1175,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </a> -->
                                         <a href="mailto:contact@facware.com" class="single-contact-list">
                                             <div class="content-wrap">
                                                 <div class="content">
@@ -904,13 +1227,125 @@ console.log(mailtoLink);
     <button type="submit">Submit Form</button>
 
 </form> -->
-                                    <!-- <form id="contact-form" action="https://whizthemes.com/mail-php/jowel/Facware/php/hero-mail.php" method="post"> -->
-                                        <!-- action="assets/php/hero-mail.php" method="post" -->
+                                    <!-- Contact Form with Web3Forms -->
+                                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                                        
+                                        <!-- Web3Forms Access Key - REPLACE WITH YOUR OWN -->
+                                        <input type="hidden" name="access_key" value="63d81c5d-43bf-4748-83db-678aab892576">
+                                        
+                                        <!-- Redirect after submission -->
+                                        <input type="hidden" name="redirect" value="https://www.facware.com/thank-you.html">
+                                        
+                                        <!-- Subject Line -->
+                                        <input type="hidden" name="subject" value="Nuevo contacto desde Facware.com">
+                                        
+                                        <!-- From Name -->
+                                        <input type="hidden" name="from_name" value="Formulario Facware">
 
-                                        <!-- <a href="mailto:name@email.com">Link text</a>
-                                        <a href="mailto:contact@facware.com?subject=Appointment%20Request&body=Please%20provide%20details%20about%20your%20request.">Send Email</a>
-                                    -->
-                                        <a class="ht-btn ht-btn-md" href="mailto:contact@facware.com" target="_blank">Get a free consultation</a>
+                                        <div class="contact-form__two">
+                                            <div class="contact-input">
+                                                <div class="contact-inner">
+                                                    <input 
+                                                        name="name" 
+                                                        type="text" 
+                                                        class="lang-es" 
+                                                        placeholder="Nombre completo *" 
+                                                        required
+                                                        minlength="3">
+                                                    <input 
+                                                        name="name" 
+                                                        type="text" 
+                                                        class="lang-en" 
+                                                        style="display:none;" 
+                                                        placeholder="Full name *" 
+                                                        required
+                                                        minlength="3">
+                                                </div>
+                                                <div class="contact-inner">
+                                                    <input 
+                                                        name="email" 
+                                                        type="email" 
+                                                        class="lang-es" 
+                                                        placeholder="Correo electrónico *" 
+                                                        required>
+                                                    <input 
+                                                        name="email" 
+                                                        type="email" 
+                                                        class="lang-en" 
+                                                        style="display:none;" 
+                                                        placeholder="Email address *" 
+                                                        required>
+                                                </div>
+                                            </div>
+                                            <div class="contact-inner">
+                                                <input 
+                                                    name="phone" 
+                                                    type="tel" 
+                                                    class="lang-es" 
+                                                    placeholder="Teléfono (opcional)" 
+                                                    pattern="[0-9]{10}">
+                                                <input 
+                                                    name="phone" 
+                                                    type="tel" 
+                                                    class="lang-en" 
+                                                    style="display:none;" 
+                                                    placeholder="Phone (optional)" 
+                                                    pattern="[0-9]{10}">
+                                            </div>
+                                            <div class="contact-select">
+                                                <div class="form-item contact-inner">
+                                                    <select name="service" class="lang-es" required>
+                                                        <option value="" disabled selected>Selecciona un servicio *</option>
+                                                        <option value="Desarrollo Web">Desarrollo Web</option>
+                                                        <option value="Aplicaciones Móviles">Aplicaciones Móviles</option>
+                                                        <option value="Consultoría IT">Consultoría IT</option>
+                                                        <option value="Cloud Computing">Cloud Computing</option>
+                                                        <option value="Integración de Sistemas">Integración de Sistemas</option>
+                                                        <option value="Automatización">Automatización</option>
+                                                        <option value="Otro">Otro</option>
+                                                    </select>
+                                                    <select name="service" class="lang-en" style="display:none;" required>
+                                                        <option value="" disabled selected>Select a service *</option>
+                                                        <option value="Web Development">Web Development</option>
+                                                        <option value="Mobile Applications">Mobile Applications</option>
+                                                        <option value="IT Consulting">IT Consulting</option>
+                                                        <option value="Cloud Computing">Cloud Computing</option>
+                                                        <option value="System Integration">System Integration</option>
+                                                        <option value="Automation">Automation</option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="contact-inner contact-message">
+                                                <textarea 
+                                                    name="message" 
+                                                    class="lang-es" 
+                                                    placeholder="Cuéntanos sobre tu proyecto *" 
+                                                    required
+                                                    minlength="20"
+                                                    rows="5"></textarea>
+                                                <textarea 
+                                                    name="message" 
+                                                    class="lang-en" 
+                                                    style="display:none;" 
+                                                    placeholder="Tell us about your project *" 
+                                                    required
+                                                    minlength="20"
+                                                    rows="5"></textarea>
+                                            </div>
+                                            
+                                            <!-- Honeypot for spam protection -->
+                                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                            
+                                            <div class="comment-submit-btn">
+                                                <button class="ht-btn ht-btn-md submit-btn" type="submit" id="submit-btn">
+                                                    <span class="lang-es">Enviar mensaje</span>
+                                                    <span class="lang-en" style="display:none;">Send message</span>
+                                                </button>
+                                                <p class="form-message" id="form-message"></p>
+                                            </div>
+                                        </div>
+                                    </form>
 
 <!--
                                         <a class="ht-btn ht-btn-md" href="mailto:contact@facware.com?subject=Appointment%20Request&body=Please%20provide%20details%20about%20your%20request.">Send Email</a> -->
@@ -1043,7 +1478,24 @@ console.log(mailtoLink);
                         </div>
 
                         <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
-                            <div class="footer-widget__title section-space--mb_50"></div>
+                            <h6 class="footer-widget__title mb-20">Síguenos / Follow Us</h6>
+                            <ul class="footer-widget__list">
+                                <li class="mb-3">
+                                    <a href="https://www.linkedin.com/company/facware" target="_blank" rel="noopener" class="hover-style-link">
+                                        <i class="fab fa-linkedin text-color-primary me-2"></i> LinkedIn
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="https://wa.me/5216142542471" target="_blank" rel="noopener" class="hover-style-link">
+                                        <i class="fab fa-whatsapp text-success me-2"></i> WhatsApp
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="https://www.facebook.com/facware" target="_blank" rel="noopener" class="hover-style-link">
+                                        <i class="fab fa-facebook text-primary me-2"></i> Facebook
+                                    </a>
+                                </li>
+                            </ul>
                             <!-- <ul class="footer-widget__list">
                                 <li><a href="#" class="image_btn" aria-label="Google play Button"><img class="img-fluid" src="assets/images/icons/aeroland-button-google-play.webp" alt=""></a></li>
                                 <li><a href="#" class="image_btn" aria-label="App Store Button"><img class="img-fluid" src="assets/images/icons/aeroland-button-app-store.webp" alt=""></a></li>
@@ -1315,6 +1767,17 @@ console.log(mailtoLink);
     </div>
     <!--====================  End of search overlay  ====================-->
 
+    <!--====================  WhatsApp Floating Button  ====================-->
+    <a href="https://wa.me/5216142542471?text=Hola%20Facware%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener"
+       data-tooltip="¡Contáctanos por WhatsApp!"
+       aria-label="Chat con nosotros en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!--====================  End of WhatsApp Button  ====================-->
+
 
 
 
@@ -1340,6 +1803,12 @@ console.log(mailtoLink);
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+    
+    <!-- Language Switcher JS -->
+    <script src="assets/js/language-switcher.js"></script>
+    
+    <!-- Contact Form JS -->
+    <script src="assets/js/contact-form.js"></script>
 
 </body>
 

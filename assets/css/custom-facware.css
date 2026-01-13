@@ -1,0 +1,507 @@
+/**
+ * Custom Styles for Facware
+ * Professional enhancements for the website
+ */
+
+/* ============================================
+   Language Switcher Styles
+   ============================================ */
+.header-right-inner {
+    position: relative;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    z-index: 99999 !important;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: #000000;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer !important;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 100000 !important;
+    pointer-events: auto !important;
+    min-width: 50px;
+    text-align: center;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.lang-btn.active {
+    background: #086AD8 !important;
+    border-color: #086AD8 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 15px rgba(8, 106, 216, 0.6) !important;
+    font-weight: 700 !important;
+}
+
+/* Ensure language menu doesn't block buttons */
+.header-right-inner > * {
+    position: relative;
+}
+
+.header-search-form,
+.hidden-icons-menu {
+    z-index: 1 !important;
+}
+
+/* Show language indicator */
+.language-switcher {
+    animation: pulseAttention 2s ease-in-out infinite;
+}
+
+/* Hide old language menu that might be blocking buttons */
+.language-menu {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+@keyframes pulseAttention {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* ============================================
+   About Us Section Enhancements
+   ============================================ */
+.about-us-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-content-wrap {
+    padding: 20px 0;
+}
+
+.about-image-wrap img {
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-image-wrap img:hover {
+    transform: scale(1.02);
+}
+
+/* Mission & Vision Cards */
+.mission-vision-card {
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.mission-vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission-vision-card .icon-wrapper {
+    display: inline-block;
+}
+
+.mission-vision-card h4 {
+    font-weight: 700;
+}
+
+/* Core Values Cards */
+.value-card {
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(8, 106, 216, 0.2);
+    border-color: #086AD8 !important;
+}
+
+.value-card i {
+    transition: all 0.3s ease;
+}
+
+.value-card:hover i {
+    transform: scale(1.1);
+}
+
+/* ============================================
+   Enhanced Typography
+   ============================================ */
+.sub-heading {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666666;
+}
+
+.badge {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+/* Tablet y móvil (hasta 991px) */
+@media (max-width: 991px) {
+    .language-switcher {
+        position: fixed !important;
+        top: 20px !important;
+        right: 70px !important;
+        z-index: 99999 !important;
+        margin: 0 !important;
+        gap: 10px !important;
+    }
+    
+    .lang-btn {
+        padding: 6px 14px !important;
+        font-size: 13px !important;
+        min-width: 45px !important;
+    }
+    
+    .mission-vision-card {
+        margin-bottom: 30px;
+    }
+}
+
+/* Móvil pequeño (hasta 767px) */
+@media (max-width: 767px) {
+    .language-switcher {
+        top: 15px !important;
+        right: 65px !important;
+        gap: 8px !important;
+    }
+    
+    .lang-btn {
+        padding: 5px 12px !important;
+        font-size: 12px !important;
+        min-width: 40px !important;
+    }
+    
+    .about-image-wrap {
+        margin-top: 30px;
+    }
+    
+    .mission-vision-card {
+        padding: 30px !important;
+    }
+    
+    .value-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Móvil muy pequeño (hasta 575px) */
+@media (max-width: 575px) {
+    .language-switcher {
+        top: 12px !important;
+        right: 60px !important;
+        gap: 6px !important;
+    }
+    
+    .lang-btn {
+        padding: 4px 10px !important;
+        font-size: 11px !important;
+        min-width: 38px !important;
+        border-width: 1.5px !important;
+    }
+}
+
+/* ============================================
+   Smooth Scrolling
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   Custom Animations
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ============================================
+   Enhanced CTAs
+   ============================================ */
+.ht-btn {
+    transition: all 0.3s ease;
+}
+
+.ht-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(8, 106, 216, 0.3);
+}
+
+/* ============================================
+   Section Spacing Enhancement
+   ============================================ */
+.section-space--ptb_100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-space--mb_80 {
+    margin-bottom: 80px;
+}
+
+.section-space--mt_80 {
+    margin-top: 80px;
+}
+
+/* ============================================
+   Contact Form Enhancements
+   ============================================ */
+.contact-form__two input,
+.contact-form__two textarea,
+.contact-form__two select {
+    transition: all 0.3s ease;
+    border: 2px solid #e0e0e0;
+}
+
+.contact-form__two input:focus,
+.contact-form__two textarea:focus,
+.contact-form__two select:focus {
+    border-color: #086AD8;
+    box-shadow: 0 0 0 3px rgba(8, 106, 216, 0.1);
+    outline: none;
+}
+
+.contact-form__two input.error-field,
+.contact-form__two textarea.error-field,
+.contact-form__two select.error-field {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+.field-error {
+    display: block;
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.form-message {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    display: block;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.submit-btn {
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.submit-btn:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(8, 106, 216, 0.3);
+}
+
+/* ============================================
+   WhatsApp Floating Button
+   ============================================ */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    color: #FFF;
+    text-decoration: none;
+}
+
+.whatsapp-float i {
+    margin-top: 3px;
+}
+
+/* WhatsApp Tooltip */
+.whatsapp-float::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 70px;
+    background: #333;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.whatsapp-float:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive WhatsApp Button */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+    
+    .whatsapp-float::before {
+        display: none;
+    }
+}
+
+/* ============================================
+   Certifications Section
+   ============================================ */
+.certifications-section {
+    background: #f8f9fa;
+}
+
+.cert-badge-wrap {
+    transition: all 0.3s ease;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-badge-wrap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.cert-badge-wrap i {
+    transition: all 0.3s ease;
+}
+
+.cert-badge-wrap:hover i {
+    transform: scale(1.15);
+}
+
+.tech-stack-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.tech-stack-badges .badge {
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tech-stack-badges .badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   Social Media Links Enhancement
+   ============================================ */
+.footer-widget__list a i {
+    transition: all 0.3s ease;
+}
+
+.footer-widget__list a:hover i {
+    transform: scale(1.2);
+}
+
+/* ============================================
+   SEO Local Keywords Enhancement
+   ============================================ */
+.local-seo-keywords {
+    display: none;
+    /* Hidden but crawlable by search engines */
+    position: absolute;
+    left: -9999px;
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    .language-switcher,
+    .header-area,
+    .footer-area-wrapper,
+    .whatsapp-float {
+        display: none;
+    }
+}

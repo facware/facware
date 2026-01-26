@@ -120,12 +120,10 @@
 
     // Set language
     function setLanguage(lang, savePreference = true) {
-        console.log('setLanguage called with:', lang);
-        
+
         // Save preference
         if (savePreference) {
             localStorage.setItem('facware_language', lang);
-            console.log('Language saved to localStorage:', lang);
         }
 
         // Update HTML lang attribute
@@ -133,11 +131,8 @@
 
         // Show/hide content based on language - FORCE DISPLAY CHANGES
         if (lang === 'es') {
-            console.log('Switching to Spanish...');
             const esElements = $('.lang-es');
             const enElements = $('.lang-en');
-            console.log('ES elements found:', esElements.length);
-            console.log('EN elements found:', enElements.length);
             
             // FORCE SHOW ES ELEMENTS
             esElements.each(function() {
@@ -154,23 +149,18 @@
                 $(this).hide();
                 this.style.setProperty('display', 'none', 'important');
             }).prop('disabled', true).removeAttr('required');
-            
-            console.log('ES elements visible:', $('.lang-es:visible').length);
-            console.log('EN elements visible:', $('.lang-en:visible').length);
+
         } else {
-            console.log('Switching to English...');
             const esElements = $('.lang-es');
             const enElements = $('.lang-en');
-            console.log('ES elements found:', esElements.length);
-            console.log('EN elements found:', enElements.length);
-            
+
             // FORCE HIDE ES ELEMENTS
             esElements.each(function() {
                 $(this).removeAttr('style'); // Remove all inline styles
                 $(this).hide();
                 this.style.setProperty('display', 'none', 'important');
             }).prop('disabled', true).removeAttr('required');
-            
+
             // FORCE SHOW EN ELEMENTS
             enElements.each(function() {
                 $(this).removeAttr('style'); // Remove all inline styles
@@ -179,9 +169,6 @@
             }).prop('disabled', false).attr('required', function() {
                 return $(this).data('required') === true;
             });
-            
-            console.log('ES elements visible:', $('.lang-es:visible').length);
-            console.log('EN elements visible:', $('.lang-en:visible').length);
         }
 
         // Update i18n elements
@@ -195,8 +182,6 @@
 
         // Update active button
         updateActiveButton(lang);
-        console.log('Language change complete. Active button:', lang);
-        
         // Trigger custom event for other scripts
         $(document).trigger('languageChanged', [lang]);
     }
@@ -223,77 +208,51 @@
 
     // Initialize when DOM is ready
     function init() {
-        console.log('Language switcher: Initializing...');
-        console.log('Current language on init:', localStorage.getItem('facware_language') || 'es');
-        
         // Mark required fields for language switching
         $('input[required], textarea[required], select[required]').each(function() {
             $(this).data('required', true);
         });
-        
         // Initialize language
         initLanguage();
 
         // Get buttons
         const buttons = document.querySelectorAll('.lang-btn');
-        console.log('Found buttons:', buttons.length);
-        
         buttons.forEach(function(btn, index) {
             const lang = btn.getAttribute('data-lang');
-            console.log('Button ' + index + ' - lang:', lang, '- text:', btn.textContent.trim());
-            
             // FORCE REMOVE ALL EXISTING HANDLERS
             const newBtn = btn.cloneNode(true);
             btn.parentNode.replaceChild(newBtn, btn);
-            
             // Add MULTIPLE handlers for maximum compatibility
             newBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 e.stopImmediatePropagation();
                 const clickedLang = this.getAttribute('data-lang');
-                console.log('===== CLICK EVENT FIRED! =====');
-                console.log('Language:', clickedLang);
                 setLanguage(clickedLang);
                 return false;
             }, true);
-            
+
             newBtn.addEventListener('mousedown', function(e) {
                 e.preventDefault();
                 const clickedLang = this.getAttribute('data-lang');
-                console.log('===== MOUSEDOWN EVENT FIRED! =====');
-                console.log('Language:', clickedLang);
                 setLanguage(clickedLang);
                 return false;
             }, true);
-            
+
             newBtn.ontouchstart = function(e) {
                 e.preventDefault();
                 const clickedLang = this.getAttribute('data-lang');
-                console.log('===== TOUCHSTART EVENT FIRED! =====');
-                console.log('Language:', clickedLang);
                 setLanguage(clickedLang);
                 return false;
             };
-            
-            console.log('All handlers attached to:', lang);
         });
-        
-        console.log('Language switcher: Initialized');
-        
+
         // DIAGNOSTIC: Test if buttons are clickable
         setTimeout(function() {
             const testButtons = document.querySelectorAll('.lang-btn');
             testButtons.forEach(function(btn) {
                 const rect = btn.getBoundingClientRect();
                 const lang = btn.getAttribute('data-lang');
-                console.log('Button ' + lang + ' position:', {
-                    top: rect.top,
-                    left: rect.left,
-                    width: rect.width,
-                    height: rect.height,
-                    visible: rect.width > 0 && rect.height > 0
-                });
             });
         }, 500);
     }
@@ -303,13 +262,13 @@
         // Wait a bit for other scripts to load
         setTimeout(function() {
             init();
-            
+
             // WORKAROUND: Add click handler to parent div to catch blocked clicks
             $('.language-switcher').off('click').on('click', function(e) {
                 const target = e.target;
                 const clickX = e.clientX;
                 const clickY = e.clientY;
-                
+
                 // Find which button was intended
                 const buttons = document.querySelectorAll('.lang-btn');
                 buttons.forEach(function(btn) {
@@ -317,17 +276,13 @@
                     if (clickX >= rect.left && clickX <= rect.right &&
                         clickY >= rect.top && clickY <= rect.bottom) {
                         const lang = btn.getAttribute('data-lang');
-                        console.log('===== WORKAROUND CLICK! =====');
-                        console.log('Detected click on:', lang);
                         setLanguage(lang);
                     }
                 });
             });
-            
-            console.log('Workaround click handler installed');
         }, 100);
     });
-    
+
     // Also try with window.load as backup
     $(window).on('load', function() {
         setTimeout(function() {
@@ -335,7 +290,6 @@
             if (buttons.length > 0) {
                 const hasEvents = $._data(buttons[0], 'events');
                 if (!hasEvents || !hasEvents.click) {
-                    console.log('Language switcher: Re-initializing after window load');
                     init();
                 }
             }

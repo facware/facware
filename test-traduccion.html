@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Traducción - Facware</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #086AD8;
+        }
+        .test-item {
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #ddd;
+            background: #f9f9f9;
+        }
+        .test-item.pass {
+            border-left-color: #28a745;
+            background: #d4edda;
+        }
+        .test-item.fail {
+            border-left-color: #dc3545;
+            background: #f8d7da;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-primary {
+            background: #086AD8;
+            color: white;
+        }
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .status.ok {
+            background: #28a745;
+            color: white;
+        }
+        .status.error {
+            background: #dc3545;
+            color: white;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🔧 Test del Sistema de Traducción</h1>
+        
+        <div class="test-item fail">
+            <strong>⚠️ ATENCIÓN: Esta es solo una página de información</strong><br>
+            <p>Esta página está separada de index.html, por eso no puede ver los elementos del sitio.</p>
+        </div>
+        
+        <h2>📋 Para hacer el diagnóstico correcto:</h2>
+        
+        <div class="test-item">
+            <strong>OPCIÓN 1: Usar la consola (Recomendado)</strong>
+            <ol>
+                <li>Haz clic en el botón de abajo para ir a index.html</li>
+                <li>Presiona <strong>F12</strong> para abrir la consola</li>
+                <li>Copia y pega el código del archivo <code>test-consola.js</code></li>
+                <li>Verás el diagnóstico completo en la consola</li>
+            </ol>
+        </div>
+        
+        <div class="test-item">
+            <strong>OPCIÓN 2: Prueba Manual</strong>
+            <ol>
+                <li>Ve a index.html (botón de abajo)</li>
+                <li>Busca los botones <strong>ES | EN</strong> arriba a la derecha</li>
+                <li>Haz clic en <strong>EN</strong></li>
+                <li>Verifica que el contenido cambie a inglés</li>
+                <li>Haz clic en <strong>ES</strong></li>
+                <li>Verifica que vuelva a español</li>
+            </ol>
+        </div>
+        
+        <div>
+            <button class="btn-success" onclick="goToMain()" style="font-size: 18px; padding: 15px 30px;">
+                🏠 IR A INDEX.HTML PARA PROBAR
+            </button>
+        </div>
+        
+        <h3>📝 Script de Diagnóstico</h3>
+        <p>Copia este código y pégalo en la consola (F12) mientras estás en <strong>index.html</strong>:</p>
+        <pre style="max-height: 300px; overflow-y: auto;">// Ver archivo: test-consola.js
+// O usa este código directo:
+
+(function() {
+    console.log('🔧 Diagnóstico rápido');
+    console.log('jQuery:', typeof jQuery !== 'undefined' ? '✅' : '❌');
+    console.log('API idiomas:', typeof window.FacwareLanguage !== 'undefined' ? '✅' : '❌');
+    console.log('Elementos ES:', $('.lang-es').length);
+    console.log('Elementos EN:', $('.lang-en').length);
+    console.log('Botones idioma:', $('.lang-btn').length);
+    console.log('Idioma actual:', localStorage.getItem('facware_language'));
+})();</pre>
+        
+        <div id="results"></div>
+    </div>
+
+    <script>
+        function goToMain() {
+            window.location.href = 'index.html';
+        }
+
+        function escapeHtml(value) {
+            return String(value)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function runTests() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<h2>Ejecutando pruebas...</h2>';
+            
+            const tests = [];
+            
+            // Test 1: jQuery cargado
+            tests.push({
+                name: 'jQuery está cargado',
+                pass: typeof jQuery !== 'undefined',
+                details: typeof jQuery !== 'undefined' ? 'jQuery versión: ' + jQuery.fn.jquery : 'jQuery no encontrado'
+            });
+            
+            // Test 2: API de idiomas existe
+            tests.push({
+                name: 'API de idiomas disponible',
+                pass: typeof window.FacwareLanguage !== 'undefined',
+                details: typeof window.FacwareLanguage !== 'undefined' ? 'window.FacwareLanguage existe' : 'API no encontrada'
+            });
+            
+            // Test 3: localStorage funciona
+            let localStorageWorks = false;
+            try {
+                localStorage.setItem('test', 'ok');
+                localStorageWorks = localStorage.getItem('test') === 'ok';
+                localStorage.removeItem('test');
+            } catch(e) {
+                localStorageWorks = false;
+            }
+            tests.push({
+                name: 'localStorage funcional',
+                pass: localStorageWorks,
+                details: localStorageWorks ? 'localStorage funciona correctamente' : 'localStorage bloqueado o no disponible'
+            });
+            
+            // Test 4: Idioma actual
+            const currentLang = localStorage.getItem('facware_language') || 'no definido';
+            tests.push({
+                name: 'Idioma guardado',
+                pass: currentLang === 'es' || currentLang === 'en',
+                details: 'Idioma actual: ' + currentLang
+            });
+            
+            // Test 5: Elementos con lang-es
+            const esElements = document.querySelectorAll('.lang-es').length;
+            tests.push({
+                name: 'Elementos en español encontrados',
+                pass: esElements > 0,
+                details: esElements + ' elementos con clase lang-es'
+            });
+            
+            // Test 6: Elementos con lang-en
+            const enElements = document.querySelectorAll('.lang-en').length;
+            tests.push({
+                name: 'Elementos en inglés encontrados',
+                pass: enElements > 0,
+                details: enElements + ' elementos con clase lang-en'
+            });
+            
+            // Test 7: Botones de idioma
+            const langButtons = document.querySelectorAll('.lang-btn').length;
+            tests.push({
+                name: 'Botones de idioma presentes',
+                pass: langButtons >= 2,
+                details: langButtons + ' botones encontrados'
+            });
+            
+            // Test 8: Scripts cargados
+            const scripts = Array.from(document.querySelectorAll('script')).map(s => s.src).filter(s => s.includes('language-switcher'));
+            tests.push({
+                name: 'Script de traducción cargado',
+                pass: scripts.length > 0,
+                details: scripts.length > 0 ? 'language-switcher.js encontrado' : 'Script no encontrado'
+            });
+            
+            // Renderizar resultados
+            let html = '<h2>📊 Resultados de las Pruebas</h2>';
+            const passed = tests.filter(t => t.pass).length;
+            const total = tests.length;
+            
+            html += `<p><strong>Resultado:</strong> ${passed}/${total} pruebas pasadas</p>`;
+            
+            if (passed === total) {
+                html += '<div class="test-item pass"><strong>✅ ¡Todas las pruebas pasaron!</strong><br>El sistema de traducción está funcionando correctamente.</div>';
+            } else {
+                html += '<div class="test-item fail"><strong>❌ Algunas pruebas fallaron</strong><br>Revisa los detalles a continuación.</div>';
+            }
+            
+            tests.forEach(test => {
+                html += `
+                    <div class="test-item ${test.pass ? 'pass' : 'fail'}">
+                        <span class="status ${test.pass ? 'ok' : 'error'}">${test.pass ? '✓' : '✗'}</span>
+                        <strong>${escapeHtml(test.name)}</strong><br>
+                        <small>${escapeHtml(test.details)}</small>
+                    </div>
+                `;
+            });
+            
+            // Comandos útiles
+            html += `
+                <h3>🔧 Comandos Útiles para la Consola</h3>
+                <p>Abre la consola (F12) y prueba estos comandos:</p>
+                <pre>// Ver idioma actual
+window.FacwareLanguage.getCurrentLanguage()
+
+// Cambiar a español
+window.FacwareLanguage.setLanguage('es')
+
+// Cambiar a inglés
+window.FacwareLanguage.setLanguage('en')
+
+// Ver elementos visibles en español
+$('.lang-es:visible').length
+
+// Ver elementos visibles en inglés
+$('.lang-en:visible').length</pre>
+            `;
+            
+            // Recomendaciones
+            if (passed < total) {
+                html += `
+                    <h3>💡 Recomendaciones</h3>
+                    <div class="test-item">
+                `;
+                
+                if (!tests[0].pass) {
+                    html += '<p>❌ <strong>jQuery no está cargado:</strong> Verifica que jquery-3.5.1.min.js esté en assets/js/vendor/</p>';
+                }
+                
+                if (!tests[1].pass) {
+                    html += '<p>❌ <strong>API de idiomas no disponible:</strong> Verifica que language-switcher.js esté cargado correctamente</p>';
+                }
+                
+                if (!tests[2].pass) {
+                    html += '<p>❌ <strong>localStorage bloqueado:</strong> No uses modo incógnito o habilita cookies/almacenamiento local en configuración del navegador</p>';
+                }
+                
+                if (!tests[6].pass) {
+                    html += '<p>❌ <strong>Botones no encontrados:</strong> Verifica que estés en la página correcta (index.html)</p>';
+                }
+                
+                html += '</div>';
+            }
+            
+            resultsDiv.innerHTML = html;
+        }
+        
+        // Auto-ejecutar al cargar
+        window.onload = function() {
+            // Esperar un momento para que todo cargue
+            setTimeout(runTests, 500);
+        };
+    </script>
+</body>
+</html>

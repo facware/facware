@@ -51,3 +51,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+        # The `GITHUB_TOKEN` secret is automatically created by GitHub and allows you to authenticate on behalf of GitHub Actions.

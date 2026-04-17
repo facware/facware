@@ -1,0 +1,61 @@
+---
+// Footer.astro — 4-column footer with build-time copyright year
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/images/facware/home_logo.png" width="140" height="42" alt="Facware" loading="lazy">
+          <address class="footer-address">
+            <p>Chihuahua, Chihuahua, México</p>
+            <p><a href="mailto:contact@facware.com">contact@facware.com</a></p>
+            <p><a href="https://facware.com" rel="noopener">facware.com</a></p>
+          </address>
+        </div>
+        <nav aria-label="Footer — Services">
+          <h3 class="footer-heading">Services</h3>
+          <ul role="list">
+            <li><a href="/#facware_services">Services</a></li>
+            <li><a href="/#facware_features">How It Works</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Footer — Quick Links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul role="list">
+            <li><a href="/terms-of-service.html">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/contact.html">Where to Find Us</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Footer — Support">
+          <h3 class="footer-heading">Support</h3>
+          <ul role="list">
+            <li><a href="#">Help &amp; FAQ</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="#">Cookies Policy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="copyright">&copy; {currentYear} Facware. All Rights Reserved.</p>
+      <ul class="social-links" role="list" aria-label="Social media">
+        <li>
+          <a href="https://www.facebook.com/facware" target="_blank" rel="noopener noreferrer" aria-label="Facware on Facebook">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/18322494/" target="_blank" rel="noopener noreferrer" aria-label="Facware on LinkedIn">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

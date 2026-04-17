@@ -1,0 +1,54 @@
+---
+// Header.astro — top bar + sticky navigation
+---
+
+<header class="site-header" role="banner">
+  <div class="top-bar" role="complementary" aria-label="Site announcement">
+    Stop paying the <strong>integration tax</strong> — we build systems that cut manual ops by 40%+.
+    <a href="/contact.html">Get a free assessment &rarr;</a>
+  </div>
+  <nav class="container" aria-label="Main navigation">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo" aria-label="Facware — go to homepage">
+        <img src="/assets/images/facware/home_logo.png" width="160" height="48" alt="Facware" fetchpriority="high">
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="/#facware_problem">Why Facware</a></li>
+        <li><a href="/#facware_services">Services</a></li>
+        <li><a href="/#facware_features">How It Works</a></li>
+        <li><a href="/contact.html" class="btn btn-primary">Book assessment &rarr;</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('is-open');
+    });
+
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-open');
+      });
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && menu.classList.contains('is-open')) {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-open');
+        toggle.focus();
+      }
+    });
+  }
+</script>

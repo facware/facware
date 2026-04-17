@@ -135,6 +135,15 @@
             window.location.href = 'index.html';
         }
 
+        function escapeHtml(value) {
+            return String(value)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
         function runTests() {
             const resultsDiv = document.getElementById('results');
             resultsDiv.innerHTML = '<h2>Ejecutando pruebas...</h2>';
@@ -227,8 +236,8 @@
                 html += `
                     <div class="test-item ${test.pass ? 'pass' : 'fail'}">
                         <span class="status ${test.pass ? 'ok' : 'error'}">${test.pass ? '✓' : '✗'}</span>
-                        <strong>${test.name}</strong><br>
-                        <small>${test.details}</small>
+                        <strong>${escapeHtml(test.name)}</strong><br>
+                        <small>${escapeHtml(test.details)}</small>
                     </div>
                 `;
             });

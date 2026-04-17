@@ -1,0 +1,146 @@
+---
+// ContactForm.astro — web3forms AJAX contact form
+// Access key is injected at build time from PUBLIC_WEB3FORMS_KEY env var
+const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HERE';
+---
+
+<div class="contact-form-card">
+  <h2 class="form-title">Send us a message</h2>
+  <p class="form-subtitle">Fill out the form and we'll get back to you within one business day.</p>
+
+  <form
+    id="contact-form-el"
+    action="https://api.web3forms.com/submit"
+    method="POST"
+    novalidate
+    aria-label="Contact form"
+  >
+    <!-- Web3Forms access key — set PUBLIC_WEB3FORMS_KEY in your .env file -->
+    <input type="hidden" name="access_key" value={web3FormsKey}>
+    <input type="hidden" name="subject" value="New contact inquiry from Facware.com">
+    <input type="hidden" name="from_name" value="Facware Website">
+    <!-- Honeypot — hidden from real users, visible to bots -->
+    <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" aria-hidden="true">
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label" for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Work email <span class="req" aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="you@company.com" required autocomplete="email">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label" for="company">Company <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="company" name="company" class="form-input" placeholder="Acme Corp" required autocomplete="organization">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="phone">Phone <span style="color:#8a92a6;font-weight:400">(optional)</span></label>
+        <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (614) 000-0000" autocomplete="tel">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="service">Service of interest <span class="req" aria-hidden="true">*</span></label>
+      <select id="service" name="service" class="form-select" required>
+        <option value="" disabled selected>Select a service&hellip;</option>
+        <option value="IT Consulting">IT Consulting</option>
+        <option value="System Architecture Design">System Architecture Design</option>
+        <option value="Custom Software Development">Custom Software Development</option>
+        <option value="System &amp; Data Integrations">System &amp; Data Integrations</option>
+        <option value="Process Automation">Process Automation</option>
+        <option value="Web Design &amp; Conversion">Web Design &amp; Conversion</option>
+        <option value="Free Operations Assessment">Free Operations Assessment (not sure yet)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="message">Tell us about your challenge <span class="req" aria-hidden="true">*</span></label>
+      <textarea
+        id="message"
+        name="message"
+        class="form-textarea"
+        placeholder="Describe the workflow, integration gap, or system problem you're dealing with. The more context, the more useful our response."
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="form-submit-btn" id="submit-btn">
+      <span class="btn-label">Send message &rarr;</span>
+      <span class="btn-spinner" role="status" aria-label="Sending&hellip;"></span>
+    </button>
+
+    <div class="form-result" id="form-result" role="alert" aria-live="polite"></div>
+
+    <p class="form-privacy-note">
+      We respect your privacy. No spam, ever. Read our <a href="/privacy-policy.html">Privacy Policy</a>.
+    </p>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('contact-form-el');
+  const submitBtn = document.getElementById('submit-btn');
+  const resultEl = document.getElementById('form-result');
+
+  if (form && submitBtn && resultEl) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.classList.add('loading');
+      resultEl.className = 'form-result';
+      resultEl.innerHTML = '';
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await response.json();
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('loading');
+
+        if (response.ok) {
+          resultEl.className = 'form-result success';
+          resultEl.innerHTML =
+            '<i class="fas fa-check-circle" aria-hidden="true"></i>' +
+            '<span>Message sent! We\'ll reply within one business day.</span>';
+          form.reset();
+        } else {
+          resultEl.className = 'form-result error';
+          resultEl.innerHTML =
+            '<i class="fas fa-exclamation-circle" aria-hidden="true"></i>' +
+            '<span>' + (data.message || 'Something went wrong. Please try again or email us directly.') + '</span>';
+        }
+      } catch {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('loading');
+        resultEl.className = 'form-result error';
+        resultEl.innerHTML =
+          '<i class="fas fa-exclamation-circle" aria-hidden="true"></i>' +
+          '<span>Network error. Please email us at <a href="mailto:contact@facware.com">contact@facware.com</a>.</span>';
+      }
+
+      // Auto-hide result after 8 seconds
+      setTimeout(() => {
+        resultEl.className = 'form-result';
+        resultEl.innerHTML = '';
+      }, 8000);
+    });
+  }
+</script>

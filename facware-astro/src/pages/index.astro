@@ -1,0 +1,268 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Testimonials from '../components/Testimonials.astro';
+---
+
+<BaseLayout
+  title="Facware — Custom Software & Integrations for Mid-Market Operations"
+  description="Facware eliminates the integration tax — the hidden cost of duct-taped software — by building purpose-built systems that reduce manual operations by 40%+ for mid-market businesses in Mexico and the US Southwest."
+  canonicalURL="https://facware.com/"
+  ogDescription="We build automated, integrated systems that cut manual ops by 40%+ — scoped to your outcome, not our billing cycle."
+  preloadHeroImage={true}
+>
+  <Fragment slot="head">
+    <style is:inline>
+      .hero{position:relative;min-height:600px;display:flex;align-items:center;background:#1a1a2e url('/assets/images/facware/business_solutions_home.jpg') center/cover no-repeat}
+      .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,30,80,.72) 0%,rgba(10,20,50,.6) 100%);pointer-events:none}
+      .hero-inner{position:relative;z-index:1;text-align:center;padding:80px 0;width:100%}
+      .hero h1{color:#fff;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;max-width:820px;margin:0 auto 20px}
+      .hero-sub{color:rgba(255,255,255,.85);font-size:clamp(1rem,2vw,1.2rem);max-width:640px;margin:0 auto 36px}
+      .btn-group{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+    </style>
+  </Fragment>
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container hero-inner">
+      <span class="hero-eyebrow">Custom Software &amp; Integrations — Chihuahua &amp; US Southwest</span>
+      <h1 id="hero-heading">Your software stack is costing you more than you realize</h1>
+      <p class="hero-sub">We build automated, integrated systems that cut manual ops by 40%+ — scoped to your outcome, not our billing cycle.</p>
+      <div class="btn-group">
+        <a href="#contact-us" class="btn btn-primary">Get a free operations assessment &rarr;</a>
+        <a href="#facware_problem" class="btn btn-outline-white">See if this fits you</a>
+      </div>
+      <p class="hero-reassurance">No pitch deck. No commitment. 30 minutes, on your schedule.</p>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="stats-strip" aria-label="Key performance metrics">
+    <div class="container">
+      <dl class="stats-grid">
+        <div class="stat-item">
+          <dt class="stat-label">Reduction in manual ops</dt>
+          <dd class="stat-num">40%+</dd>
+        </div>
+        <div class="stat-item">
+          <dt class="stat-label">Faster than US agencies</dt>
+          <dd class="stat-num">2&times;</dd>
+        </div>
+        <div class="stat-item">
+          <dt class="stat-label">Client satisfaction rating</dt>
+          <dd class="stat-num">4.6/5.0</dd>
+        </div>
+        <div class="stat-item">
+          <dt class="stat-label">Outcome-scoped projects</dt>
+          <dd class="stat-num">100%</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="section" id="facware_problem" aria-labelledby="problem-heading">
+    <div class="container">
+      <header class="section-header text-center">
+        <p class="section-eyebrow">Does this sound familiar?</p>
+        <h2 id="problem-heading">The hidden cost of a <span class="text-primary">duct-taped stack</span></h2>
+      </header>
+      <div class="cards-grid cards-3">
+        <article class="card">
+          <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-04-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
+          <h3 class="card-title">3+ tools, zero alignment</h3>
+          <p class="card-text">Your CRM doesn't talk to your ERP. Your ERP doesn't talk to your warehouse. Every handoff is a spreadsheet and a prayer — and someone is working nights to reconcile it.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-05-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
+          <h3 class="card-title">Manual work eating your margin</h3>
+          <p class="card-text">Your team spends 10&ndash;20 hrs/week on reporting, data entry, and reconciliation. That's $30K&ndash;$80K/yr in labor that a custom integration would eliminate in one engagement.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-06-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
+          <h3 class="card-title">Agencies that bill hours, not results</h3>
+          <p class="card-text">You've hired developers before. The project dragged on, scope crept, the vendor disappeared — and you still don't have what you scoped on day one.</p>
+        </article>
+      </div>
+      <p class="section-cta-note text-center">If any of these hit close to home, you're exactly who we build for. <a href="#contact-us" class="link-primary">Let's talk &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section--gray" id="facware_services" aria-labelledby="services-heading">
+    <div class="container">
+      <header class="section-header text-center">
+        <p class="section-eyebrow">The Solution</p>
+        <h2 id="services-heading">Purpose-Built Systems for <span class="text-primary">Operations That Need to Scale</span></h2>
+        <p class="section-desc">Every service is scoped to a measurable business outcome. We design, build, and run — one accountable partner from kickoff to production.</p>
+      </header>
+      <div class="cards-grid cards-3">
+        <article class="card">
+          <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-01-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
+          <h3 class="card-title">IT Consulting</h3>
+          <p class="card-text">Stop guessing which part of your stack is holding revenue back. We audit your systems, map your bottlenecks, and give you a prioritized roadmap with projected ROI for each fix — before you spend a dollar on development.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-02-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
+          <h3 class="card-title">System Architecture Design</h3>
+          <p class="card-text">We architect systems that fit how your business actually works — not how a generic SaaS vendor assumes it does. Every design decision is made with your existing infrastructure, compliance requirements, and growth trajectory in mind.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-03-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
+          <h3 class="card-title">Custom Software Development</h3>
+          <p class="card-text">When off-the-shelf software forces you to change your process instead of supporting it, the cost compounds every quarter. We build to spec — scoped, priced, and delivered against a defined outcome, not a time-and-materials estimate.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-04-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
+          <h3 class="card-title">System &amp; Data Integrations</h3>
+          <p class="card-text">Your ERP, CRM, warehouse, and financial systems should share data automatically — not through weekly exports and manual reconciliation. We connect your existing tools so your team stops copying data and starts using it.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-05-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
+          <h3 class="card-title">Process Automation</h3>
+          <p class="card-text">Every hour your team spends on manual approvals, status updates, and data entry is an hour not spent on the work that grows the business. We automate the repetitive so your people can focus on the irreplaceable — with measurable time savings from day one.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-06-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
+          <h3 class="card-title">Web Design &amp; Conversion</h3>
+          <p class="card-text">A website that doesn't convert is just an expense. We design B2B web experiences built around your buyer's decision journey — clear positioning, fast load times, and a path to contact that doesn't require three clicks and a form from 2018.</p>
+        </article>
+      </div>
+      <p class="section-cta-note text-center">Not sure which service applies? <a href="#contact-us" class="link-primary">Tell us what's breaking down and we'll tell you what to fix first &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="facware_features" aria-labelledby="how-heading">
+    <div class="container">
+      <header class="section-header text-center">
+        <p class="section-eyebrow">How It Works</p>
+        <h2 id="how-heading">From problem to production in <span class="text-primary">3 defined steps</span></h2>
+        <p class="section-desc">No open-ended retainers. No scope surprises. Every engagement follows the same proven process.</p>
+      </header>
+      <ol class="steps-grid" role="list">
+        <li class="step-item">
+          <span class="step-num" aria-hidden="true">01</span>
+          <div class="step-content">
+            <h3 class="step-title">Operations Assessment <span class="badge-free">(Free)</span></h3>
+            <p>We map your current stack, identify your biggest automation and integration gaps, and quantify the cost of leaving them unaddressed. You walk away with a clear picture — even if we never work together.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num" aria-hidden="true">02</span>
+          <div class="step-content">
+            <h3 class="step-title">Outcome-Scoped Proposal</h3>
+            <p>We propose a fixed-scope engagement defined by a specific business result — not hours or sprints. You know exactly what you're paying, what you'll get, and when you'll get it before signing anything.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num" aria-hidden="true">03</span>
+          <div class="step-content">
+            <h3 class="step-title">Build, Deploy &amp; Stay Accountable</h3>
+            <p>We design, build, and run the system — covering UX, development, cloud infrastructure, and post-launch support. One team, one point of accountability, until the outcome is delivered and stable.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PROVEN RESULTS -->
+  <section class="section results-section" aria-labelledby="results-heading">
+    <div class="container">
+      <div class="results-grid">
+        <div class="results-content">
+          <p class="section-eyebrow">Proven Results</p>
+          <h2 id="results-heading">Real outcomes, not slide-deck promises</h2>
+          <ul class="results-list" role="list">
+            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>40%+ reduction</strong> in manual operational hours post-integration</span></li>
+            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>2&times; faster</strong> time-to-deploy vs. comparable US agencies</span></li>
+            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>4.6/5.0 client rating</strong> across all completed engagements</span></li>
+            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>100% outcome-scoped</strong> — every project has a defined, measurable result before we start</span></li>
+          </ul>
+          <a href="#contact-us" class="btn btn-primary" style="margin-top:8px">See if we're a fit &rarr;</a>
+        </div>
+        <div class="results-image">
+          <img src="/assets/images/facware/resources_facware.png" alt="Facware results illustration" loading="lazy" width="600" height="450">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <Testimonials />
+
+  <!-- LOGO TICKER -->
+  <section class="logos-section" aria-label="Clients we have worked with">
+    <div class="container">
+      <p class="logos-label">Trusted by teams across Mexico &amp; the US Southwest</p>
+    </div>
+    <div class="logos-ticker">
+      <div class="logos-track" aria-hidden="true">
+        <img src="/assets/images/facware/customers/festa.png" alt="Festa" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/grammarschool.jpg" alt="Grammar School" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/scrapadvisor.png" alt="ScrapAdvisor" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/proffer.png" alt="Proffer" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/sista.png" alt="Sista" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/vikingsdrywall.png" alt="Vikings Drywall" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/partyzone.png" alt="Party Zone" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/buildbinder.png" alt="BuildBinder" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/3pillar_logo.jpeg" alt="3Pillar" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/tiempo_development.jpeg" alt="Tiempo Development" height="38" loading="lazy">
+        <!-- Duplicate set for seamless loop -->
+        <img src="/assets/images/facware/customers/festa.png" alt="" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/grammarschool.jpg" alt="" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/scrapadvisor.png" alt="" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/proffer.png" alt="" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/sista.png" alt="" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/vikingsdrywall.png" alt="" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/partyzone.png" alt="" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/buildbinder.png" alt="" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/3pillar_logo.jpeg" alt="" height="38" loading="lazy">
+        <img src="/assets/images/facware/customers/tiempo_development.jpeg" alt="" height="38" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="contact-section" id="contact-us" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-grid">
+        <aside class="contact-trust" aria-label="Why clients trust Facware">
+          <div class="trust-rating">
+            <span class="trust-score">4.6<span class="trust-denom">/5.0</span></span>
+            <div class="trust-stars" aria-label="Approximately 4.6 out of 5 stars" role="img">
+              <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i>
+            </div>
+            <p class="trust-sub">Avg. client satisfaction rating</p>
+          </div>
+          <ul class="trust-list" role="list">
+            <li>
+              <i class="fas fa-clock" aria-hidden="true"></i>
+              <div><strong>30-min call</strong><span>Quick, no-pressure conversation</span></div>
+            </li>
+            <li>
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <div><strong>Email us directly</strong><a href="mailto:contact@facware.com">contact@facware.com</a></div>
+            </li>
+            <li>
+              <i class="fas fa-shield-alt" aria-hidden="true"></i>
+              <div><strong>Fixed scope, guaranteed</strong><span>No billing surprises, ever</span></div>
+            </li>
+          </ul>
+        </aside>
+        <div class="contact-cta">
+          <span class="contact-badge">Free &bull; No commitment</span>
+          <h2 id="contact-heading">Start with a free 30-min operations assessment</h2>
+          <p>We'll identify your top automation opportunity and estimate the ROI — no commitment, no pitch deck. Just a direct conversation about your stack.</p>
+          <a
+            class="btn btn-primary btn-lg"
+            href="mailto:contact@facware.com?subject=Free%20Operations%20Assessment%20Request&body=Hi%20Facware%2C%0A%0AI%27d%20like%20to%20schedule%20a%20free%2030-min%20operations%20assessment.%0A%0ACompany%3A%20%0AMain%20challenge%3A%20%0A"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book my free 30-min assessment &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

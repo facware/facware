@@ -1,0 +1,138 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+  ogImage?: string;
+  ogDescription?: string;
+  preloadHeroImage?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonicalURL = Astro.url.href,
+  ogImage = 'https://facware.com/assets/images/facware/og-image.jpg',
+  ogDescription = description,
+  preloadHeroImage = false,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href={canonicalURL}>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={ogDescription}>
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:site_name" content="Facware">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={ogDescription}>
+  <meta name="twitter:image" content={ogImage}>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/images/facware/favicon_facware.png" type="image/png">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- LCP hero image preload (index page only) -->
+  {preloadHeroImage && (
+    <link rel="preload" as="image" href="/assets/images/facware/business_solutions_home.jpg">
+  )}
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome (served from public/assets/) -->
+  <link rel="stylesheet" href="/assets/css/vendor/fontawesome-all.min.css">
+
+  <!-- Page-specific head additions (critical CSS, preloads, etc.) -->
+  <slot name="head" />
+
+  <!-- Critical above-fold CSS — inlined to eliminate render-blocking -->
+  <style is:inline>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#1a1a2e;background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+    .site-header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e2e8f0}
+    .top-bar{background:#1a1a2e;color:rgba(255,255,255,.9);font-size:13px;padding:9px clamp(16px,4vw,48px);text-align:center}
+    .top-bar a{color:#7bc4f8;text-decoration:none;font-weight:500}
+    .top-bar strong{color:#fff}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+    .btn{display:inline-flex;align-items:center;gap:6px;padding:14px 28px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;border:2px solid transparent;line-height:1;white-space:nowrap;transition:.22s ease}
+    .btn-primary{background:#086AD8;color:#fff;border-color:#086AD8}
+    .btn-primary:hover{background:#065bb8;border-color:#065bb8;transform:translateY(-1px);color:#fff}
+    .btn-outline-white{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+    .btn-outline-white:hover{background:rgba(255,255,255,.12)}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <Header />
+  <main id="main-content">
+    <slot />
+  </main>
+  <Footer />
+
+  <!-- Scroll-to-top button -->
+  <a href="#main-content" class="scroll-top" id="scroll-top" aria-label="Scroll back to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </a>
+
+  <script>
+    // Scroll-to-top visibility
+    const sb = document.getElementById('scroll-top');
+    if (sb) {
+      window.addEventListener('scroll', () => {
+        sb.classList.toggle('visible', window.scrollY > 400);
+      }, { passive: true });
+    }
+
+    // Header shadow on scroll
+    const sh = document.querySelector('.site-header');
+    if (sh) {
+      window.addEventListener('scroll', () => {
+        sh.classList.toggle('scrolled', window.scrollY > 10);
+      }, { passive: true });
+    }
+
+    // IntersectionObserver scroll animations
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in-view');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.card, .step-item, .stat-item, .results-list li').forEach(el => {
+        el.classList.add('animate-on-scroll');
+        obs.observe(el);
+      });
+    }
+  </script>
+</body>
+</html>

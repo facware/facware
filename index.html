@@ -1,10 +1,31 @@
 ﻿<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html class="no-js" lang="en" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Facware - Desarrollo de Software en Chihuahua | Software Development Consulting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Empresa de desarrollo de software en Chihuahua, México. Consultoría IT, desarrollo de aplicaciones móviles y web. Software development consulting in Chihuahua.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- SEO Local Keywords -->
+    <meta name="keywords" content="desarrollo software chihuahua, desarrollo software chihuahua mexico, consultoria IT chihuahua, desarrollo aplicaciones moviles chihuahua, desarrollo web chihuahua, software developer chihuahua, programador chihuahua, IT consulting chihuahua, custom software development, desarrollo apps android ios chihuahua, cloud computing chihuahua, aws azure chihuahua" />
+    <meta name="geo.region" content="MX-CHH" />
+    <meta name="geo.placename" content="Chihuahua" />
+    <meta name="geo.position" content="28.6353;-106.0889" />
+    <meta name="ICBM" content="28.6353, -106.0889" />
+    <meta name="author" content="facware.com"> 
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/facware/favicon_facware.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/css/vendor/bootstrap.min.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/js/vendor/jquery-3.5.1.min.js" as="script">
+    
+    <!-- CSS
+        ============================================ -->
 
   <!-- ===== SEO Meta ===== -->
   <title>Facware — Custom Software &amp; Integrations for Mid-Market Operations</title>
@@ -14,14 +35,10 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://facware.com/">
 
-  <!-- ===== Open Graph ===== -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://facware.com/">
-  <meta property="og:title" content="Facware — Custom Software &amp; Integrations for Mid-Market Operations">
-  <meta property="og:description" content="We build automated, integrated systems that cut manual ops by 40%+ — scoped to your outcome, not our billing cycle.">
-  <meta property="og:image" content="https://facware.com/assets/images/facware/og-image.jpg">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="Facware">
+    <!-- Font Family CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
@@ -45,8 +62,123 @@
   <!-- ===== FontAwesome (icons) ===== -->
   <link rel="stylesheet" href="assets/css/vendor/fontawesome-all.min.css">
 
-  <!-- ===== Main stylesheet ===== -->
-  <link rel="stylesheet" href="assets/css/facware-landing.css">
+    <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+        <link rel="stylesheet" href="assets/css/plugins/plugins.min.css"> -->
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Custom Facware Styles -->
+    <link rel="stylesheet" href="assets/css/custom-facware.css">
+
+    <!-- SEO Meta Tags -->
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Facware">
+    <meta property="og:url" content="https://www.facware.com/">
+    <meta property="og:title" content="Facware - Diseño y Desarrollo de Software | Software Design & Development">
+    <meta property="og:description" content="Consultoría profesional en diseño y desarrollo de software en Chihuahua, México. Soluciones innovadoras para tu negocio. | Professional software design and development consulting in Chihuahua, Mexico.">
+    <meta property="og:image" content="https://www.facware.com/assets/images/facware/business_solutions_home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Facware Software Development Team">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Facware - Software Development Consulting">
+    <meta name="twitter:description" content="Professional software design and development consulting in Chihuahua, Mexico.">
+    <meta name="twitter:image" content="https://www.facware.com/assets/images/facware/business_solutions_home.jpg">
+    
+    <link rel="canonical" href="https://www.facware.com/">
+    
+    <!-- Schema.org JSON-LD for Google My Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.facware.com",
+        "name": "Facware",
+        "alternateName": ["Facware Consulting", "Facware Software Development"],
+        "description": "Empresa de desarrollo de software y consultoría IT en Chihuahua, México. Especialistas en desarrollo de aplicaciones móviles, web y soluciones cloud.",
+        "url": "https://www.facware.com",
+        "telephone": "+52-614-XXX-XXXX",
+        "email": "contact@facware.com",
+        "logo": "https://www.facware.com/assets/images/facware/home_logo.png",
+        "image": "https://www.facware.com/assets/images/facware/business_solutions_home.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Chihuahua",
+            "addressLocality": "Chihuahua",
+            "addressRegion": "Chihuahua",
+            "postalCode": "31000",
+            "addressCountry": "MX"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.6353",
+            "longitude": "-106.0889"
+        },
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "28.6353",
+                "longitude": "-106.0889"
+            },
+            "geoRadius": "100000"
+        },
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.linkedin.com/company/facware",
+            "https://www.facebook.com/facware",
+            "https://twitter.com/facware"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "12"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Desarrollo de Software",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Desarrollo de Software Personalizado",
+                        "description": "Desarrollo de aplicaciones empresariales a medida"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Desarrollo de Aplicaciones Móviles",
+                        "description": "Apps nativas y multiplataforma para iOS y Android"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Consultoría IT",
+                        "description": "Asesoría tecnológica y arquitectura de software"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
 
   <!-- ===== Critical inline CSS (above-the-fold) ===== -->
   <style>
@@ -142,29 +274,234 @@
       </div>
     </section>
 
-    <!-- PROBLEM -->
-    <section class="section" id="facware_problem" aria-labelledby="problem-heading">
-      <div class="container">
-        <header class="section-header text-center">
-          <p class="section-eyebrow">Does this sound familiar?</p>
-          <h2 id="problem-heading">The hidden cost of a <span class="text-primary">duct-taped stack</span></h2>
-        </header>
-        <div class="cards-grid cards-3">
-          <article class="card">
-            <div class="card-icon"><img src="assets/images/icons/mitech-box-image-style-05-image-04-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
-            <h3 class="card-title">3+ tools, zero alignment</h3>
-            <p class="card-text">Your CRM doesn't talk to your ERP. Your ERP doesn't talk to your warehouse. Every handoff is a spreadsheet and a prayer — and someone is working nights to reconcile it.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon"><img src="assets/images/icons/mitech-box-image-style-05-image-05-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
-            <h3 class="card-title">Manual work eating your margin</h3>
-            <p class="card-text">Your team spends 10&ndash;20 hrs/week on reporting, data entry, and reconciliation. That's $30K&ndash;$80K/yr in labor that a custom integration would eliminate in one engagement.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon"><img src="assets/images/icons/mitech-box-image-style-05-image-06-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
-            <h3 class="card-title">Agencies that bill hours, not results</h3>
-            <p class="card-text">You've hired developers before. The project dragged on, scope crept, the vendor disappeared — and you still don't have what you scoped on day one.</p>
-          </article>
+                            <!-- brand logo -->
+                            <div class="header__logo">
+                                <a href="index.html">
+                                    <img src="assets/images/facware/home_logo.png" width="160" height="48" class="img-fluid" alt="Facware - Software Development Company Logo" loading="eager">
+                                </a>
+                            </div>
+
+                            <!-- header midle box  -->
+                            <div class="header-midle-box">
+                                <div class="header-bottom-wrap d-md-block d-none">
+                                    <div class="header-bottom-inner">
+                                        <div class="header-bottom-left-wrap">
+                                            <!-- navigation menu -->
+                                            <div class="header__navigation d-none d-xl-block">
+                                                <nav class="navigation-menu primary--menu">
+
+                                                    <ul>
+                                                        <li class="">
+                                                            <!-- has-children has-children--multilevel-submenu -->
+                                                            <a href="#"><span>Home</span></a>
+                                                            <!-- <ul class="submenu">
+                                                                <li><a href="index-infotechno.html"><span>Software & Techology</span></a></li>
+                                                                <li><a href="index-processing.html"><span>Startup Business</span></a></li>
+                                                                <li><a href="index-appointment.html"><span>IT Agency</span></a></li>
+                                                                <li><a href="index-services.html"><span>IT Services</span></a></li>
+                                                                <li><a href="index-resolutions.html"><span>IT Solution</span></a></li>
+                                                                <li><a href="index-cybersecurity.html"><span>Cyber Security</span></a></li>
+                                                                <li><a href="index-modern-it-company.html"><span>Modern IT Company</span></a></li>
+                                                                <li><a href="index-machine-learning.html"><span>Machine Learning</span></a></li>
+                                                                <li><a href="index-software-innovation.html"><span>Software Innovation</span></a></li>
+                                                            </ul> -->
+                                                        </li>
+                                                        <!-- <li class="has-children has-children--multilevel-submenu">
+                                                            <a href="#"><span>Company</span></a>
+                                                            <ul class="submenu">
+                                                                <li class="has-children">
+                                                                    <a href="about-us-01.html"><span>About us</span></a>
+                                                                    <ul class="submenu">
+                                                                        <li><a href="about-us-01.html"><span>About us 01</span></a></li>
+                                                                        <li><a href="about-us-02.html"><span>About us 02</span></a></li>
+                                                                        <li class="has-children">
+                                                                            <a href="#"><span>Submenu Level Two</span></a>
+                                                                            <ul class="submenu">
+                                                                                <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                                                                <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                                                                <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="contact-us.html"><span>Contact us</span></a></li>
+                                                                <li><a href="leadership.html"><span>Leadership</span></a></li>
+                                                                <li><a href="why-choose-us.html"><span>Why choose us</span></a></li>
+                                                                <li><a href="our-history.html"><span>Our history</span></a></li>
+                                                                <li><a href="faqs.html"><span>FAQs</span></a></li>
+                                                                <li><a href="careers.html"><span>Careers</span></a></li>
+                                                                <li><a href="pricing-plans.html"><span>Pricing plans</span></a></li>
+                                                            </ul>
+                                                        </li> -->
+                                                        <li class="has-children has-children--multilevel-submenu">
+                                                            <a href="#"><span>IT solutions</span></a>
+                                                            <ul class="submenu">
+                                                                <!-- <li><a href="it-services.html"><span>IT Services</span></a></li>
+                                                                <li><a href="managed-it-service.html"><span>Managed IT Services</span></a></li>
+                                                                <li><a href="industries.html"><span>Industries</span></a></li>
+                                                                <li><a href="business-solution.html"><span>Business solution</span></a></li>
+                                                                <li><a href="it-services-details.html"><span>IT Services Details</span></a></li> -->
+                                                                <li><a href="#facware_services"><span>IT Services</span></a></li>
+                                                                <li><a href="#facware_features"><span>IT Features</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <!-- mega menu -->
+                                                        <!-- <li class="has-children">
+                                                            <a href="#"><span>Elements</span></a>
+                                                            
+                                                            <ul class="megamenu megamenu--mega">
+                                                                <li>
+                                                                    <h2 class="page-list-title">ELEMENT GROUP 01</h2>
+                                                                    <ul>
+                                                                        <li><a href="element-accordion.html"><span>Accordions & Toggles</span></a></li>
+                                                                        <li><a href="element-box-icon.html"><span>Box Icon</span></a></li>
+                                                                        <li><a href="element-box-image.html"><span>Box Image</span></a></li>
+                                                                        <li><a href="element-box-large-image.html"><span>Box Large Image</span></a></li>
+                                                                        <li><a href="element-buttons.html"><span>Buttons</span></a></li>
+                                                                        <li><a href="element-cta.html"><span>Call to action</span></a></li>
+                                                                        <li><a href="element-client-logo.html"><span>Client Logo</span></a></li>
+                                                                        <li><a href="element-countdown.html"><span>Countdown</span></a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h2 class="page-list-title">ELEMENT GROUP 02</h2>
+                                                                    <ul>
+                                                                        <li><a href="element-counters.html"><span>Counters</span></a></li>
+                                                                        <li><a href="element-dividers.html"><span>Dividers</span></a></li>
+                                                                        <li><a href="element-flexible-image-slider.html"><span>Flexible image slider</span></a></li>
+                                                                        <li><a href="element-google-map.html"><span>Google Map</span></a></li>
+                                                                        <li><a href="element-gradation.html"><span>Gradation</span></a></li>
+                                                                        <li><a href="element-instagram.html"><span>Instagram</span></a></li>
+                                                                        <li><a href="element-lists.html"><span>Lists</span></a></li>
+                                                                        <li><a href="element-message-box.html"><span>Message box</span></a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h2 class="page-list-title">ELEMENT GROUP 03</h2>
+                                                                    <ul>
+                                                                        <li><a href="element-popup-video.html"><span>Popup Video</span></a></li>
+                                                                        <li><a href="element-pricing-box.html"><span>Pricing Box</span></a></li>
+                                                                        <li><a href="element-progress-bar.html"><span>Progress Bar</span></a></li>
+                                                                        <li><a href="element-progress-circle.html"><span>Progress Circle</span></a></li>
+                                                                        <li><a href="element-rows-columns.html"><span>Rows & Columns</span></a></li>
+                                                                        <li><a href="element-social-networks.html"><span>Social Networks</span></a></li>
+                                                                        <li><a href="element-tabs.html"><span>Tabs</span></a></li>
+                                                                        <li><a href="element-team-member.html"><span>Team member</span></a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h2 class="page-list-title">ELEMENT GROUP 04</h2>
+                                                                    <ul>
+                                                                        <li><a href="element-testimonials.html"><span>Testimonials</span></a></li>
+                                                                        <li><a href="element-timeline.html"><span>Timeline</span></a></li>
+                                                                        <li><a href="element-carousel-sliders.html"><span>Carousel Sliders</span></a></li>
+                                                                        <li><a href="element-typed-text.html"><span>Typed Text</span></a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li> -->
+                                                        <!-- multilevel submenu -->
+                                                        <!-- <li class="has-children has-children--multilevel-submenu">
+                                                            <a href="#"><span>Case Studies</span></a>
+                                                            
+                                                            <ul class="submenu">
+                                                                <li><a href="case-studies.html"><span>Case Studies 01</span></a></li>
+                                                                <li><a href="case-studies-02.html"><span>Case Studies 02</span></a></li>
+                                                                <li><a href="single-smart-vision.html"><span>Single Layout</span></a></li>
+                                                            </ul>
+                                                        </li> -->
+                                                        <!-- multilevel submenu -->
+                                                        <!-- <li class="has-children has-children--multilevel-submenu">
+                                                            <a href="blog-list-large-image.html"><span>Blog</span></a>
+                                                            
+                                                            <ul class="submenu">
+                                                                <li><a href="blog-list-large-image.html"><span>List Large Image</span></a></li>
+                                                                <li><a href="blog-list-left-large-image.html"><span>Left Large Image</span></a></li>
+                                                                <li><a href="blog-grid-classic.html"><span>Grid Classic</span></a></li>
+                                                                <li><a href="blog-grid-masonry.html"><span>Grid Masonry</span></a></li>
+                                                                <li class="has-children">
+                                                                    <a href="blog-post-layout-one.html"><span>Single Layouts</span></a>
+                                                                    <ul class="submenu">
+                                                                        <li><a href="blog-post-layout-one.html"><span>Left Sidebar</span></a></li>
+                                                                        <li><a href="blog-post-right-sidebar.html"><span>Right Sidebar</span></a></li>
+                                                                        <li><a href="blog-post-no-sidebar.html"><span>No Sidebar</span></a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li> -->
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- header right box -->
+                            <div class="header-right-box">
+                                <!-- Language Switcher - Always Visible -->
+                                <div class="language-switcher me-3">
+                                    <button class="lang-btn" data-lang="es" type="button">ES</button>
+                                    <button class="lang-btn" data-lang="en" type="button">EN</button>
+                                </div>
+
+                                <div class="header-right-inner" id="hidden-icon-wrapper">
+                                    <!-- language-menu -->
+                                    <div class="language-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="">
+                                                    <!-- <img class="ls-flag" src="assets/images/flags/en.webp" alt="en" title="English">
+                                                    <span class="wpml-ls-native">English</span> -->
+                                                </a>
+
+                                                <!-- <ul class="ls-sub-menu">
+                                                    <li class="">
+                                                        <a href="#" class="">
+                                                            <img class="ls-flag" src="assets/images/flags/fr.webp" alt="en" title="Français"><span class="wpml-ls-native">Français</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="#" class="">
+                                                            <img class="wpml-ls-flag" src="assets/images/flags/de.webp" alt="de" title="Deutsch"><span class="wpml-ls-native">Deutsch</span>
+                                                        </a>
+                                                    </li>
+
+                                                </ul> -->
+
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <!-- header-search-form -->
+                                    <div class="header-search-form default-search">
+                                        <!-- <form action="#" class="search-form-top">
+                                            <input class="search-field" type="text" placeholder="Search…">
+                                            <button class="search-submit">
+                                                <i class="search-btn-icon fa fa-search"></i>
+                                            </button>
+                                        </form> -->
+                                    </div>
+                                </div>
+
+                                <!-- mobile menu -->
+                                <div class="mobile-navigation-icon d-block d-xl-none" id="mobile-menu-trigger">
+                                    <i></i>
+                                </div>
+                                <!-- hidden icons menu -->
+                                <div class="hidden-icons-menu d-block d-md-none" id="hidden-icon-trigger">
+                                    <a href="javascript:void(0)">
+                                        <i class="far fa-ellipsis-h-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <p class="section-cta-note text-center">If any of these hit close to home, you're exactly who we build for. <a href="#contact-us" class="link-primary">Let's talk &rarr;</a></p>
       </div>
@@ -440,14 +777,1200 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p class="copyright">&copy; <span id="copyright-year">2025</span> Facware. All Rights Reserved.</p>
-        <ul class="social-links" role="list" aria-label="Social media">
-          <li><a href="https://www.facebook.com/facware" target="_blank" rel="noopener noreferrer" aria-label="Facware on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-          <li><a href="https://www.linkedin.com/company/18322494/" target="_blank" rel="noopener noreferrer" aria-label="Facware on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-        </ul>
-      </div>
+    <!--====================  End of header area  ====================-->
+
+    <div id="main-wrapper">
+        <div class="site-wrapper-reveal">
+            <div class="bg-white">
+                <div class="about-banner-wrap banner-space bg-img" data-bg="assets/images/facware/business_solutions_home.jpg">
+                    <!-- <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 m-auto">
+                                <div class="about-banner-content text-center">
+                                    <h1 class="mb-15 text-white">Business solution</h1>
+                                    <h5 class="font-weight--normal text-white">Reach out to the world’s most reliable IT services.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!--===========  About Us Section Start =============-->
+                <div class="about-us-section section-space--ptb_100">
+                    <div class="container">
+                        <!-- Section Title -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-title-wrap text-center section-space--mb_60">
+                                    <h2 class="heading" data-i18n="about.title">Sobre Nosotros / About Us</h2>
+                                    <p class="sub-heading mt-3" data-i18n="about.subtitle">Transformando ideas en soluciones digitales desde Chihuahua, México / Transforming ideas into digital solutions from Chihuahua, Mexico</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Our Story -->
+                        <div class="row align-items-center section-space--mb_80">
+                            <div class="col-lg-6">
+                                <div class="about-content-wrap">
+                                    <div class="section-title mb-4">
+                                        <span class="badge bg-primary text-white mb-3 px-3 py-2">Nuestra Historia / Our Story</span>
+                                        <h3 class="heading mb-4" data-i18n="about.story.title">Construyendo el Futuro Digital</h3>
+                                    </div>
+                                    <div class="about-text">
+                                        <p class="mb-3 lang-es" style="display:none;">Facware nace de la pasión por la tecnología y el compromiso de ayudar a las empresas a alcanzar su máximo potencial digital. Con sede en Chihuahua, México, hemos trabajado en proyectos que abarcan desde startups locales hasta empresas internacionales.</p>
+                                        <p class="mb-3 lang-en">Facware was born from a passion for technology and a commitment to helping businesses reach their full digital potential. Based in Chihuahua, Mexico, we've worked on projects ranging from local startups to international enterprises.</p>
+                                        
+                                        <p class="mb-3 lang-es" style="display:none;">Nuestro equipo combina experiencia técnica con un profundo entendimiento de las necesidades empresariales, ofreciendo soluciones que no solo funcionan, sino que impulsan el crecimiento y la innovación.</p>
+                                        <p class="mb-3 lang-en">Our team combines technical expertise with a deep understanding of business needs, offering solutions that not only work but drive growth and innovation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="about-image-wrap">
+                                    <img src="assets/images/facware/business_solutions_home.jpg" alt="Facware Software Development Team - Professional IT Consulting in Chihuahua" class="img-fluid rounded shadow-lg" loading="lazy" width="600" height="400">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mission & Vision -->
+                        <div class="row">
+                            <!-- Mission -->
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <div class="mission-vision-card h-100 p-5 bg-light rounded">
+                                    <div class="icon-wrapper mb-4">
+                                        <i class="fas fa-bullseye fa-3x text-color-primary"></i>
+                                    </div>
+                                    <h4 class="heading mb-4" data-i18n="about.mission.title">Nuestra Misión / Our Mission</h4>
+                                    <p class="lang-es mb-3" style="display:none;"><strong>Empoderar a las empresas</strong> mediante soluciones tecnológicas innovadoras y personalizadas que optimicen sus procesos, mejoren su competitividad y les permitan alcanzar sus objetivos estratégicos.</p>
+                                    <p class="lang-en mb-3"><strong>Empower businesses</strong> through innovative and customized technological solutions that optimize their processes, improve their competitiveness, and enable them to achieve their strategic objectives.</p>
+                                    
+                                    <ul class="list-unstyled mt-4">
+                                        <li class="mb-2 lang-es" style="display:none;"><i class="fas fa-check text-color-primary me-2"></i> Soluciones personalizadas a medida</li>
+                                        <li class="mb-2 lang-es" style="display:none;"><i class="fas fa-check text-color-primary me-2"></i> Tecnología de vanguardia</li>
+                                        <li class="mb-2 lang-es" style="display:none;"><i class="fas fa-check text-color-primary me-2"></i> Soporte continuo y capacitación</li>
+                                        <li class="mb-2 lang-en"><i class="fas fa-check text-color-primary me-2"></i> Customized tailored solutions</li>
+                                        <li class="mb-2 lang-en"><i class="fas fa-check text-color-primary me-2"></i> Cutting-edge technology</li>
+                                        <li class="mb-2 lang-en"><i class="fas fa-check text-color-primary me-2"></i> Continuous support and training</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Vision -->
+                            <div class="col-lg-6">
+                                <div class="mission-vision-card h-100 p-5 bg-primary text-white rounded">
+                                    <div class="icon-wrapper mb-4">
+                                        <i class="fas fa-eye fa-3x text-white"></i>
+                                    </div>
+                                    <h4 class="heading mb-4 text-white" data-i18n="about.vision.title">Nuestra Visión / Our Vision</h4>
+                                    <p class="lang-es mb-3" style="display:none;">Ser <strong>el socio tecnológico de referencia</strong> en México y América Latina, reconocidos por nuestra excelencia técnica, compromiso con la innovación y capacidad de transformar desafíos empresariales en oportunidades digitales.</p>
+                                    <p class="lang-en mb-3">To be <strong>the reference technology partner</strong> in Mexico and Latin America, recognized for our technical excellence, commitment to innovation, and ability to transform business challenges into digital opportunities.</p>
+                                    
+                                    <ul class="list-unstyled mt-4">
+                                        <li class="mb-2 lang-es" style="display:none;"><i class="fas fa-star text-white me-2"></i> Liderazgo en innovación</li>
+                                        <li class="mb-2 lang-es" style="display:none;"><i class="fas fa-star text-white me-2"></i> Expansión regional</li>
+                                        <li class="mb-2 lang-es" style="display:none;"><i class="fas fa-star text-white me-2"></i> Excelencia en servicio al cliente</li>
+                                        <li class="mb-2 lang-en"><i class="fas fa-star text-white me-2"></i> Leadership in innovation</li>
+                                        <li class="mb-2 lang-en"><i class="fas fa-star text-white me-2"></i> Regional expansion</li>
+                                        <li class="mb-2 lang-en"><i class="fas fa-star text-white me-2"></i> Excellence in customer service</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Core Values -->
+                        <div class="row section-space--mt_80">
+                            <div class="col-lg-12">
+                                <div class="section-title-wrap text-center section-space--mb_40">
+                                    <h3 class="heading" data-i18n="about.values.title">Nuestros Valores / Our Values</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card text-center p-4 h-100 border rounded">
+                                    <i class="fas fa-handshake fa-3x text-color-primary mb-3"></i>
+                                    <h5 class="mb-3 lang-es" style="display:none;">Compromiso</h5>
+                                    <h5 class="mb-3 lang-en">Commitment</h5>
+                                    <p class="lang-es" style="display:none;">Con cada proyecto y cada cliente</p>
+                                    <p class="lang-en">With every project and every client</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card text-center p-4 h-100 border rounded">
+                                    <i class="fas fa-lightbulb fa-3x text-color-primary mb-3"></i>
+                                    <h5 class="mb-3 lang-es" style="display:none;">Innovación</h5>
+                                    <h5 class="mb-3 lang-en">Innovation</h5>
+                                    <p class="lang-es" style="display:none;">Soluciones creativas y efectivas</p>
+                                    <p class="lang-en">Creative and effective solutions</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card text-center p-4 h-100 border rounded">
+                                    <i class="fas fa-shield-alt fa-3x text-color-primary mb-3"></i>
+                                    <h5 class="mb-3 lang-es" style="display:none;">Integridad</h5>
+                                    <h5 class="mb-3 lang-en">Integrity</h5>
+                                    <p class="lang-es" style="display:none;">Transparencia en todo momento</p>
+                                    <p class="lang-en">Transparency at all times</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card text-center p-4 h-100 border rounded">
+                                    <i class="fas fa-trophy fa-3x text-color-primary mb-3"></i>
+                                    <h5 class="mb-3 lang-es" style="display:none;">Excelencia</h5>
+                                    <h5 class="mb-3 lang-en">Excellence</h5>
+                                    <p class="lang-es" style="display:none;">Calidad en cada detalle</p>
+                                    <p class="lang-en">Quality in every detail</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--===========  About Us Section End =============-->
+
+                <!--===========  Certifications & Partners Section Start =============-->
+                <div class="certifications-section section-space--ptb_80 bg-gray">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-title-wrap text-center section-space--mb_40">
+                                    <h3 class="heading" data-i18n="certifications.title">Certificaciones y Partners / Certifications & Partners</h3>
+                                    <p class="sub-heading mt-3 lang-es" style="display:none;">Trabajamos con las mejores tecnologías y plataformas del mercado</p>
+                                    <p class="sub-heading mt-3 lang-en">We work with the best technologies and platforms in the market</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center justify-content-center">
+                            <!-- Microsoft Partner -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-microsoft fa-3x text-primary mb-2"></i>
+                                    <h6 class="mt-2 small">Microsoft Partner</h6>
+                                </div>
+                            </div>
+                            <!-- AWS -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-aws fa-3x" style="color: #FF9900;" aria-label="AWS"></i>
+                                    <h6 class="mt-2 small">AWS Cloud</h6>
+                                </div>
+                            </div>
+                            <!-- Azure -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-microsoft fa-3x" style="color: #0078D4;" aria-label="Azure"></i>
+                                    <h6 class="mt-2 small">Microsoft Azure</h6>
+                                </div>
+                            </div>
+                            <!-- Google Cloud -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-google fa-3x" style="color: #4285F4;" aria-label="Google Cloud"></i>
+                                    <h6 class="mt-2 small">Google Cloud</h6>
+                                </div>
+                            </div>
+                            <!-- GitHub -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-github fa-3x text-dark"></i>
+                                    <h6 class="mt-2 small">GitHub Partner</h6>
+                                </div>
+                            </div>
+                            <!-- Docker -->
+                            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                                <div class="cert-badge-wrap p-3 bg-white rounded shadow-sm h-100">
+                                    <i class="fab fa-docker fa-3x" style="color: #2496ED;" aria-label="Docker"></i>
+                                    <h6 class="mt-2 small">Docker</h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Technologies Row -->
+                        <div class="row mt-4">
+                            <div class="col-lg-12">
+                                <div class="text-center">
+                                    <p class="mb-3 lang-es" style="display:none;"><strong>Tecnologías que dominamos:</strong></p>
+                                    <p class="mb-3 lang-en"><strong>Technologies we master:</strong></p>
+                                    <div class="tech-stack-badges">
+                                        <span class="badge bg-primary me-2 mb-2 px-3 py-2">React</span>
+                                        <span class="badge bg-success me-2 mb-2 px-3 py-2">Node.js</span>
+                                        <span class="badge bg-info me-2 mb-2 px-3 py-2">Python</span>
+                                        <span class="badge bg-warning text-dark me-2 mb-2 px-3 py-2">JavaScript</span>
+                                        <span class="badge bg-danger me-2 mb-2 px-3 py-2">Angular</span>
+                                        <span class="badge bg-secondary me-2 mb-2 px-3 py-2">.NET</span>
+                                        <span class="badge bg-dark me-2 mb-2 px-3 py-2">MongoDB</span>
+                                        <span class="badge" style="background: #00758F;" aria-label="MySQL">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--===========  Certifications & Partners Section End =============-->
+
+                <!--===========  feature-large-images-wrapper  Start =============-->
+                <div class="feature-large-images-wrapper section-space--ptb_100">
+                    <div class="container">
+                        <div class="cybersecurity-about-box">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="conact-us-wrap-one managed-it">
+                                        <!-- Spanish Version -->
+                                        <h5 class="heading lang-es" style="display:none;">En Facware, nos especializamos en el <span class="text-color-primary">diseño y desarrollo</span> de soluciones de software innovadoras y ofrecemos servicios de consultoría expertos. Nuestro equipo de profesionales experimentados se dedica a transformar tu visión en realidad a través de productos de software robustos y escalables.</h5>
+                                        
+                                        <!-- English Version -->
+                                        <h5 class="heading lang-en">At Facware, we specialize in the <span class="text-color-primary">design and development</span> of innovative software solutions and offer expert consulting services. Our team of seasoned professionals is dedicated to transforming your vision into reality through robust and scalable software products.</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 offset-lg-1">
+                                    <div class="cybersecurity-about-text">
+                                        <!-- Spanish Version -->
+                                        <div class="text lang-es" style="display:none;">Los servicios de TI de Facware se categorizan según las habilidades requeridas: diseño, construcción y ejecución. Estos servicios se dividen en tres áreas principales: servicios de procesos de negocio, servicios de aplicaciones y servicios de infraestructura. Cada servicio se adapta a las necesidades específicas de tu negocio, asegurando una solución personalizada en todo momento.</div>
+                                        
+                                        <!-- English Version -->
+                                        <div class="text lang-en">Facware's IT services are categorized based on the skills required: design, build, and run. These services are divided into three main areas: business process services, application services, and infrastructure services. Each service is tailored to your specific business needs, ensuring a personalized solution every time.</div>
+                                        
+                                        <div class="button-group-wrap">
+                                            <a href="#contact-us" class="ht-btn ht-btn-md me-md-3 mb-20 lang-es" style="display:none;">Obtén una cotización GRATUITA sin compromiso</a>
+                                            <a href="#contact-us" class="ht-btn ht-btn-md me-md-3 mb-20 lang-en">Get a FREE no-obligation quote</a>
+                                            <!-- <a href="#" class="ht-btn ht-btn-md ht-btn--solid">Live chat with a consultant</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--===========  feature-large-images-wrapper  End =============-->
+
+                <!--===========  feature-images-wrapper  Start =============-->
+                <div class="feature-images-wrapper bg-gray section-space--ptb_100" id="facware_services">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- section-title-wrap Start -->
+                                <div class="section-title-wrap text-center section-space--mb_30">
+                                    <h3 class="heading lang-es" style="display:none;">Servicios IT Confiables para <span class="text-color-primary">Empresas</span></h3>
+                                    <h3 class="heading lang-en">Reliable IT Services for <span class="text-color-primary">Businesses</span></h3>
+                                </div>
+                                <!-- section-title-wrap Start -->
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="feature-images__four">
+                                    <div class=" row">
+                                        <div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
+                                            <!-- ht-box-icon Start -->
+                                            <a href="#" class="ht-box-images style-04">
+                                                <div class="image-box-wrap">
+                                                    <div class="box-image">
+                                                        <img class="img-fulid" src="assets/images/icons/mitech-box-image-style-05-image-01-60x60.webp" alt="IT Consulting Services Icon" loading="lazy" width="60" height="60">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h5 class="heading lang-es" style="display:none;">Consultoría IT</h5>
+                                                        <h5 class="heading lang-en">IT Consulting</h5>
+                                                        <div class="text lang-es" style="display:none;">Los servicios de consultoría IT ofrecen asesoramiento experto y orientación sobre el uso de tecnología de la información para cumplir con los objetivos empresariales. Los consultores evalúan tu configuración IT actual, identifican áreas de mejora y recomiendan estrategias personalizadas para optimizar el rendimiento, mejorar la seguridad e impulsar el crecimiento.</div>
+                                                        <div class="text lang-en">IT consulting services offer expert advice and guidance on utilizing information technology to meet business objectives. Consultants assess your current IT setup, identify areas for improvement, and recommend tailored strategies to optimize performance, enhance security, and drive growth.</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- ht-box-icon End -->
+                                        </div>
+                                        <div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
+                                            <!-- ht-box-icon Start -->
+                                            <a href="#" class="ht-box-images style-04">
+                                                <div class="image-box-wrap">
+                                                    <div class="box-image">
+                                                        <img class="img-fulid" src="assets/images/icons/mitech-box-image-style-05-image-02-60x60.webp" alt="IT Solutions Design Icon" loading="lazy" width="60" height="60">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h5 class="heading lang-es" style="display:none;">Diseño de Soluciones IT</h5>
+                                                        <h5 class="heading lang-en">IT Solutions Design</h5>
+                                                        <div class="text lang-es" style="display:none;">El diseño de soluciones IT implica crear soluciones tecnológicas integrales y personalizadas para abordar desafíos empresariales específicos. Este servicio incluye analizar requisitos, diseñar arquitecturas de sistemas e implementar soluciones que se integren perfectamente con la infraestructura existente, garantizando eficiencia y escalabilidad.</div>
+                                                        <div class="text lang-en">IT solutions design involves creating comprehensive and customized technology solutions to address specific business challenges. This service includes analyzing requirements, designing system architectures, and implementing solutions that integrate seamlessly with existing infrastructure, ensuring efficiency and scalability.</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- ht-box-icon End -->
+                                        </div>
+                                        <div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
+                                            <!-- ht-box-icon Start -->
+                                            <a href="#" class="ht-box-images style-04">
+                                                <div class="image-box-wrap">
+                                                    <div class="box-image">
+                                                        <img class="img-fulid" src="assets/images/icons/mitech-box-image-style-05-image-03-60x60.webp" alt="Custom Software Development Icon" loading="lazy" width="60" height="60">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h5 class="heading lang-es" style="display:none;">Desarrollo de Software</h5>
+                                                        <h5 class="heading lang-en">Software Development</h5>
+                                                        <div class="text lang-es" style="display:none;">El desarrollo de software es el proceso de diseñar, codificar, probar e implementar aplicaciones de software para satisfacer las necesidades únicas de un negocio. Este servicio cubre una gama de actividades desde crear software personalizado, mejorar aplicaciones existentes, hasta integrar soluciones de terceros, garantizando productos de software de alta calidad y fáciles de usar.</div>
+                                                        <div class="text lang-en">Software development is the process of designing, coding, testing, and deploying software applications to meet the unique needs of a business. This service covers a range of activities from creating custom software, enhancing existing applications, to integrating third-party solutions, ensuring high-quality and user-friendly software products.</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- ht-box-icon End -->
+                                        </div>
+                                        <div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
+                                            <!-- ht-box-icon Start -->
+                                            <a href="#" class="ht-box-images style-04">
+                                                <div class="image-box-wrap">
+                                                    <div class="box-image">
+                                                        <img class="img-fulid" src="assets/images/icons/mitech-box-image-style-05-image-04-60x60.webp" alt="Data Integration Services Icon" loading="lazy" width="60" height="60">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h5 class="heading lang-es" style="display:none;">Integraciones de Datos</h5>
+                                                        <h5 class="heading lang-en">Data Integrations</h5>
+                                                        <div class="text lang-es" style="display:none;">Los servicios de integración de datos se centran en consolidar y armonizar datos de diversas fuentes en un sistema unificado. Este servicio garantiza que los datos sean accesibles, precisos y consistentes, permitiendo a las empresas tomar decisiones informadas, mejorar la eficiencia operativa y obtener información valiosa a través de análisis de datos integrales.</div>
+                                                        <div class="text lang-en">Data integration services focus on consolidating and harmonizing data from various sources into a unified system. This service ensures that data is accessible, accurate, and consistent, enabling businesses to make informed decisions, improve operational efficiency, and gain valuable insights through comprehensive data analysis.</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- ht-box-icon End -->
+                                        </div>
+                                        <div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
+                                            <!-- ht-box-icon Start -->
+                                            <a href="#" class="ht-box-images style-04">
+                                                <div class="image-box-wrap">
+                                                    <div class="box-image">
+                                                        <img class="img-fulid" src="assets/images/icons/mitech-box-image-style-05-image-05-60x60.webp" alt="Business Process Automation Icon" loading="lazy" width="60" height="60">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h5 class="heading lang-es" style="display:none;">Automatización de Procesos</h5>
+                                                        <h5 class="heading lang-en">Process Automatization</h5>
+                                                        <div class="text lang-es" style="display:none;">La automatización de procesos implica usar tecnología para automatizar procesos empresariales repetitivos y manuales. Al implementar flujos de trabajo automatizados, las empresas pueden reducir errores humanos, aumentar la productividad y liberar recursos para enfocarse en tareas más estratégicas. Este servicio a menudo incluye automatización robótica de procesos (RPA) y soluciones de automatización inteligente.</div>
+                                                        <div class="text lang-en">Process automatization involves using technology to automate repetitive and manual business processes. By implementing automated workflows, businesses can reduce human error, increase productivity, and free up resources to focus on more strategic tasks. This service often includes robotic process automation (RPA) and intelligent automation solutions.</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- ht-box-icon End -->
+                                        </div>
+                                        <div class="single-item col-lg-4 col-md-6 mt-30 wow move-up">
+                                            <!-- ht-box-icon Start -->
+                                            <a href="#" class="ht-box-images style-04">
+                                                <div class="image-box-wrap">
+                                                    <div class="box-image">
+                                                        <img class="img-fulid" src="assets/images/icons/mitech-box-image-style-05-image-06-60x60.webp" alt="Professional Web Design Icon" loading="lazy" width="60" height="60">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h5 class="heading lang-es" style="display:none;">Diseño Web</h5>
+                                                        <h5 class="heading lang-en">Web Design</h5>
+                                                        <div class="text lang-es" style="display:none;">Los servicios de diseño web abarcan la creación y mantenimiento de sitios web visualmente atractivos y fáciles de usar. Este servicio incluye diseñar el diseño, gráficos y elementos interactivos, asegurando que el sitio web sea responsive, accesible y optimizado para motores de búsqueda. Un sitio web bien diseñado mejora la experiencia del usuario y fortalece la presencia en línea de un negocio.</div>
+                                                        <div class="text lang-en">Web design services encompass the creation and maintenance of visually appealing and user-friendly websites. This service includes designing the layout, graphics, and interactive elements, ensuring the website is responsive, accessible, and optimized for search engines. A well-designed website enhances user experience and strengthens a business's online presence.</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- ht-box-icon End -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="section-under-heading text-center section-space--mt_60 lang-es" style="display:none;">Los desafíos son solo oportunidades disfrazadas. <a href="#contact-us">¡No dudes en solicitar una cotización!</a></div>
+                                <div class="section-under-heading text-center section-space--mt_60 lang-en">Challenges are just opportunities in disguise. <a href="#contact-us">Don't hesitate to request a quote!</a></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--===========  feature-images-wrapper  End =============-->
+
+                <!--========= About Delivering Wrapper Start ===========-->
+                <div class="about-delivering-wrapper section-space--ptb_100" id="facware_features">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-title-wrap text-center section-space--mb_20">
+                                    <h3 class="heading lang-es" style="display:none;">Características de Soporte IT para Negocios</h3>
+                                    <h3 class="heading lang-en">Business IT Support Features</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="delivering-optimal-wrap">
+                                    <div class="list-item">
+                                        <div class="marker"></div>
+                                        <div class="title-wrap">
+                                            <h5 class="title lang-es" style="display:none;">Requisitos de Software</h5>
+                                            <h5 class="title lang-en">Software Requirements</h5>
+                                            <div class="desc lang-es" style="display:none;">Los requisitos de software implican recopilar y definir las especificaciones y condiciones necesarias para un proyecto de software. Este servicio incluye trabajar estrechamente con las partes interesadas para comprender sus necesidades, documentar requisitos funcionales y no funcionales, y crear especificaciones detalladas. El objetivo es asegurar una comprensión clara de lo que el software debe hacer, cómo debe funcionar y cualquier restricción dentro de la cual debe operar. La recopilación adecuada de requisitos es crucial para guiar el proceso de desarrollo y asegurar que el producto final cumpla con las expectativas del usuario.</div>
+                                            <div class="desc lang-en">Software requirements involve gathering and defining the necessary specifications and conditions for a software project. This service includes working closely with stakeholders to understand their needs, documenting functional and non-functional requirements, and creating detailed specifications. The goal is to ensure a clear understanding of what the software should do, how it should perform, and any constraints it must operate within. Proper requirements gathering is crucial for guiding the development process and ensuring the final product meets user expectations.</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="marker"></div>
+                                        <div class="title-wrap">
+                                            <h5 class="title lang-es" style="display:none;">Documentación de Software</h5>
+                                            <h5 class="title lang-en">Software Documentation</h5>
+                                            <div class="desc lang-es" style="display:none;">La documentación de software abarca todos los materiales escritos que explican cómo funciona una aplicación de software, cómo usarla y cómo mantenerla. Este servicio incluye crear manuales de usuario, guías técnicas, documentación de API y comentarios de código. La documentación completa ayuda a los desarrolladores a comprender la funcionalidad del software, asiste a los usuarios en utilizar efectivamente el producto y proporciona información esencial para la resolución de problemas y el desarrollo futuro. La documentación de alta calidad es crítica para asegurar la sostenibilidad a largo plazo y la facilidad de uso.</div>
+                                            <div class="desc lang-en">Software documentation encompasses all written materials that explain how a software application works, how to use it, and how to maintain it. This service includes creating user manuals, technical guides, API documentation, and code comments. Comprehensive documentation helps developers understand the software's functionality, assists users in effectively utilizing the product, and provides essential information for troubleshooting and future development. High-quality documentation is critical for ensuring long-term sustainability and ease of use.</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="marker"></div>
+                                        <div class="title-wrap">
+                                            <h5 class="title lang-es" style="display:none;">Plan de Infraestructura</h5>
+                                            <h5 class="title lang-en">Infrastructure Plan</h5>
+                                            <div class="desc lang-es" style="display:none;">Facware toma en cuenta todas las condiciones y presupuestos necesarios para construir un plan de infraestructura.</div>
+                                            <div class="desc lang-en">Facware takes into account all conditions and budgets needed for building infrastructure plan.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="delivering-optimal-wrap">
+                                    <div class="list-item">
+                                        <div class="marker"></div>
+                                        <div class="title-wrap">
+                                            <h5 class="title lang-es" style="display:none;">Diseño de Infraestructura</h5>
+                                            <h5 class="title lang-en">Infrastructure Design</h5>
+                                            <div class="desc lang-es" style="display:none;">El diseño de infraestructura implica planificar e implementar el entorno tecnológico subyacente que soporta las aplicaciones de software. Este servicio incluye diseñar redes, servidores, soluciones de almacenamiento y arquitecturas en la nube para asegurar un rendimiento óptimo, confiabilidad y seguridad. El diseño de infraestructura toma en cuenta factores como escalabilidad, recuperación ante desastres y rentabilidad. Una infraestructura robusta es esencial para proporcionar una base estable para las operaciones de software y permitir una integración perfecta con los sistemas existentes.</div>
+                                            <div class="desc lang-en">Infrastructure design involves planning and implementing the underlying technology environment that supports software applications. This service includes designing networks, servers, storage solutions, and cloud architectures to ensure optimal performance, reliability, and security. Infrastructure design takes into account factors like scalability, disaster recovery, and cost-effectiveness. A robust infrastructure is essential for providing a stable foundation for software operations and enabling seamless integration with existing systems.</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="marker"></div>
+                                        <div class="title-wrap">
+                                            <h5 class="title lang-es" style="display:none;">Capacitación de Usuarios Finales</h5>
+                                            <h5 class="title lang-en">Final User Training</h5>
+                                            <div class="desc lang-es" style="display:none;">La capacitación de usuarios finales se enfoca en educar a los usuarios finales sobre cómo usar efectivamente una aplicación de software. Este servicio incluye desarrollar materiales de capacitación, realizar sesiones prácticas y proporcionar soporte continuo para asegurar que los usuarios se sientan cómodos y sean competentes con el nuevo sistema. La capacitación puede personalizarse para diferentes roles de usuario y niveles de habilidad, cubriendo temas como funcionalidad básica, características avanzadas y mejores prácticas. La capacitación efectiva ayuda a maximizar la adopción del usuario y asegura una transición suave al nuevo software.</div>
+                                            <div class="desc lang-en">Final user training focuses on educating end-users on how to effectively use a software application. This service includes developing training materials, conducting hands-on sessions, and providing ongoing support to ensure users are comfortable and proficient with the new system. Training can be customized to different user roles and skill levels, covering topics like basic functionality, advanced features, and best practices. Effective training helps maximize user adoption and ensures a smooth transition to the new software.</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="marker"></div>
+                                        <div class="title-wrap">
+                                            <h5 class="title lang-es" style="display:none;">Soporte a Usuarios Finales</h5>
+                                            <h5 class="title lang-en">Support to Final Users</h5>
+                                            <div class="desc lang-es" style="display:none;">El soporte a usuarios finales implica proporcionar asistencia y resolución de problemas para los usuarios finales después de que se implementa una aplicación de software. Este servicio incluye ofrecer soporte de mesa de ayuda, resolver problemas técnicos y atender consultas de usuarios. El soporte puede proporcionarse a través de varios canales, como correo electrónico, teléfono, chat en vivo o un portal de soporte dedicado. El soporte de usuario oportuno y eficiente es crucial para mantener la satisfacción del usuario, minimizar el tiempo de inactividad y asegurar que el software continúe satisfaciendo las necesidades del usuario.</div>
+                                            <div class="desc lang-en">Support to final users involves providing assistance and troubleshooting for end-users after a software application is deployed. This service includes offering helpdesk support, resolving technical issues, and addressing user queries. Support can be provided through various channels, such as email, phone, live chat, or a dedicated support portal. Timely and efficient user support is crucial for maintaining user satisfaction, minimizing downtime, and ensuring the software continues to meet user needs.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--========= About Resources Wrapper Start ===========-->
+                <!-- <div class="about-resources-wrapper">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 order-2 order-lg-1">
+                                <div class="resources-left-box">
+                                    <div class="resources-inner">
+                                        <h6 class="sub-title mb-20">Resources</h6>
+                                        <h3 class="heading">Get a copy of the brochure of our strategy development...</h3>
+                                        <div class="button mt-30">
+                                            <a href="#contact-us" class="ht-btn ht-btn-md">Coming Soon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2">
+                                <div class="resources-right-box">
+                                    <div class="resources-right-inner text-center">
+                                        <div class="resources-images">
+                                            <img class="img-fluid" src="assets/images/facware/resources_facware.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!--========= About Resources Wrapper End ===========-->
+                <!--====================  testimonial section ====================-->
+                <div class="testimonial-slider-area section-space--pt_100">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-title-wrap text-center section-space--mb_40">
+                                    <h6 class="section-sub-title mb-20 lang-es" style="display:none;">Testimonios</h6>
+                                    <h6 class="section-sub-title mb-20 lang-en">Testimonials</h6>
+                                    <h3 class="heading lang-es" style="display:none;">¿Qué es lo que la gente elogia sobre <span class="text-color-primary">Facware?</span></h3>
+                                    <h3 class="heading lang-en">What do people praise about <span class="text-color-primary">Facware?</span></h3>
+                                </div>
+                                <div class="testimonial-slider">
+                                    <div class="swiper-container testimonial-slider__container">
+                                        <div class="swiper-wrapper testimonial-slider__wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="testimonial-slider__one wow move-up">
+
+                                                    <div class="testimonial-slider--info">
+                                                        <div class="testimonial-slider__media">
+                                                            <img src="assets/images/testimonial/mitech-testimonial-avata-02-90x90.webp" class="img-fluid" alt="Javier Domínguez - Facware Client Testimonial" loading="lazy" width="90" height="90">
+                                                        </div>
+
+                                                        <div class="testimonial-slider__author">
+                                                            <div class="testimonial-rating">
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                            </div>
+                                                            <div class="author-info">
+                                                                <h6 class="name">Javier Domínguez</h6>
+                                                                <!-- <span class="designation">Marketing</span> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="testimonial-slider__text lang-es" style="display:none;">Las soluciones de software de Facware han transformado nuestras operaciones comerciales. ¡Su compromiso con la excelencia y la innovación es realmente impresionante!</div>
+                                                    <div class="testimonial-slider__text lang-en">Facware's software solutions have transformed our business operations. Their commitment to excellence and innovation is truly impressive!</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="testimonial-slider__one wow move-up">
+
+                                                    <div class="testimonial-slider--info">
+                                                        <div class="testimonial-slider__media">
+                                                            <img src="assets/images/testimonial/mitech-testimonial-avata-03-90x90.webp" class="img-fluid" alt="Monica Blews - Facware Client Testimonial" loading="lazy" width="90" height="90">
+                                                        </div>
+
+                                                        <div class="testimonial-slider__author">
+                                                            <div class="testimonial-rating">
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                            </div>
+                                                            <div class="author-info">
+                                                                <h6 class="name">Monica Blews</h6>
+                                                                <!-- <span class="designation">Web designer</span> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="testimonial-slider__text lang-es" style="display:none;">El equipo de Facware es increíblemente talentoso y profesional. Su software es fácil de usar y ha mejorado significativamente nuestra productividad.</div>
+                                                    <div class="testimonial-slider__text lang-en">The team at Facware is incredibly talented and professional. Their software is user-friendly and has significantly improved our productivity.</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="testimonial-slider__one wow move-up">
+
+                                                    <div class="testimonial-slider--info">
+                                                        <div class="testimonial-slider__media">
+                                                            <img src="assets/images/testimonial/mitech-testimonial-avata-04-90x90.webp" class="img-fluid" alt="Abbie Ferguson - Facware Client Testimonial" loading="lazy" width="90" height="90">
+                                                        </div>
+
+                                                        <div class="testimonial-slider__author">
+                                                            <div class="testimonial-rating">
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                            </div>
+                                                            <div class="author-info">
+                                                                <h6 class="name">Abbie Ferguson</h6>
+                                                                <!-- <span class="designation">WEB DESIGNER</span> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="testimonial-slider__text lang-es" style="display:none;">El soporte al cliente de Facware es de primera clase. Siempre son receptivos y serviciales, asegurando que obtengamos el máximo provecho de su software.</div>
+                                                    <div class="testimonial-slider__text lang-en">Facware's customer support is top-notch. They are always responsive and helpful, ensuring we get the most out of their software.</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="testimonial-slider__one wow move-up">
+
+                                                    <div class="testimonial-slider--info">
+                                                        <div class="testimonial-slider__media">
+                                                            <img src="assets/images/testimonial/mitech-testimonial-avata-01-90x90.webp" class="img-fluid" alt="Diego Navarro - Facware Client Testimonial" loading="lazy" width="90" height="90">
+                                                        </div>
+
+                                                        <div class="testimonial-slider__author">
+                                                            <div class="testimonial-rating">
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                            </div>
+                                                            <div class="author-info">
+                                                                <h6 class="name">Diego Navarro</h6>
+                                                                <!-- <span class="designation">WEB DESIGNER</span> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="testimonial-slider__text lang-es" style="display:none;">Estamos encantados con la integración perfecta del software de Facware en nuestros sistemas existentes. Ha marcado una gran diferencia en nuestra eficiencia.</div>
+                                                    <div class="testimonial-slider__text lang-en">We are thrilled with the seamless integration of Facware's software into our existing systems. It has made a huge difference in our efficiency.</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination swiper-pagination-t01 section-space--mt_30"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====================  End of testimonial section  ====================-->
+
+                <!--====================  brand logo slider area ====================-->
+                <div class="brand-logo-slider-area section-space--ptb_60">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- brand logo slider -->
+                                <div class="brand-logo-slider__container-area">
+                                    <div class="swiper-container brand-logo-slider__container">
+                                        <div class="swiper-wrapper brand-logo-slider__one">
+                                            <div class="swiper-slide brand-logo brand-logo--slider">
+                                                <a href="#">
+                                                    <div class="brand-logo__image">
+                                                        <img src="assets/images/facware/customers/festa.png" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="brand-logo__image-hover">
+                                                        <img src="assets/images/facware/customers/festa.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide brand-logo brand-logo--slider">
+                                                <a href="#">
+                                                    <div class="brand-logo__image">
+                                                        <img src="assets/images/facware/customers/grammarschool.jpg" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="brand-logo__image-hover">
+                                                        <img src="assets/images/facware/customers/grammarschool.jpg" class="img-fluid" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide brand-logo brand-logo--slider">
+                                                <a href="#">
+                                                    <div class="brand-logo__image">
+                                                        <img src="assets/images/facware/customers/scrapadvisor.png" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="brand-logo__image-hover">
+                                                        <img src="assets/images/facware/customers/scrapadvisor.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide brand-logo brand-logo--slider">
+                                                <a href="#">
+                                                    <div class="brand-logo__image">
+                                                        <img src="assets/images/facware/customers/proffer.png" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="brand-logo__image-hover">
+                                                        <img src="assets/images/facware/customers/proffer.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide brand-logo brand-logo--slider">
+                                                <a href="#">
+                                                    <div class="brand-logo__image">
+                                                        <img src="assets/images/facware/customers/sista.png" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="brand-logo__image-hover">
+                                                        <img src="assets/images/facware/customers/sista.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide brand-logo brand-logo--slider">
+                                                <a href="#">
+                                                    <div class="brand-logo__image">
+                                                        <img src="assets/images/facware/customers/vikingsdrywall.png" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="brand-logo__image-hover">
+                                                        <img src="assets/images/facware/customers/vikingsdrywall.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide brand-logo brand-logo--slider">
+                                                <a href="#">
+                                                    <div class="brand-logo__image">
+                                                        <img src="assets/images/facware/customers/partyzone.png" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="brand-logo__image-hover">
+                                                        <img src="assets/images/facware/customers/partyzone.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide brand-logo brand-logo--slider">
+                                                <a href="#">
+                                                    <div class="brand-logo__image">
+                                                        <img src="assets/images/facware/customers/buildbinder.png" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="brand-logo__image-hover">
+                                                        <img src="assets/images/facware/customers/buildbinder.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide brand-logo brand-logo--slider">
+                                                <a href="#">
+                                                    <div class="brand-logo__image">
+                                                        <img src="assets/images/facware/customers/3pillar_logo.jpeg" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="brand-logo__image-hover">
+                                                        <img src="assets/images/facware/customers/3pillar_logo.jpeg" class="img-fluid" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide brand-logo brand-logo--slider">
+                                                <a href="#">
+                                                    <div class="brand-logo__image">
+                                                        <img src="assets/images/facware/customers/tiempo_development.jpeg" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="brand-logo__image-hover">
+                                                        <img src="assets/images/facware/customers/tiempo_development.jpeg" class="img-fluid" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====================  End of brand logo slider area  ====================-->
+                <!--============ Contact Us Area Start =================-->
+                <div class="contact-us-area service-contact-bg section-space--ptb_100" id="contact-us">
+                    <div class="container">
+                        <div class="row align-items-center">
+
+                            <div class="col-lg-4 me-auto">
+                                <div class="contact-info sytle-one text-left">
+
+                                    <div class="contact-info-title-wrap text-center">
+                                        <h3 class="heading text-white mb-10">4.6/5.0</h3>
+                                        <div class="ht-star-rating lg-style">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <!-- <p class="sub-text">by 700+ customers for 3200+ clients</p> -->
+                                    </div>
+
+                                    <div class="contact-list-item">
+                                        <!-- <a href="tel:190068668" class="single-contact-list">
+                                            <div class="content-wrap">
+                                                <div class="content">
+                                                    <div class="icon">
+                                                        <span class="fas fa-phone"></span>
+                                                    </div>
+                                                    <div class="main-content">
+                                                        <h6 class="heading">Call for advice now!</h6>
+                                                        <div class="text">Coming soon..</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a> -->
+                                        <a href="mailto:contact@facware.com" class="single-contact-list">
+                                            <div class="content-wrap">
+                                                <div class="content">
+                                                    <div class="icon">
+                                                        <span class="far fa-envelope"></span>
+                                                    </div>
+                                                    <div class="main-content">
+                                                        <h6 class="heading">Say hello</h6>
+                                                        <div class="text">contact@facware.com</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-5 me-auto ms-auto">
+                                <div class="business-solution-form-wrap">
+                                    <div class="contact-title text-center section-space--mb_40">
+                                        <h5 class="mb-10">Book appointment</h5>
+                                        <p class="text">It's out pleasure to have a chance to cooperate. Please send us an email.</p>
+                                    </div>
+
+                                    <!-- <script>
+                                        document.getElementById('contact-form').addEventListener('submit', function(event) {
+                                            event.preventDefault();
+
+                                            const name = document.querySelector('input[name="con_name"]').value;
+                                            const email = document.querySelector('input[name="con_email"]').value;
+                                            const message = document.querySelector('textarea[name="con_message"]').value;
+
+                                            const mailtoLink = `mailto:contact@facware.com?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
+console.log(mailtoLink);
+                                            window.location.href = mailtoLink;
+                                        });
+                                    </script> -->
+
+
+<!-- <form >
+
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <textarea name="message" required></textarea>
+    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+    <button type="submit">Submit Form</button>
+
+</form> -->
+                                    <!-- Contact Form with Web3Forms -->
+                                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                                        
+                                        <!-- Web3Forms Access Key - REPLACE WITH YOUR OWN -->
+                                        <input type="hidden" name="access_key" value="63d81c5d-43bf-4748-83db-678aab892576">
+                                        
+                                        <!-- Redirect after submission -->
+                                        <input type="hidden" name="redirect" value="https://www.facware.com/thank-you.html">
+                                        
+                                        <!-- Subject Line -->
+                                        <input type="hidden" name="subject" value="Nuevo contacto desde Facware.com">
+                                        
+                                        <!-- From Name -->
+                                        <input type="hidden" name="from_name" value="Formulario Facware">
+
+                                        <div class="contact-form__two">
+                                            <div class="contact-input">
+                                                <div class="contact-inner">
+                                                    <input 
+                                                        id="name-es"
+                                                        name="name" 
+                                                        type="text" 
+                                                        class="lang-es" style="display:none;" 
+                                                        placeholder="Nombre completo *" 
+                                                        required
+                                                        minlength="3"
+                                                        aria-label="Nombre completo">
+                                                    <input 
+                                                        id="name-en"
+                                                        name="name" 
+                                                        type="text" 
+                                                        class="lang-en" 
+                                                        placeholder="Full name *" 
+                                                        required
+                                                        minlength="3"
+                                                        aria-label="Full name">
+                                                </div>
+                                                <div class="contact-inner">
+                                                    <input 
+                                                        id="email-es"
+                                                        name="email" 
+                                                        type="email" 
+                                                        class="lang-es" style="display:none;" 
+                                                        placeholder="Correo electrónico *" 
+                                                        required
+                                                        aria-label="Correo electrónico">
+                                                    <input 
+                                                        id="email-en"
+                                                        name="email" 
+                                                        type="email" 
+                                                        class="lang-en" 
+                                                        placeholder="Email address *" 
+                                                        required
+                                                        aria-label="Email address">
+                                                </div>
+                                            </div>
+                                            <div class="contact-inner">
+                                                <input 
+                                                    id="phone-es"
+                                                    name="phone" 
+                                                    type="tel" 
+                                                    class="lang-es" style="display:none;" 
+                                                    placeholder="Teléfono (opcional)" 
+                                                    pattern="[0-9]{10}"
+                                                    aria-label="Teléfono">
+                                                <input 
+                                                    id="phone-en"
+                                                    name="phone" 
+                                                    type="tel" 
+                                                    class="lang-en" 
+                                                    placeholder="Phone (optional)" 
+                                                    pattern="[0-9]{10}"
+                                                    aria-label="Phone number">
+                                            </div>
+                                            <div class="contact-select">
+                                                <div class="form-item contact-inner">
+                                                    <select id="service-es" name="service" class="lang-es" style="display:none;" required aria-label="Selecciona un servicio">
+                                                        <option value="" disabled selected>Selecciona un servicio *</option>
+                                                        <option value="Desarrollo Web">Desarrollo Web</option>
+                                                        <option value="Aplicaciones Móviles">Aplicaciones Móviles</option>
+                                                        <option value="Consultoría IT">Consultoría IT</option>
+                                                        <option value="Cloud Computing">Cloud Computing</option>
+                                                        <option value="Integración de Sistemas">Integración de Sistemas</option>
+                                                        <option value="Automatización">Automatización</option>
+                                                        <option value="Otro">Otro</option>
+                                                    </select>
+                                                    <select id="service-en" name="service" class="lang-en" required aria-label="Select a service">
+                                                        <option value="" disabled selected>Select a service *</option>
+                                                        <option value="Web Development">Web Development</option>
+                                                        <option value="Mobile Applications">Mobile Applications</option>
+                                                        <option value="IT Consulting">IT Consulting</option>
+                                                        <option value="Cloud Computing">Cloud Computing</option>
+                                                        <option value="System Integration">System Integration</option>
+                                                        <option value="Automation">Automation</option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="contact-inner contact-message">
+                                                <textarea 
+                                                    id="message-es"
+                                                    name="message" 
+                                                    class="lang-es" style="display:none;" 
+                                                    placeholder="Cuéntanos sobre tu proyecto *" 
+                                                    required
+                                                    minlength="20"
+                                                    rows="5"
+                                                    aria-label="Mensaje del proyecto"></textarea>
+                                                <textarea 
+                                                    id="message-en"
+                                                    name="message" 
+                                                    class="lang-en" 
+                                                    placeholder="Tell us about your project *" 
+                                                    required
+                                                    minlength="20"
+                                                    rows="5"
+                                                    aria-label="Project message"></textarea>
+                                            </div>
+                                            
+                                            <!-- Honeypot for spam protection -->
+                                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                            
+                                            <div class="comment-submit-btn">
+                                                <button class="ht-btn ht-btn-md submit-btn" type="submit" id="submit-btn" aria-label="Submit contact form">
+                                                    <span class="lang-es" style="display:none;">Enviar mensaje</span>
+                                                    <span class="lang-en">Send message</span>
+                                                </button>
+                                            </div>
+                                            <div class="form-response">
+                                                <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+                                            </div>
+                                        </div>
+                                    </form>
+
+<!--
+                                        <a class="ht-btn ht-btn-md" href="mailto:contact@facware.com?subject=Appointment%20Request&body=Please%20provide%20details%20about%20your%20request.">Send Email</a> -->
+                                    <!-- <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                                        <input type="hidden" name="apikey" value="6040927a-83d6-4234-ba58-09987be98487">
+
+                                        <div class="contact-form__two">
+                                            <div class="contact-input">
+                                                <div class="contact-inner">
+                                                    <input name="name" type="text" placeholder="Name *">
+                                                </div>
+                                                <div class="contact-inner">
+                                                    <input name="email" type="email" placeholder="Email *">
+                                                </div>
+                                            </div>
+                                            <div class="contact-select">
+                                                <div class="form-item contact-inner">
+                                                    <span class="inquiry">
+                                        <- <select id="Visiting" name="Visiting">
+                                            <option disabled selected>Select Department to email</option>
+                                            <option value="Your inquiry about">Your inquiry about</option>
+                                            <option value="General Information Request">General Information Request</option>
+                                            <option value="Partner Relations">Partner Relations</option>
+                                            <option value="Careers">Careers</option>
+                                            <option value="Software Licencing">Software Licencing</option>
+                                        </select> --
+
+                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="contact-inner contact-message">
+                                                <textarea name="message" placeholder="Please describe what you need."></textarea>
+                                            </div>
+                                            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                                            <div class="comment-submit-btn">
+                                                <button class="ht-btn ht-btn-md" type="submit">Get a free consultation</button>
+                                                <p class="form-messege"></p>
+                                            </div>
+                                        </div>
+                                    </form> -->
+                                    <!-- <script>
+                                        document.getElementById('contact-form').addEventListener('submit', function(event) {
+                                            event.preventDefault();
+
+                                            const form = event.target;
+                                            const formData = new FormData(form);
+
+                                            // fetch(form.action, {
+                                            //     method: form.method,
+                                            //     body: formData,
+                                            //     headers: {
+                                            //         'Accept': 'application/json'
+                                            //     }
+                                            // }).then(response => {
+                                            //     if (response.ok) {
+                                            //         form.reset();
+                                            //         //alert('Thank you for your message. It has been sent.');
+                                            //     } else {
+                                            //         //alert('There was a problem with your submission. Please try again.');
+                                            //         form.reset();
+                                            //     }
+                                            // }).catch(error => {
+                                            //     form.reset();
+                                            //     //alert('There was a problem with your submission. Please try again.');
+                                            // });
+                                        });
+                                    </script> -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--============ Contact Us Area End =================-->
+            </div>
+        </div>
+
+        <!--====================  footer area ====================-->
+        <div class="footer-area-wrapper reveal-footer bg-gray">
+            <div class="footer-area section-space--ptb_80">
+                <div class="container">
+                    <div class="row footer-widget-wrapper">
+                        <div class="col-lg-4 col-md-6 col-sm-6 footer-widget">
+                            <div class="footer-widget__logo mb-30">
+                                <img src="assets/images/facware/home_logo.png" width="160" height="48" class="img-fluid" alt="">
+                            </div>
+                            <ul class="footer-widget__list">
+                                <li>Chihuahua, Chihuahua, México</li>
+                                <li><a href="mailto:contact@facware" class="hover-style-link">contact@facware.com</a></li>
+                                <li><a href="#" class="hover-style-link text-black font-weight--bold">Coming Soon...</a></li>
+                                <li><a href="https://facware.com" class="hover-style-link text-color-primary">Powered by Facware</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
+                            <h6 class="footer-widget__title mb-20 lang-es" style="display:none;">Servicios IT</h6>
+                            <h6 class="footer-widget__title mb-20 lang-en">IT Services</h6>
+                            <ul class="footer-widget__list">
+                                <!-- <li><a href="#" class="hover-style-link">Managed IT</a></li>
+                                <li><a href="#" class="hover-style-link">IT Support</a></li>
+                                <li><a href="#" class="hover-style-link">IT Consultancy</a></li>
+                                <li><a href="#" class="hover-style-link">Cloud Computing</a></li>
+                                <li><a href="#" class="hover-style-link">Cyber Security</a></li> -->
+
+                                <li><a href="#facware_services" class="hover-style-link lang-es" style="display:none;">Servicios IT</a></li>
+                                <li><a href="#facware_services" class="hover-style-link lang-en">IT Services</a></li>
+                                <li><a href="#facware_features" class="hover-style-link lang-es" style="display:none;">Características IT</a></li>
+                                <li><a href="#facware_features" class="hover-style-link lang-en">IT Features</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
+                            <h6 class="footer-widget__title mb-20 lang-es" style="display:none;">Enlaces Rápidos</h6>
+                            <h6 class="footer-widget__title mb-20 lang-en">Quick links</h6>
+                            <ul class="footer-widget__list">
+                                <!-- <li><a href="#" class="hover-style-link">Pick up locations</a></li> -->
+                                <li><a href="#" class="hover-style-link lang-es" style="display:none;">Términos de Pago</a></li>
+                                <li><a href="#" class="hover-style-link lang-en">Terms of Payment</a></li>
+                                <li><a href="#" class="hover-style-link lang-es" style="display:none;">Política de Privacidad</a></li>
+                                <li><a href="#" class="hover-style-link lang-en">Privacy Policy</a></li>
+                                <li><a href="#" class="hover-style-link lang-es" style="display:none;">Dónde Encontrarnos</a></li>
+                                <li><a href="#" class="hover-style-link lang-en">Where to Find Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
+                            <h6 class="footer-widget__title mb-20 lang-es" style="display:none;">Soporte</h6>
+                            <h6 class="footer-widget__title mb-20 lang-en">Support</h6>
+                            <ul class="footer-widget__list">
+                                <!-- <li><a href="#" class="hover-style-link">Forum Support</a></li> -->
+                                <li><a href="#" class="hover-style-link lang-es" style="display:none;">Ayuda y Preguntas Frecuentes</a></li>
+                                <li><a href="#" class="hover-style-link lang-en">Help & FAQ</a></li>
+                                <li><a href="#contact-us" class="hover-style-link lang-es" style="display:none;">Contáctanos</a></li>
+                                <li><a href="#contact-us" class="hover-style-link lang-en">Contact Us</a></li>
+                                <!-- <li><a href="#" class="hover-style-link">Pricing and plans</a></li> -->
+                                <li><a href="#" class="hover-style-link lang-es" style="display:none;">Política de Cookies</a></li>
+                                <li><a href="#" class="hover-style-link lang-en">Cookies Policy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
+                            <h6 class="footer-widget__title mb-20">Síguenos / Follow Us</h6>
+                            <ul class="footer-widget__list">
+                                <li class="mb-3">
+                                    <a href="https://www.linkedin.com/company/facware" target="_blank" rel="noopener" class="hover-style-link">
+                                        <i class="fab fa-linkedin text-color-primary me-2"></i> LinkedIn
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="https://wa.me/5216142542471" target="_blank" rel="noopener" class="hover-style-link">
+                                        <i class="fab fa-whatsapp text-success me-2"></i> WhatsApp
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="https://www.facebook.com/facware" target="_blank" rel="noopener" class="hover-style-link">
+                                        <i class="fab fa-facebook text-primary me-2"></i> Facebook
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- <ul class="footer-widget__list">
+                                <li><a href="#" class="image_btn" aria-label="Google play Button"><img class="img-fluid" src="assets/images/icons/aeroland-button-google-play.webp" alt=""></a></li>
+                                <li><a href="#" class="image_btn" aria-label="App Store Button"><img class="img-fluid" src="assets/images/icons/aeroland-button-app-store.webp" alt=""></a></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright-area section-space--pb_30">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-md-6 text-center text-md-start">
+                            <span class="copyright-text lang-es" style="display:none;">&copy; 2025 Facware. <a href="https://facware.com/">Todos los Derechos Reservados.</a></span>
+                            <span class="copyright-text lang-en">&copy; 2025 Facware. <a href="https://facware.com/">All Rights Reserved.</a></span>
+                        </div>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                const currentYear = new Date().getFullYear();
+                                const copyrightEs = document.querySelector(".copyright-text.lang-es");
+                                const copyrightEn = document.querySelector(".copyright-text.lang-en");
+                                if (copyrightEs) {
+                                    copyrightEs.innerHTML = `&copy; ${currentYear} Facware. <a href="https://facware.com/">Todos los Derechos Reservados.</a>`;
+                                }
+                                if (copyrightEn) {
+                                    copyrightEn.innerHTML = `&copy; ${currentYear} Facware. <a href="https://facware.com/">All Rights Reserved.</a>`;
+                                }
+                            });
+                        </script>
+
+
+                        <div class="col-md-6 text-center text-md-end">
+                            <ul class="list ht-social-networks solid-rounded-icon">
+
+                                <!-- <li class="item">
+                                    <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="social-link hint--bounce hint--top hint--primary">
+                                        <i class="fab fa-twitter link-icon"></i>
+                                    </a>
+                                </li> -->
+                                <li class="item">
+                                    <a href="https://www.facebook.com/facware" target="_blank" aria-label="Facebook" class="social-link hint--bounce hint--top hint--primary">
+                                        <i class="fab fa-facebook-f link-icon"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="item">
+                                    <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-link hint--bounce hint--top hint--primary">
+                                        <i class="fab fa-instagram link-icon"></i>
+                                    </a>
+                                </li> -->
+                                <li class="item">
+                                    <a href="https://www.linkedin.com/company/18322494/admin/page-posts/published/" target="_blank" aria-label="Linkedin" class="social-link hint--bounce hint--top hint--primary">
+                                        <i class="fab fa-linkedin link-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--====================  End of footer area  ====================-->
     </div>
   </footer>
 
@@ -455,50 +1978,248 @@
     <i class="fas fa-chevron-up" aria-hidden="true"></i>
   </a>
 
-  <!-- MINIMAL JS -->
-  <script>
-    (function(){
-      'use strict';
-      // Nav toggle
-      var toggle=document.getElementById('nav-toggle'),menu=document.getElementById('nav-menu');
-      if(toggle&&menu){
-        toggle.addEventListener('click',function(){var e=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!e));menu.classList.toggle('is-open');});
-        menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){toggle.setAttribute('aria-expanded','false');menu.classList.remove('is-open');});});
-        document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('is-open')){toggle.setAttribute('aria-expanded','false');menu.classList.remove('is-open');toggle.focus();}});
-      }
-      // Testimonial carousel
-      var track=document.getElementById('testimonials-track'),dotsWrap=document.getElementById('tc-dots'),prevBtn=document.getElementById('tc-prev'),nextBtn=document.getElementById('tc-next');
-      if(track&&dotsWrap&&prevBtn&&nextBtn){
-        var slides=track.querySelectorAll('.testimonial'),current=0,timer;
-        slides.forEach(function(_,i){var d=document.createElement('button');d.className='tc-dot'+(i===0?' active':'');d.setAttribute('role','tab');d.setAttribute('aria-label','Go to testimonial '+(i+1));d.setAttribute('aria-selected',String(i===0));d.addEventListener('click',function(){goTo(i);});dotsWrap.appendChild(d);});
-        function goTo(i){current=(i+slides.length)%slides.length;track.style.transform='translateX(-'+(current*100)+'%)';dotsWrap.querySelectorAll('.tc-dot').forEach(function(d,j){d.classList.toggle('active',j===current);d.setAttribute('aria-selected',String(j===current));});}
-        prevBtn.addEventListener('click',function(){goTo(current-1);});
-        nextBtn.addEventListener('click',function(){goTo(current+1);});
-        function start(){timer=setInterval(function(){goTo(current+1);},6000);}
-        function stop(){clearInterval(timer);}
-        start();
-        var region=track.closest('[role="region"]')||track.parentElement;
-        region.addEventListener('mouseenter',stop);region.addEventListener('mouseleave',start);
-        region.addEventListener('focusin',stop);region.addEventListener('focusout',start);
-        var sx=0;
-        track.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
-        track.addEventListener('touchend',function(e){var d=sx-e.changedTouches[0].clientX;if(Math.abs(d)>48)goTo(d>0?current+1:current-1);});
-      }
-      // Copyright year
-      var y=document.getElementById('copyright-year');if(y)y.textContent=new Date().getFullYear();
-      // Scroll-to-top
-      var sb=document.getElementById('scroll-top');
-      if(sb)window.addEventListener('scroll',function(){sb.classList.toggle('visible',window.scrollY>400);},{passive:true});
-      // Header shadow
-      var sh=document.querySelector('.site-header');
-      if(sh)window.addEventListener('scroll',function(){sh.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
-      // Intersection observer animations
-      if('IntersectionObserver' in window){
-        var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-        document.querySelectorAll('.card,.step-item,.stat-item,.results-list li').forEach(function(el){el.classList.add('animate-on-scroll');obs.observe(el);});
-      }
-    }());
-  </script>
+    <!--====================  mobile menu overlay ====================-->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-overlay__inner">
+            <div class="mobile-menu-overlay__header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-8">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="assets/images/facware/home_logo.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4">
+                            <!-- mobile menu content -->
+                            <div class="mobile-menu-content text-end">
+                                <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-overlay__body">
+                <nav class="offcanvas-navigation">
+                    <ul>
+                        <li class="has-children">
+                            <a href="#">Home</a>
+                            <!-- <ul class="sub-menu">
+                                <li><a href="index-infotechno.html"><span>Infotechno</span></a></li>
+                                <li><a href="index-processing.html"><span>Processing</span></a></li>
+                                <li><a href="index-appointment.html"><span>Appointment</span></a></li>
+                                <li><a href="index-services.html"><span>Services</span></a></li>
+                                <li><a href="index-resolutions.html"><span>Resolutions</span></a></li>
+                                <li><a href="index-cybersecurity.html"><span>cybersecurity</span></a></li>
+                                <li><a href="index-modern-it-company.html"><span>Modern IT Company</span></a></li>
+                                <li><a href="index-machine-learning.html"><span>Machine Learning</span></a></li>
+                                <li><a href="index-software-innovation.html"><span>Software Innovation</span></a></li>
+                            </ul> -->
+                        </li>
+                        <!-- <li class="has-children">
+                            <a href="#">Company</a>
+                            <ul class="sub-menu">
+                                <li class="has-children">
+                                    <a href="about-us-01.html"><span>About us</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about-us-01.html"><span>About us 01</span></a></li>
+                                        <li><a href="about-us-02.html"><span>About us 02</span></a></li>
+                                        <li class="has-children">
+                                            <a href="#"><span>Submenu Level Two</span></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                                <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                                <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact-us.html"><span>Contact us</span></a></li>
+                                <li><a href="leadership.html"><span>Leadership</span></a></li>
+                                <li><a href="why-choose-us.html"><span>Why choose us</span></a></li>
+                                <li><a href="our-history.html"><span>Our history</span></a></li>
+                                <li><a href="faqs.html"><span>FAQs</span></a></li>
+                                <li><a href="careers.html"><span>Careers</span></a></li>
+                                <li><a href="pricing-plans.html"><span>Pricing plans</span></a></li>
+                            </ul>
+                        </li> -->
+                        <li class="has-children">
+                            <a href="#">IT solutions</a>
+                            <ul class="sub-menu">
+                                <!-- <li><a href="it-services.html"><span>IT Services</span></a></li>
+                                <li><a href="managed-it-service.html"><span>Managed IT Services</span></a></li>
+                                <li><a href="industries.html"><span>Industries</span></a></li>
+                                <li><a href="business-solution.html"><span>Business solution</span></a></li>
+                                <li><a href="it-services-details.html"><span>IT Services Details</span></a></li> -->
+
+                                <li><a href="#facware_services"><span>IT Services</span></a></li>
+                                <li><a href="#facware_features"><span>IT Features</span></a></li>
+                            </ul>
+                        </li>
+                        <!-- <li class="has-children">
+                            <a href="#">Elements</a>
+                            <ul class="sub-menu">
+                                <li class="has-children">
+                                    <a href="#">Element Group 01</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="element-accordion.html"><span>Accordions & Toggles</span></a></li>
+                                        <li><a href="element-box-icon.html"><span>Box Icon</span></a></li>
+                                        <li><a href="element-box-image.html"><span>Box Image</span></a></li>
+                                        <li><a href="element-box-large-image.html"><span>Box Large Image</span></a></li>
+                                        <li><a href="element-buttons.html"><span>Buttons</span></a></li>
+                                        <li><a href="element-cta.html"><span>Call to action</span></a></li>
+                                        <li><a href="element-client-logo.html"><span>Client Logo</span></a></li>
+                                        <li><a href="element-countdown.html"><span>Countdown</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#">Element Group 02</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="element-counters.html"><span>Counters</span></a></li>
+                                        <li><a href="element-dividers.html"><span>Dividers</span></a></li>
+                                        <li><a href="element-flexible-image-slider.html"><span>Flexible image slider</span></a></li>
+                                        <li><a href="element-google-map.html"><span>Google Map</span></a></li>
+                                        <li><a href="element-gradation.html"><span>Gradation</span></a></li>
+                                        <li><a href="element-instagram.html"><span>Instagram</span></a></li>
+                                        <li><a href="element-lists.html"><span>Lists</span></a></li>
+                                        <li><a href="element-message-box.html"><span>Message box</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#">Element Group 03</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="element-popup-video.html"><span>Popup Video</span></a></li>
+                                        <li><a href="element-pricing-box.html"><span>Pricing Box</span></a></li>
+                                        <li><a href="element-progress-bar.html"><span>Progress Bar</span></a></li>
+                                        <li><a href="element-progress-circle.html"><span>Progress Circle</span></a></li>
+                                        <li><a href="element-rows-columns.html"><span>Rows & Columns</span></a></li>
+                                        <li><a href="element-social-networks.html"><span>Social Networks</span></a></li>
+                                        <li><a href="element-tabs.html"><span>Tabs</span></a></li>
+                                        <li><a href="element-team-member.html"><span>Team member</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#">Element Group 04</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="element-testimonials.html"><span>Testimonials</span></a></li>
+                                        <li><a href="element-timeline.html"><span>Timeline</span></a></li>
+                                        <li><a href="element-carousel-sliders.html"><span>Carousel Sliders</span></a></li>
+                                        <li><a href="element-typed-text.html"><span>Typed Text</span></a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li> -->
+                        <!-- <li class="has-children">
+                            <a href="javascript:void(0)">Case Studies</a>
+                            <ul class="sub-menu">
+                                <li><a href="case-studies.html"><span>Case Studies 01</span></a></li>
+                                <li><a href="case-studies-02.html"><span>Case Studies 02</span></a></li>
+                                <li><a href="single-smart-vision.html"><span>Single Layout</span></a></li>
+                            </ul>
+                        </li> -->
+                        <!-- <li class="has-children">
+                            <a href="javascript:void(0)">Blogs</a>
+                            <ul class="sub-menu">
+                                <li><a href="blog-list-large-image.html"><span>List Large Image</span></a></li>
+                                <li><a href="blog-list-left-large-image.html"><span>Left Large Image</span></a></li>
+                                <li><a href="blog-grid-classic.html"><span>Grid Classic</span></a></li>
+                                <li><a href="blog-grid-masonry.html"><span>Grid Masonry</span></a></li>
+                                <li class="has-children">
+                                    <a href="blog-post-layout-one.html"><span>Single Layouts</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog-post-layout-one.html"><span>Left Sidebar</span></a></li>
+                                        <li><a href="blog-post-right-sidebar.html"><span>Right Sidebar</span></a></li>
+                                        <li><a href="blog-post-no-sidebar.html"><span>No Sidebar</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of mobile menu overlay  ====================-->
+
+
+
+
+
+
+
+    <!--====================  search overlay ====================-->
+    <div class="search-overlay" id="search-overlay">
+
+        <div class="search-overlay__header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-6 ms-auto col-4">
+                        <!-- search content -->
+                        <div class="search-content text-end">
+                            <span class="mobile-navigation-close-icon" id="search-close-trigger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-overlay__inner">
+            <div class="search-overlay__body">
+                <div class="search-overlay__form">
+                    <form action="#">
+                        <input type="text" placeholder="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of search overlay  ====================-->
+
+    <!--====================  WhatsApp Floating Button  ====================-->
+    <a href="https://wa.me/5216142542471?text=Hola%20Facware%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener"
+       data-tooltip="¡Contáctanos por WhatsApp!"
+       aria-label="Chat con nosotros en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!--====================  End of WhatsApp Button  ====================-->
+
+
+
+
+
+
+
+
+    <!-- JS
+    ============================================ -->
+    <!-- Modernizer JS -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery-3.5.1.min.js" defer></script>
+    <script src="assets/js/vendor/jquery-migrate-3.3.0.min.js" defer></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/bootstrap.min.js" defer></script>
+
+    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
+
+    <script src="assets/js/plugins/plugins.min.js" defer></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js" defer></script>
+    
+    <!-- Language Switcher JS -->
+    <script src="assets/js/language-switcher.js" defer></script>
+    
+    <!-- Contact Form JS -->
+    <script src="assets/js/contact-form.js" defer></script>
 
 </body>
+
 </html>

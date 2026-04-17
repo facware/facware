@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Astro cache
+.astro/
+
+# Environment variables (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+*.log
+.vscode/settings.json

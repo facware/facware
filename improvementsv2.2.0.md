@@ -8,7 +8,7 @@
 | Area | Score | Status | Notes |
 |---|---:|:---:|---|
 | Security headers grade | D → **A** | ✅ | CSP, HSTS, X-Frame-Options, Permissions-Policy all deployed. |
-| SEO readiness | 7/10 | ⏳ | Meta descriptions done. JSON-LD and service pages still pending. |
+| SEO readiness | 8/10 | ⏳ | Meta descriptions, service pages, and JSON-LD done. Blog launched. |
 | UX / conversion | 3/10 | ⏳ | No booking, no FAQ, no case studies yet. |
 | Automation depth | 3/10 | ⏳ | No nurture, chat, retargeting, or WhatsApp yet. |
 
@@ -52,10 +52,14 @@ Impact: Competitors with consistent publishing will dominate terms such as:
 First post published:
 - `/blog/how-to-create-digital-products.html` — "How to Create a Digital Product: From First Idea to Measurable Business ROI" (Product Strategy, April 2026)
 
-#### ⏳ No structured data (Schema.org)
-Missing `Organization`, `LocalBusiness`, `FAQPage`, and `Review` JSON-LD.
+#### ✅ No structured data (Schema.org)
+`Organization`, `LocalBusiness`, `FAQPage`, and `Review` JSON-LD all added to homepage (`index.astro`).
+- `Organization` + `LocalBusiness`: name, address (Chihuahua, MX), geo, areaServed, openingHours, contactPoint
+- `AggregateRating`: 4.6/5 from 4 reviews, embedded in Organization node
+- `Review`: all 4 testimonials with author and ratingValue
+- `FAQPage`: 5 buyer-objection Q&A pairs (timeline, pricing, geography, free assessment, industries)
 
-Impact: Lower eligibility for rich snippets.
+Enables eligibility for rich snippets: star ratings, local panel, FAQ accordion.
 
 ### Weak
 
@@ -173,7 +177,7 @@ Zero-cost / highest-impact actions:
 - ✅ Add `CSP`, `X-Frame-Options`, `HSTS`, `Referrer-Policy`, `Permissions-Policy` via Cloudflare.
 - ✅ Replace email obfuscation with protected server-side form endpoint.
 - ✅ Add Cloudflare Turnstile to contact form. *(Note: Turnstile removed — incompatible with Web3Forms free plan. Honeypot `botcheck` retained as bot protection.)*
-- ⏳ Add JSON-LD: `Organization` + `LocalBusiness` + `Review`.
+- ✅ Add JSON-LD: `Organization` + `LocalBusiness` + `Review` + `FAQPage`.
 - ✅ Write unique titles/descriptions for all current pages.
 - ✅ Implement cookie consent banner.
 

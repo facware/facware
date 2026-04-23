@@ -71,10 +71,8 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
     </div>
 
     <div class="form-group full">
-      {turnstileSiteKey ? (
+      {turnstileSiteKey && (
         <div class="cf-turnstile" data-sitekey={turnstileSiteKey}></div>
-      ) : (
-        <p class="form-turnstile-warning">Turnstile is not configured. Set <strong>PUBLIC_TURNSTILE_SITE_KEY</strong> in environment variables.</p>
       )}
     </div>
 

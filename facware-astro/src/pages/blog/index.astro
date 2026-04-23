@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Blog — Software, Integration & Operations Insights | Facware"
+  description="Practical guides for mid-market operations leaders on custom software development, ERP integration, process automation, and building digital products that deliver measurable ROI."
+  canonicalURL="https://facware.com/blog/"
+  ogDescription="Facware's blog: practical guides on custom software, ERP integration, and process automation for mid-market operations businesses in Mexico and the US Southwest."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Facware Blog",
+      "description": "Practical guides for mid-market operations leaders on custom software, ERP integration, and process automation.",
+      "url": "https://facware.com/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Facware",
+        "url": "https://facware.com"
+      }
+    }
+    </script>
+  </Fragment>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <i class="fas fa-chevron-right" aria-hidden="true" style="font-size:10px"></i>
+        <span aria-current="page">Blog</span>
+      </nav>
+      <h1>Software &amp; Operations Insights</h1>
+      <p>Practical guides for mid-market business leaders on building digital products, integrating systems, and eliminating the manual ops that cost you margin every week.</p>
+    </div>
+  </div>
+
+  <!-- BLOG GRID -->
+  <section class="section" aria-labelledby="blog-heading">
+    <div class="container">
+      <header class="section-header text-center">
+        <p class="section-eyebrow">Latest Articles</p>
+        <h2 id="blog-heading">Guides built around your real questions</h2>
+        <p class="section-desc">No fluff. Each post is designed to answer a specific question we hear from operations managers, owners, and IT leads before they engage with us.</p>
+      </header>
+
+      <div class="blog-grid">
+
+        <!-- POST 1 -->
+        <article class="blog-card">
+          <div class="blog-card-accent"></div>
+          <div class="blog-card-body">
+            <span class="blog-tag">Product Strategy</span>
+            <h2 class="blog-card-title">
+              <a href="/blog/how-to-create-digital-products.html" style="color:inherit;text-decoration:none;">
+                How to Create a Digital Product: From First Idea to Measurable Business ROI
+              </a>
+            </h2>
+            <p class="blog-card-excerpt">A step-by-step guide for business owners and ops leaders: how to validate a software idea, identify who it's for, scope an MVP, and calculate ROI before you invest a dollar.</p>
+            <div class="blog-card-meta">
+              <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> April 23, 2026</span>
+              <span><i class="fas fa-clock" aria-hidden="true"></i> 8 min read</span>
+            </div>
+            <a href="/blog/how-to-create-digital-products.html" class="blog-card-link">Read article &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Placeholder cards shown as coming soon — remove when real posts are added -->
+        <article class="blog-card" style="opacity:.55;pointer-events:none;" aria-hidden="true">
+          <div class="blog-card-accent" style="background:#e2e8f0;"></div>
+          <div class="blog-card-body">
+            <span class="blog-tag" style="background:#f1f5f9;color:#8491a5;">ERP Integration</span>
+            <h2 class="blog-card-title" style="color:#8491a5;">Coming soon</h2>
+            <p class="blog-card-excerpt">Next article publishes in May 2026.</p>
+          </div>
+        </article>
+
+        <article class="blog-card" style="opacity:.55;pointer-events:none;" aria-hidden="true">
+          <div class="blog-card-accent" style="background:#e2e8f0;"></div>
+          <div class="blog-card-body">
+            <span class="blog-tag" style="background:#f1f5f9;color:#8491a5;">Process Automation</span>
+            <h2 class="blog-card-title" style="color:#8491a5;">Coming soon</h2>
+            <p class="blog-card-excerpt">Next article publishes in May 2026.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER / CTA -->
+  <section class="section section--gray" aria-labelledby="blog-cta-heading">
+    <div class="container" style="text-align:center;max-width:680px;">
+      <p class="section-eyebrow">Stay ahead</p>
+      <h2 id="blog-cta-heading" style="font-size:clamp(1.4rem,3vw,2rem);font-weight:700;color:#1a1a2e;margin:0 0 14px;">Two practical posts a month</h2>
+      <p style="color:#5a6580;font-size:1rem;line-height:1.7;margin:0 0 28px;">Each article is written to answer the questions we hear most from operations leaders before they decide to build — no filler, no product pitches.</p>
+      <a href="/contact.html" class="btn btn-primary">Talk to an expert instead &rarr;</a>
+    </div>
+  </section>
+
+</BaseLayout>

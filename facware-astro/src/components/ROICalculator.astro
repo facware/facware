@@ -1,0 +1,296 @@
+---
+// ROICalculator.astro — Interactive manual-ops cost & savings estimator
+---
+
+<section class="section roi-section" id="roi-calculator" aria-labelledby="roi-heading">
+  <div class="container">
+    <header class="section-header text-center">
+      <p class="section-eyebrow">ROI Estimator</p>
+      <h2 id="roi-heading">How much is manual work <span class="text-primary">actually costing you?</span></h2>
+      <p class="section-desc">Adjust the sliders to match your team. We'll estimate the annual cost of manual operations and what a 40% reduction would mean for your bottom line.</p>
+    </header>
+
+    <div class="roi-card">
+      <!-- INPUTS -->
+      <div class="roi-inputs" aria-label="Calculator inputs">
+
+        <div class="roi-field">
+          <label class="roi-label" for="roi-people">
+            Team members doing manual/repetitive work
+            <span class="roi-val-badge" id="roi-people-val">5</span>
+          </label>
+          <input
+            type="range"
+            id="roi-people"
+            class="roi-slider"
+            min="1" max="30" value="5" step="1"
+            aria-valuemin="1" aria-valuemax="30" aria-valuenow="5"
+          >
+          <div class="roi-range-labels"><span>1</span><span>30</span></div>
+        </div>
+
+        <div class="roi-field">
+          <label class="roi-label" for="roi-hours">
+            Avg. manual hours per person per week
+            <span class="roi-val-badge" id="roi-hours-val">10 hrs</span>
+          </label>
+          <input
+            type="range"
+            id="roi-hours"
+            class="roi-slider"
+            min="1" max="40" value="10" step="1"
+            aria-valuemin="1" aria-valuemax="40" aria-valuenow="10"
+          >
+          <div class="roi-range-labels"><span>1 hr</span><span>40 hrs</span></div>
+        </div>
+
+        <div class="roi-field">
+          <label class="roi-label" for="roi-rate">
+            Loaded hourly cost per person (USD)
+            <span class="roi-val-badge" id="roi-rate-val">$25</span>
+          </label>
+          <input
+            type="range"
+            id="roi-rate"
+            class="roi-slider"
+            min="10" max="120" value="25" step="5"
+            aria-valuemin="10" aria-valuemax="120" aria-valuenow="25"
+          >
+          <div class="roi-range-labels"><span>$10</span><span>$120</span></div>
+        </div>
+
+      </div>
+
+      <!-- RESULTS -->
+      <div class="roi-results" aria-live="polite" aria-label="Calculation results">
+        <div class="roi-result-row roi-result--cost">
+          <p class="roi-result-label">Annual cost of manual operations</p>
+          <p class="roi-result-num" id="roi-total">$67,600</p>
+          <p class="roi-result-sub" id="roi-weekly">$1,300 / week</p>
+        </div>
+        <div class="roi-result-divider" aria-hidden="true"></div>
+        <div class="roi-result-row roi-result--savings">
+          <p class="roi-result-label">Projected annual savings at 40% reduction</p>
+          <p class="roi-result-num roi-result-num--green" id="roi-savings">$27,040</p>
+          <p class="roi-result-sub" id="roi-savings-monthly">$2,253 / month</p>
+        </div>
+        <p class="roi-disclaimer">
+          Based on a conservative 40% manual-ops reduction — the average across Facware client engagements.
+          Actual results depend on process complexity and integration scope.
+        </p>
+        <a href="/contact.html#contact-form" class="btn btn-primary roi-cta">
+          Get my free assessment &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const peopleInput  = document.getElementById('roi-people');
+  const hoursInput   = document.getElementById('roi-hours');
+  const rateInput    = document.getElementById('roi-rate');
+
+  const peopleVal    = document.getElementById('roi-people-val');
+  const hoursVal     = document.getElementById('roi-hours-val');
+  const rateVal      = document.getElementById('roi-rate-val');
+
+  const totalEl      = document.getElementById('roi-total');
+  const weeklyEl     = document.getElementById('roi-weekly');
+  const savingsEl    = document.getElementById('roi-savings');
+  const savingsMonEl = document.getElementById('roi-savings-monthly');
+
+  const fmt = (n) => '$' + Math.round(n).toLocaleString('en-US');
+
+  function update() {
+    if (
+      !(peopleInput instanceof HTMLInputElement) ||
+      !(hoursInput instanceof HTMLInputElement) ||
+      !(rateInput instanceof HTMLInputElement)
+    ) return;
+
+    const people = Number(peopleInput.value);
+    const hours  = Number(hoursInput.value);
+    const rate   = Number(rateInput.value);
+
+    if (peopleVal)  peopleVal.textContent  = String(people);
+    if (hoursVal)   hoursVal.textContent   = hours + ' hr' + (hours !== 1 ? 's' : '');
+    if (rateVal)    rateVal.textContent    = '$' + rate;
+
+    peopleInput.setAttribute('aria-valuenow', String(people));
+    hoursInput.setAttribute('aria-valuenow',  String(hours));
+    rateInput.setAttribute('aria-valuenow',   String(rate));
+
+    const weeklyTotal  = people * hours * rate;
+    const annualTotal  = weeklyTotal * 52;
+    const annualSaving = annualTotal * 0.40;
+    const monthlySav   = annualSaving / 12;
+
+    if (totalEl)      totalEl.textContent      = fmt(annualTotal);
+    if (weeklyEl)     weeklyEl.textContent      = fmt(weeklyTotal) + ' / week';
+    if (savingsEl)    savingsEl.textContent     = fmt(annualSaving);
+    if (savingsMonEl) savingsMonEl.textContent  = fmt(monthlySav) + ' / month';
+  }
+
+  [peopleInput, hoursInput, rateInput].forEach(el => {
+    if (el) el.addEventListener('input', update);
+  });
+
+  update();
+</script>
+
+<style>
+  .roi-section { background: var(--gray-light, #f8fafc); }
+
+  .roi-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0,0,0,.08);
+    overflow: hidden;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* Inputs column */
+  .roi-inputs {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border-right: 1px solid #e2e8f0;
+  }
+
+  .roi-field { display: flex; flex-direction: column; gap: 10px; }
+
+  .roi-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .roi-val-badge {
+    background: var(--primary, #086AD8);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    min-width: 52px;
+    text-align: center;
+  }
+
+  .roi-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 4px;
+    background: #e2e8f0;
+    outline: none;
+    cursor: pointer;
+  }
+  .roi-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary, #086AD8);
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(8,106,216,.4);
+    cursor: pointer;
+  }
+  .roi-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary, #086AD8);
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(8,106,216,.4);
+    cursor: pointer;
+  }
+  .roi-slider:focus-visible {
+    outline: 3px solid var(--primary, #086AD8);
+    outline-offset: 3px;
+  }
+
+  .roi-range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #9ca3af;
+  }
+
+  /* Results column */
+  .roi-results {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    background: #fff;
+  }
+
+  .roi-result-row { margin-bottom: 8px; }
+
+  .roi-result-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: 4px;
+  }
+
+  .roi-result-num {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+
+  .roi-result-num--green { color: #059669; }
+
+  .roi-result-sub {
+    font-size: 13px;
+    color: #9ca3af;
+  }
+
+  .roi-result-divider {
+    height: 1px;
+    background: #e2e8f0;
+    margin: 20px 0;
+  }
+
+  .roi-disclaimer {
+    font-size: 11.5px;
+    color: #9ca3af;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .roi-cta { width: 100%; justify-content: center; }
+
+  /* Mobile */
+  @media (max-width: 720px) {
+    .roi-card {
+      grid-template-columns: 1fr;
+    }
+    .roi-inputs {
+      border-right: none;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 28px 20px;
+    }
+    .roi-results { padding: 28px 20px; }
+  }
+</style>

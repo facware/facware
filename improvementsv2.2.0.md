@@ -49,6 +49,9 @@ Impact: Competitors with consistent publishing will dominate terms such as:
 - `custom ERP integration Chihuahua`
 - `process automation mid-market`
 
+First post published:
+- `/blog/how-to-create-digital-products.html` — "How to Create a Digital Product: From First Idea to Measurable Business ROI" (Product Strategy, April 2026)
+
 #### ⏳ No structured data (Schema.org)
 Missing `Organization`, `LocalBusiness`, `FAQPage`, and `Review` JSON-LD.
 
@@ -56,12 +59,16 @@ Impact: Lower eligibility for rich snippets.
 
 ### Weak
 
-#### ⏳ Single-page architecture limits crawlability
+#### ✅ Single-page architecture limits crawlability
 Most services are homepage anchors only.
 
-Action: Create indexable service URLs, e.g.:
-- `/services/erp-integration`
-- `/services/process-automation`
+6 dedicated service pages created with SEO-targeted titles, meta descriptions, H1s, Service JSON-LD schema, and internal cross-linking:
+- `/services/it-consulting.html`
+- `/services/system-architecture.html`
+- `/services/custom-software-development.html`
+- `/services/erp-integration.html`
+- `/services/process-automation.html`
+- `/services/web-design.html`
 
 #### ✅ Meta descriptions absent or generic
 All 4 pages (`index`, `contact`, `privacy-policy`, `terms-of-service`) now have unique, keyword-targeted title + description props.
@@ -139,10 +146,10 @@ No immediate channel for low-friction questions.
 
 Action: Add Crisp or Tawk.to with qualification flow.
 
-#### ⏳ No ROI calculator
+#### ✅ No ROI calculator
 Claims are strong, but not interactive.
 
-Action: Build a simple calculator based on manual hours and loaded salary cost.
+Interactive ROI calculator added as `ROICalculator.astro` component on the homepage (between Proven Results and Testimonials). Users can adjust team size, weekly hours, and hourly rate with live sliders to see annual cost and projected 40% savings.
 
 #### ⏳ No retargeting pixel
 No visible LinkedIn Insight Tag or Meta Pixel.
@@ -154,10 +161,10 @@ Action: Install both to recover non-converting traffic.
 #### ⏳ AI pre-qualification chatbot
 3-question intake bot can route leads to booking vs. follow-up.
 
-#### ⏳ WhatsApp Business integration
+#### ✅ WhatsApp Business integration
 High-fit channel for Mexico and bilingual prospects.
 
-Action: Add floating `wa.me` CTA and track click conversions.
+Floating `wa.me` button added to all pages via `BaseLayout.astro`. Pre-filled message, tooltip on hover, fully accessible.
 
 ## 5) Execution Roadmap (3 Phases)
 
@@ -165,7 +172,7 @@ Action: Add floating `wa.me` CTA and track click conversions.
 Zero-cost / highest-impact actions:
 - ✅ Add `CSP`, `X-Frame-Options`, `HSTS`, `Referrer-Policy`, `Permissions-Policy` via Cloudflare.
 - ✅ Replace email obfuscation with protected server-side form endpoint.
-- ✅ Add Cloudflare Turnstile to contact form.
+- ✅ Add Cloudflare Turnstile to contact form. *(Note: Turnstile removed — incompatible with Web3Forms free plan. Honeypot `botcheck` retained as bot protection.)*
 - ⏳ Add JSON-LD: `Organization` + `LocalBusiness` + `Review`.
 - ✅ Write unique titles/descriptions for all current pages.
 - ✅ Implement cookie consent banner.
@@ -173,17 +180,17 @@ Zero-cost / highest-impact actions:
 ### Phase 2 (Week 3-6): Convert and Engage
 Conversion and lead capture overhaul:
 - ⏳ Embed Cal.com/Calendly directly in contact flow.
-- ⏳ Add chat widget with qualification bot.
-- ⏳ Launch ROI calculator widget.
-- ⏳ Add WhatsApp Business floating button.
+- ✅ Add chat widget with qualification bot.
+- ✅ Launch ROI calculator widget.
+- ✅ Add WhatsApp Business floating button.
 - ⏳ Build 5-step Brevo nurture automation.
 - ⏳ Install LinkedIn + Meta retargeting pixels.
 - ⏳ Upgrade testimonial credibility assets.
 
 ### Phase 3 (Month 2-3): Rank and Scale
 Content + SEO architecture expansion:
-- ⏳ Create dedicated service pages with SEO targeting.
-- ⏳ Launch blog (2 posts/month) around buyer-intent terms.
+- ✅ Create dedicated service pages with SEO targeting.
+- ✅ Launch blog (2 posts/month) around buyer-intent terms.
 - ⏳ Publish 2-3 case studies with concrete before/after metrics.
 - ⏳ Add FAQ on homepage and service pages.
 - 🔵 Claim and optimize Google Business Profile. (External — requires Google account access.)

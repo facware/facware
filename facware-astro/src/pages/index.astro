@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Testimonials from '../components/Testimonials.astro';
+import ROICalculator from '../components/ROICalculator.astro';
 ---
 
 <BaseLayout
@@ -100,31 +101,37 @@ import Testimonials from '../components/Testimonials.astro';
           <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-01-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
           <h3 class="card-title">IT Consulting</h3>
           <p class="card-text">Stop guessing which part of your stack is holding revenue back. We audit your systems, map your bottlenecks, and give you a prioritized roadmap with projected ROI for each fix — before you spend a dollar on development.</p>
+          <a href="/services/it-consulting.html" class="card-link">Learn more &rarr;</a>
         </article>
         <article class="card">
           <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-02-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
           <h3 class="card-title">System Architecture Design</h3>
           <p class="card-text">We architect systems that fit how your business actually works — not how a generic SaaS vendor assumes it does. Every design decision is made with your existing infrastructure, compliance requirements, and growth trajectory in mind.</p>
+          <a href="/services/system-architecture.html" class="card-link">Learn more &rarr;</a>
         </article>
         <article class="card">
           <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-03-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
           <h3 class="card-title">Custom Software Development</h3>
           <p class="card-text">When off-the-shelf software forces you to change your process instead of supporting it, the cost compounds every quarter. We build to spec — scoped, priced, and delivered against a defined outcome, not a time-and-materials estimate.</p>
+          <a href="/services/custom-software-development.html" class="card-link">Learn more &rarr;</a>
         </article>
         <article class="card">
           <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-04-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
           <h3 class="card-title">System &amp; Data Integrations</h3>
           <p class="card-text">Your ERP, CRM, warehouse, and financial systems should share data automatically — not through weekly exports and manual reconciliation. We connect your existing tools so your team stops copying data and starts using it.</p>
+          <a href="/services/erp-integration.html" class="card-link">Learn more &rarr;</a>
         </article>
         <article class="card">
           <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-05-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
           <h3 class="card-title">Process Automation</h3>
           <p class="card-text">Every hour your team spends on manual approvals, status updates, and data entry is an hour not spent on the work that grows the business. We automate the repetitive so your people can focus on the irreplaceable — with measurable time savings from day one.</p>
+          <a href="/services/process-automation.html" class="card-link">Learn more &rarr;</a>
         </article>
         <article class="card">
           <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-06-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
           <h3 class="card-title">Web Design &amp; Conversion</h3>
           <p class="card-text">A website that doesn't convert is just an expense. We design B2B web experiences built around your buyer's decision journey — clear positioning, fast load times, and a path to contact that doesn't require three clicks and a form from 2018.</p>
+          <a href="/services/web-design.html" class="card-link">Learn more &rarr;</a>
         </article>
       </div>
       <p class="section-cta-note text-center">Not sure which service applies? <a href="#contact-us" class="link-primary">Tell us what's breaking down and we'll tell you what to fix first &rarr;</a></p>
@@ -188,6 +195,7 @@ import Testimonials from '../components/Testimonials.astro';
   </section>
 
   <!-- TESTIMONIALS -->
+  <ROICalculator />
   <Testimonials />
 
   <!-- LOGO TICKER -->

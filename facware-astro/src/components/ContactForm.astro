@@ -2,7 +2,6 @@
 // ContactForm.astro — web3forms AJAX contact form
 // Access key is injected at build time from PUBLIC_WEB3FORMS_KEY env var
 const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HERE';
-const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 ---
 
 <div class="contact-form-card">
@@ -70,12 +69,6 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
       ></textarea>
     </div>
 
-    <div class="form-group full">
-      {turnstileSiteKey && (
-        <div class="cf-turnstile" data-sitekey={turnstileSiteKey}></div>
-      )}
-    </div>
-
     <button type="submit" class="form-submit-btn" id="submit-btn">
       <span class="btn-label">Send message &rarr;</span>
       <span class="btn-spinner" role="status" aria-label="Sending&hellip;"></span>
@@ -89,9 +82,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
   </form>
 </div>
 
-<script define:vars={{ turnstileConfigured: Boolean(turnstileSiteKey) }}>
-  const turnstileEnabled = Boolean(turnstileConfigured);
-
+<script>
   const formEl = document.getElementById('contact-form-el');
   const submitBtn = document.getElementById('submit-btn');
   const resultEl = document.getElementById('form-result');
@@ -109,18 +100,6 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
       submitBtn.classList.add('loading');
       resultEl.className = 'form-result';
       resultEl.innerHTML = '';
-
-      const turnstileInput = formEl.querySelector('input[name="cf-turnstile-response"]');
-      const turnstileToken = turnstileInput instanceof HTMLInputElement ? turnstileInput.value : '';
-      if (turnstileEnabled && !turnstileToken) {
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('loading');
-        resultEl.className = 'form-result error';
-        resultEl.innerHTML =
-          '<i class="fas fa-exclamation-circle" aria-hidden="true"></i>' +
-          '<span>Please complete the anti-spam check before sending your message.</span>';
-        return;
-      }
 
       const formData = new FormData(formEl);
       const payload = Object.fromEntries(formData.entries());
@@ -165,5 +144,3 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
     });
   }
 </script>
-
-{turnstileSiteKey && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}

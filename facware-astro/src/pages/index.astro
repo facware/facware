@@ -20,6 +20,136 @@ import ROICalculator from '../components/ROICalculator.astro';
       .hero-sub{color:rgba(255,255,255,.85);font-size:clamp(1rem,2vw,1.2rem);max-width:640px;margin:0 auto 36px}
       .btn-group{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
     </style>
+
+    <!-- Organization + LocalBusiness + AggregateRating + Reviews -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://facware.com/#organization",
+      "name": "Facware",
+      "url": "https://facware.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://facware.com/assets/images/facware/favicon_facware.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://facware.com/assets/images/facware/og-image.jpg",
+      "description": "Facware builds custom software, ERP integrations, and process automation for mid-market businesses in Mexico and the US Southwest, reducing manual operations by 40% or more.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chihuahua",
+        "addressRegion": "Chihuahua",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.6329,
+        "longitude": -106.0691
+      },
+      "areaServed": [
+        { "@type": "State", "name": "Chihuahua, Mexico" },
+        { "@type": "AdministrativeArea", "name": "US Southwest" }
+      ],
+      "priceRange": "$$",
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://facware.com/contact.html",
+        "availableLanguage": ["English", "Spanish"]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "ratingCount": "4",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Javier Domínguez" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Facware mapped our entire ERP-to-warehouse workflow, automated the reconciliation, and had it live in 6 weeks. We cut our ops overhead by nearly half — it paid for itself in the first quarter."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Monica Blews" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "What impressed me most was how they scoped the project around a specific outcome, not hours. We knew exactly what we'd get and when. No surprises, no scope creep — just delivery."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Abbie Ferguson" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "We'd tried two agencies before Facware. Both times the project dragged, scope crept, and we got a half-finished product. With Facware, it shipped clean. One team, one accountable partner."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Diego Navarro" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+          "reviewBody": "The integration between our systems that we thought would take months was done in 3 weeks. The team already understood our cross-border workflow context from day one — no lengthy onboarding required."
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAQPage — buyer objection handling -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does a custom software or integration project take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most integrations and automations are delivered in 3–6 weeks. Complex custom software projects typically run 6–12 weeks. Every engagement is outcome-scoped with a defined delivery timeline agreed before we start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Facware price its projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Facware uses fixed-scope pricing tied to a specific business outcome — not hourly billing or open-ended retainers. You receive a clear proposal with a defined price, scope, and timeline before signing anything."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with businesses outside of Mexico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We serve mid-market businesses across Mexico and the US Southwest, including companies with cross-border operations. Our team is fully bilingual (English and Spanish) and experienced in US–Mexico workflow contexts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in the free operations assessment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We map your current software stack, identify your biggest integration and automation gaps, and quantify the cost of leaving each one unaddressed. You walk away with a prioritized roadmap and projected ROI — at no cost and with no obligation to engage further."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What industries does Facware specialize in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We work with mid-market companies in manufacturing, logistics, professional services, and cross-border trade. Our core expertise is ERP integration, process automation, and custom software development for operations-heavy businesses."
+          }
+        }
+      ]
+    }
+    </script>
   </Fragment>
 
   <!-- HERO -->

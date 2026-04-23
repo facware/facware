@@ -3,6 +3,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
+const cookieBannerKey = 'facware_cookie_consent_v1';
+
 interface Props {
   title: string;
   description: string;
@@ -95,12 +97,88 @@ const {
   </main>
   <Footer />
 
+  <aside class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <p>
+      We use essential cookies for site functionality and optional analytics cookies only with your consent.
+      <a href="/privacy-policy.html">Learn more</a>.
+    </p>
+    <div class="cookie-banner-actions">
+      <button type="button" class="btn btn-outline-cookie" id="cookie-reject">Only essential</button>
+      <button type="button" class="btn btn-primary" id="cookie-accept">Accept all</button>
+    </div>
+  </aside>
+
   <!-- Scroll-to-top button -->
   <a href="#main-content" class="scroll-top" id="scroll-top" aria-label="Scroll back to top">
     <i class="fas fa-chevron-up" aria-hidden="true"></i>
   </a>
 
-  <script>
+  <script define:vars={{ cookieBannerKey }}>
+    const cookieKey = cookieBannerKey;
+    const appWindow = /** @type {any} */ (window);
+
+    const readConsent = () => {
+      try {
+        return localStorage.getItem(cookieKey);
+      } catch {
+        return null;
+      }
+    };
+
+    const writeConsent = (value) => {
+      try {
+        localStorage.setItem(cookieKey, value);
+      } catch {
+        // Some browsers/privacy modes can block storage. UI should still continue.
+      }
+    };
+
+    const applyConsent = (consent) => {
+      appWindow.facwareConsent = {
+        necessary: true,
+        analytics: consent === 'all',
+      };
+      window.dispatchEvent(new CustomEvent('facware:consent-updated', { detail: appWindow.facwareConsent }));
+    };
+
+    const initCookieBanner = () => {
+      const banner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('cookie-accept');
+      const rejectBtn = document.getElementById('cookie-reject');
+      const storedConsent = readConsent();
+
+      if (!banner) return;
+
+      if (!storedConsent) {
+        banner.hidden = false;
+      } else {
+        applyConsent(storedConsent);
+        banner.hidden = true;
+      }
+
+      if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+          writeConsent('all');
+          applyConsent('all');
+          banner.hidden = true;
+        });
+      }
+
+      if (rejectBtn) {
+        rejectBtn.addEventListener('click', () => {
+          writeConsent('essential');
+          applyConsent('essential');
+          banner.hidden = true;
+        });
+      }
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCookieBanner, { once: true });
+    } else {
+      initCookieBanner();
+    }
+
     // Scroll-to-top visibility
     const sb = document.getElementById('scroll-top');
     if (sb) {
@@ -134,5 +212,36 @@ const {
       });
     }
   </script>
+
+  <style is:inline>
+    .cookie-banner[hidden]{display:none}
+    .cookie-banner{
+      position:fixed;
+      left:16px;
+      right:16px;
+      bottom:16px;
+      z-index:1200;
+      background:#111827;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:12px;
+      padding:16px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      box-shadow:0 12px 30px rgba(0,0,0,.3);
+      max-width:860px;
+      margin:0 auto;
+    }
+    .cookie-banner p{font-size:14px;line-height:1.45;margin:0;max-width:620px}
+    .cookie-banner a{color:#8fd0ff}
+    .cookie-banner-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .btn-outline-cookie{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+    .btn-outline-cookie:hover{background:rgba(255,255,255,.12)}
+    @media (max-width: 760px){
+      .cookie-banner{flex-direction:column;align-items:flex-start}
+    }
+  </style>
 </body>
 </html>

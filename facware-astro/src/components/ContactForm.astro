@@ -2,6 +2,7 @@
 // ContactForm.astro — web3forms AJAX contact form
 // Access key is injected at build time from PUBLIC_WEB3FORMS_KEY env var
 const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HERE';
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 ---
 
 <div class="contact-form-card">
@@ -69,6 +70,14 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HE
       ></textarea>
     </div>
 
+    <div class="form-group full">
+      {turnstileSiteKey ? (
+        <div class="cf-turnstile" data-sitekey={turnstileSiteKey}></div>
+      ) : (
+        <p class="form-turnstile-warning">Turnstile is not configured. Set <strong>PUBLIC_TURNSTILE_SITE_KEY</strong> in environment variables.</p>
+      )}
+    </div>
+
     <button type="submit" class="form-submit-btn" id="submit-btn">
       <span class="btn-label">Send message &rarr;</span>
       <span class="btn-spinner" role="status" aria-label="Sending&hellip;"></span>
@@ -82,17 +91,19 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HE
   </form>
 </div>
 
-<script>
-  const form = document.getElementById('contact-form-el');
+<script define:vars={{ turnstileConfigured: Boolean(turnstileSiteKey) }}>
+  const turnstileEnabled = Boolean(turnstileConfigured);
+
+  const formEl = document.getElementById('contact-form-el');
   const submitBtn = document.getElementById('submit-btn');
   const resultEl = document.getElementById('form-result');
 
-  if (form && submitBtn && resultEl) {
-    form.addEventListener('submit', async (e) => {
+  if (formEl instanceof HTMLFormElement && submitBtn instanceof HTMLButtonElement && resultEl instanceof HTMLDivElement) {
+    formEl.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      if (!form.checkValidity()) {
-        form.reportValidity();
+      if (!formEl.checkValidity()) {
+        formEl.reportValidity();
         return;
       }
 
@@ -101,7 +112,19 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HE
       resultEl.className = 'form-result';
       resultEl.innerHTML = '';
 
-      const formData = new FormData(form);
+      const turnstileInput = formEl.querySelector('input[name="cf-turnstile-response"]');
+      const turnstileToken = turnstileInput instanceof HTMLInputElement ? turnstileInput.value : '';
+      if (turnstileEnabled && !turnstileToken) {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('loading');
+        resultEl.className = 'form-result error';
+        resultEl.innerHTML =
+          '<i class="fas fa-exclamation-circle" aria-hidden="true"></i>' +
+          '<span>Please complete the anti-spam check before sending your message.</span>';
+        return;
+      }
+
+      const formData = new FormData(formEl);
       const payload = Object.fromEntries(formData.entries());
 
       try {
@@ -120,7 +143,7 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HE
           resultEl.innerHTML =
             '<i class="fas fa-check-circle" aria-hidden="true"></i>' +
             '<span>Message sent! We\'ll reply within one business day.</span>';
-          form.reset();
+          formEl.reset();
         } else {
           resultEl.className = 'form-result error';
           resultEl.innerHTML =
@@ -133,7 +156,7 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HE
         resultEl.className = 'form-result error';
         resultEl.innerHTML =
           '<i class="fas fa-exclamation-circle" aria-hidden="true"></i>' +
-          '<span>Network error. Please email us at <a href="mailto:contact@facware.com">contact@facware.com</a>.</span>';
+          '<span>Network error. Please retry in a minute.</span>';
       }
 
       // Auto-hide result after 8 seconds
@@ -144,3 +167,5 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HE
     });
   }
 </script>
+
+{turnstileSiteKey && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}

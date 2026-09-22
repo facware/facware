@@ -19,6 +19,17 @@
         <li><a href="/#facware_problem">Why Facware</a></li>
         <li><a href="/#facware_services">Services</a></li>
         <li><a href="/#facware_features">How It Works</a></li>
+        <!-- Products Dropdown -->
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="products-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="products-menu">
+            Products <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" id="products-menu" role="menu" aria-label="Products">
+            <li role="none"><a href="/products/expense-tracking.html" role="menuitem">Expense Tracking</a></li>
+            <li role="none"><a href="/products/application.html" role="menuitem">Application</a></li>
+            <!-- Future products: add <li role="none"><a href="/products/slug.html" role="menuitem">Product Name</a></li> here -->
+          </ul>
+        </li>
         <li><a href="/blog.html">Blog</a></li>
         <li><a href="/contact.html" class="btn btn-primary">Book assessment &rarr;</a></li>
       </ul>
@@ -29,6 +40,8 @@
 <script>
   const toggle = document.getElementById('nav-toggle');
   const menu = document.getElementById('nav-menu');
+  const productsToggle = document.getElementById('products-toggle');
+  const productsMenu = document.getElementById('products-menu');
 
   if (toggle && menu) {
     toggle.addEventListener('click', () => {
@@ -52,4 +65,34 @@
       }
     });
   }
+
+  if (productsToggle && productsMenu) {
+    productsToggle.addEventListener('click', () => {
+      const expanded = productsToggle.getAttribute('aria-expanded') === 'true';
+      productsToggle.setAttribute('aria-expanded', String(!expanded));
+      productsMenu.classList.toggle('is-open');
+    });
+
+    productsMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        productsToggle.setAttribute('aria-expanded', 'false');
+        productsMenu.classList.remove('is-open');
+      });
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && productsMenu.classList.contains('is-open')) {
+        productsToggle.setAttribute('aria-expanded', 'false');
+        productsMenu.classList.remove('is-open');
+        productsToggle.focus();
+      }
+    });
+  }
+
+  document.addEventListener('click', e => {
+    if (productsMenu && productsToggle && !productsToggle.contains(e.target) && !productsMenu.contains(e.target)) {
+      productsToggle.setAttribute('aria-expanded', 'false');
+      productsMenu.classList.remove('is-open');
+    }
+  });
 </script>

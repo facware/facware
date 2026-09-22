@@ -319,15 +319,101 @@ strong {
 }
 
 .nav-links .btn {
-  padding: 9px 18px;
-  font-size: 13.5px;
-}
+    padding: 9px 18px;
+    font-size: 13.5px;
+  }
 
-.nav-links .btn:hover {
-  background: var(--primary-dark);
-  color: #fff;
-  transform: none;
-}
+  .nav-links .btn:hover {
+    background: var(--primary-dark);
+    color: #fff;
+    transform: none;
+  }
+
+  /* ===== PRODUCTS DROPDOWN ===== */
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .nav-dropdown-toggle:hover,
+  .nav-dropdown-toggle:focus-visible {
+    background: var(--bg-gray);
+    color: var(--primary);
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 8px 0;
+    z-index: 101;
+    list-style: none;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .dropdown-menu.is-open {
+    display: flex;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    transition: var(--transition);
+    border-radius: 0;
+  }
+
+  .dropdown-menu li a:hover,
+  .dropdown-menu li a:focus-visible {
+    background: var(--primary-light);
+    color: var(--primary);
+  }
+
+  @media (max-width: 992px) {
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+      background: rgba(0,0,0,0.04);
+      padding-left: 16px;
+    }
+
+    .dropdown-menu.is-open {
+      display: flex;
+    }
+
+    .nav-dropdown-toggle {
+      width: 100%;
+      justify-content: space-between;
+      padding: 10px 14px;
+    }
+  }
 
 /* Hamburger */
 .nav-toggle {

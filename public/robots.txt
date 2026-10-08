@@ -6,4 +6,4 @@ Disallow: /css/
 Disallow: /js/
 Disallow: /images/
 Disallow: /fonts/
-Sitemap: http://facware.com/sitemap.xml
+Sitemap: https://facware.com/sitemap-index.xml

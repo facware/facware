@@ -1,4 +1,4 @@
-# AGENTS.md - facware-astro
+# AGENTS.md - Facware
 
 ## Project Overview
 Static Astro 5 site for facware.com. Output: static HTML (`build.format: 'file'`).

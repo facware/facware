@@ -1,74 +1,41 @@
 # Facware Website
 
-This repository contains the Facware website project.
+This repository contains the Facware static website, built with Astro 5 and deployed to GitHub Pages.
 
-## Project Structure
+## Requirements
 
-- `facware-astro/`: Main Astro project (source code, pages, components, build output).
-- Root files/folders (`assets/`, `thank-you.html`, etc.): legacy/static assets and docs.
+- Node.js 20 LTS (Node.js 18.17 or newer is supported by Astro)
+- npm
 
-For local development, use the Astro app in `facware-astro`.
+## Local development
 
-## Prerequisites
-
-- Node.js 20 LTS recommended (Node.js 18.17+ minimum)
-- npm (comes with Node.js)
-
-Check versions:
+Install dependencies and start the development server from the repository root:
 
 ```bash
-node -v
-npm -v
-```
-
-## Run Locally
-
-From the repository root:
-
-```bash
-cd facware-astro
-npm install
+npm ci
 npm run dev
 ```
 
-Then open the local URL shown in terminal (usually `http://localhost:4321`).
-
-## Build for Production
+## Production build
 
 ```bash
-cd facware-astro
 npm run build
-```
-
-Build output is generated in:
-
-- `facware-astro/dist/`
-
-## Preview Production Build Locally
-
-```bash
-cd facware-astro
 npm run preview
 ```
 
-## Environment Variables
+The production output is written to `dist/`. Static files in `public/` are copied unchanged to that output, including the GitHub Pages CNAME, security headers, robots file, and Google verification file.
 
-Create a `.env` file inside `facware-astro/` for form features:
+## Environment variables
+
+Copy `.env.example` to `.env` when configuring form integrations:
 
 ```env
 PUBLIC_WEB3FORMS_KEY=your_web3forms_public_key
 PUBLIC_TURNSTILE_SITE_KEY=your_cloudflare_turnstile_site_key
 ```
 
-Notes:
+Without `PUBLIC_WEB3FORMS_KEY`, contact form submissions are unavailable. Without `PUBLIC_TURNSTILE_SITE_KEY`, Turnstile spam protection is disabled.
 
-- Without `PUBLIC_WEB3FORMS_KEY`, contact form submissions will not work.
-- Without `PUBLIC_TURNSTILE_SITE_KEY`, anti-spam Turnstile is not enabled.
+## Deployment
 
-## Useful Scripts
-
-Run these inside `facware-astro/`:
-
-- `npm run dev`: start local development server
-- `npm run build`: create static production build
-- `npm run preview`: preview built site locally
+Pushing to `master` runs the GitHub Actions workflow, builds the repository root, and publishes `dist/` to GitHub Pages.

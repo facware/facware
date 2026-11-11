@@ -71,6 +71,20 @@ Complete these items before creating or amplifying proof-led marketing assets.
 
 ### Days 1–30 — conversion and credibility foundation
 
+#### Implementation status — updated November 11, 2026
+
+| Status | Item | Notes |
+| --- | --- | --- |
+| ✅ Complete | Evidence-safe public copy | Unverified ratings, reviews, quantitative outcomes, delivery-time claims, guarantees, and customer-logo proof have been removed or rewritten on the homepage. |
+| ✅ Complete | Assessment conversion baseline | The contact flow, one-business-day response expectation, and consistent assessment offer already exist. CTA wording is being standardized to “Book a free operations assessment.” |
+| ✅ Complete | Consent-ready analytics integration | The site supports optional GA4 through `PUBLIC_GA_MEASUREMENT_ID`, Google verification through `PUBLIC_GOOGLE_SITE_VERIFICATION`, and consent-gated CTA/form events. Credentials are still required to activate data collection. |
+| ✅ Complete | Claim-register and content templates | Private templates below provide the approval workflow and examples without placing invented material on the public site. |
+| ✅ Complete | Buyer education content | Four generic, non-client-specific Phase 1 articles are published in the blog: automation signs, automation ROI, ERP integration challenges, and CRM/ERP synchronization. |
+| ⚠ Input needed | GA4 and Search Console activation | Luis must supply the GA4 measurement ID and choose the Search Console verification method/value. See `.env.example`. |
+| ⚠ Input needed | Three case studies | Luis must provide approved client facts and permissions. Use `docs/case-study-template.md`; its example is fictional and must never be published. |
+| ⚠ Input needed | Founder profile | Luis must provide an approved headshot, 80–120 word bio, personal-site URL, and preferred LinkedIn URL. Use `docs/founder-profile-template.md`. |
+| ⚠ Input needed | Existing proof approval | Luis must complete `docs/claim-register-template.md` before ratings, testimonials, logos, or quantified results return to the site. |
+
 | Priority | Deliverable | Owner | Required inputs | Definition of done / success signal |
 | --- | --- | --- | --- | --- |
 | P0 | Complete proof and measurement foundation | Luis + implementer | Items in section 3 | Claim register approved; analytics and Search Console live; baseline report saved. |

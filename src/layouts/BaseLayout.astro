@@ -22,6 +22,9 @@ const {
   ogDescription = description,
   preloadHeroImage = false,
 } = Astro.props;
+
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID ?? '';
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?? '';
 ---
 
 <!DOCTYPE html>
@@ -35,6 +38,7 @@ const {
   <meta name="description" content={description}>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href={canonicalURL}>
+  {googleSiteVerification && <meta name="google-site-verification" content={googleSiteVerification}>}
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -113,7 +117,7 @@ const {
     <i class="fas fa-chevron-up" aria-hidden="true"></i>
   </a>
 
-  <script define:vars={{ cookieBannerKey }}>
+  <script define:vars={{ cookieBannerKey, gaMeasurementId }}>
     const cookieKey = cookieBannerKey;
     const appWindow = /** @type {any} */ (window);
 
@@ -140,6 +144,64 @@ const {
       };
       window.dispatchEvent(new CustomEvent('facware:consent-updated', { detail: appWindow.facwareConsent }));
     };
+
+    let analyticsLoaded = false;
+    let analyticsEventsBound = false;
+
+    const loadAnalytics = () => {
+      if (!gaMeasurementId || analyticsLoaded || !appWindow.facwareConsent?.analytics) return;
+
+      analyticsLoaded = true;
+      appWindow.dataLayer = appWindow.dataLayer || [];
+      appWindow.gtag = function gtag() { appWindow.dataLayer.push(arguments); };
+      appWindow.gtag('js', new Date());
+      appWindow.gtag('config', gaMeasurementId);
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaMeasurementId);
+      document.head.appendChild(script);
+    };
+
+    const trackEvent = (name, params = {}) => {
+      if (!appWindow.facwareConsent?.analytics || typeof appWindow.gtag !== 'function') return;
+      appWindow.gtag('event', name, params);
+    };
+
+    const bindAnalyticsEvents = () => {
+      if (analyticsEventsBound) return;
+      analyticsEventsBound = true;
+
+      document.addEventListener('click', event => {
+        const target = event.target instanceof Element ? event.target.closest('a, button') : null;
+        if (!target) return;
+        const href = target instanceof HTMLAnchorElement ? target.getAttribute('href') || '' : '';
+        const isAssessmentCta = target.matches('[data-assessment-cta]') || href.includes('contact.html') || href === '#contact-us';
+        if (isAssessmentCta) {
+          trackEvent('cta_click', {
+            cta_text: target.textContent?.trim().slice(0, 100) || 'assessment CTA',
+            page_path: window.location.pathname,
+          });
+        }
+      });
+
+      document.addEventListener('focusin', event => {
+        const form = event.target instanceof Element ? event.target.closest('form') : null;
+        if (form?.id === 'contact-form-el' && !form.dataset.analyticsStarted) {
+          form.dataset.analyticsStarted = 'true';
+          trackEvent('assessment_form_start', { page_path: window.location.pathname });
+        }
+      });
+
+      window.addEventListener('facware:assessment-submitted', () => {
+        trackEvent('assessment_form_submit', { page_path: window.location.pathname });
+      });
+    };
+
+    window.addEventListener('facware:consent-updated', () => {
+      loadAnalytics();
+      if (appWindow.facwareConsent?.analytics) bindAnalyticsEvents();
+    });
 
     const initCookieBanner = () => {
       const banner = document.getElementById('cookie-banner');

@@ -23,7 +23,7 @@ const {
   preloadHeroImage = false,
 } = Astro.props;
 
-const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID ?? '';
+const gtmContainerId = import.meta.env.PUBLIC_GTM_CONTAINER_ID ?? '';
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?? '';
 ---
 
@@ -117,7 +117,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?
     <i class="fas fa-chevron-up" aria-hidden="true"></i>
   </a>
 
-  <script define:vars={{ cookieBannerKey, gaMeasurementId }}>
+  <script define:vars={{ cookieBannerKey, gtmContainerId }}>
     const cookieKey = cookieBannerKey;
     const appWindow = /** @type {any} */ (window);
 
@@ -149,23 +149,24 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?
     let analyticsEventsBound = false;
 
     const loadAnalytics = () => {
-      if (!gaMeasurementId || analyticsLoaded || !appWindow.facwareConsent?.analytics) return;
+      if (!gtmContainerId || analyticsLoaded || !appWindow.facwareConsent?.analytics) return;
 
       analyticsLoaded = true;
       appWindow.dataLayer = appWindow.dataLayer || [];
-      appWindow.gtag = function gtag() { appWindow.dataLayer.push(arguments); };
-      appWindow.gtag('js', new Date());
-      appWindow.gtag('config', gaMeasurementId);
+      appWindow.dataLayer.push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js',
+      });
 
       const script = document.createElement('script');
       script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaMeasurementId);
+      script.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(gtmContainerId);
       document.head.appendChild(script);
     };
 
     const trackEvent = (name, params = {}) => {
-      if (!appWindow.facwareConsent?.analytics || typeof appWindow.gtag !== 'function') return;
-      appWindow.gtag('event', name, params);
+      if (!appWindow.facwareConsent?.analytics || !Array.isArray(appWindow.dataLayer)) return;
+      appWindow.dataLayer.push({ event: name, ...params });
     };
 
     const bindAnalyticsEvents = () => {

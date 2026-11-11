@@ -1,7 +1,7 @@
 ---
 // ContactForm.astro — web3forms AJAX contact form
-// Access key is injected at build time from PUBLIC_WEB3FORMS_KEY2 env var
-const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY2 ?? 'YOUR_ACCESS_KEY_HERE';
+// Access key is injected at build time from PUBLIC_WEB3FORMS_KEY env var
+const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? 'YOUR_ACCESS_KEY_HERE';
 ---
 
 <div class="contact-form-card">
@@ -15,7 +15,7 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY2 ?? 'YOUR_ACCESS_KEY_H
     novalidate
     aria-label="Contact form"
   >
-    <!-- Web3Forms access key — set PUBLIC_WEB3FORMS_KEY2 in your .env file -->
+    <!-- Web3Forms access key — set PUBLIC_WEB3FORMS_KEY in your .env file -->
     <input type="hidden" name="access_key" value={web3FormsKey}>
     <input type="hidden" name="subject" value="New contact inquiry from Facware.com">
     <input type="hidden" name="from_name" value="Facware Website">

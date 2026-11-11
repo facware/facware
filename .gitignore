@@ -17,5 +17,3 @@ dist/
 Thumbs.db
 *.log
 .vscode/settings.json
-
-.env.example

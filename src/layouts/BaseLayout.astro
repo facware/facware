@@ -57,6 +57,25 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?
   <!-- Favicon -->
   <link rel="icon" href="/assets/images/facware/favicon_facware.png" type="image/png">
 
+  <!-- Google Tag Manager. Consent Mode keeps analytics storage denied until the visitor accepts. -->
+  {gtmContainerId && (
+    <>
+      <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('consent', 'default', {
+          analytics_storage: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+        });
+        gtag('js', new Date());
+      </script>
+      <script is:inline async src={`https://www.googletagmanager.com/gtm.js?id=${gtmContainerId}`}></script>
+    </>
+  )}
+
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,7 +136,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?
     <i class="fas fa-chevron-up" aria-hidden="true"></i>
   </a>
 
-  <script define:vars={{ cookieBannerKey, gtmContainerId }}>
+  <script define:vars={{ cookieBannerKey }}>
     const cookieKey = cookieBannerKey;
     const appWindow = /** @type {any} */ (window);
 
@@ -142,27 +161,20 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?
         necessary: true,
         analytics: consent === 'all',
       };
+
+      if (typeof appWindow.gtag === 'function') {
+        appWindow.gtag('consent', 'update', {
+          analytics_storage: consent === 'all' ? 'granted' : 'denied',
+          ad_storage: consent === 'all' ? 'granted' : 'denied',
+          ad_user_data: consent === 'all' ? 'granted' : 'denied',
+          ad_personalization: consent === 'all' ? 'granted' : 'denied',
+        });
+      }
+
       window.dispatchEvent(new CustomEvent('facware:consent-updated', { detail: appWindow.facwareConsent }));
     };
 
-    let analyticsLoaded = false;
     let analyticsEventsBound = false;
-
-    const loadAnalytics = () => {
-      if (!gtmContainerId || analyticsLoaded || !appWindow.facwareConsent?.analytics) return;
-
-      analyticsLoaded = true;
-      appWindow.dataLayer = appWindow.dataLayer || [];
-      appWindow.dataLayer.push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js',
-      });
-
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(gtmContainerId);
-      document.head.appendChild(script);
-    };
 
     const trackEvent = (name, params = {}) => {
       if (!appWindow.facwareConsent?.analytics || !Array.isArray(appWindow.dataLayer)) return;
@@ -200,7 +212,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?
     };
 
     window.addEventListener('facware:consent-updated', () => {
-      loadAnalytics();
       if (appWindow.facwareConsent?.analytics) bindAnalyticsEvents();
     });
 

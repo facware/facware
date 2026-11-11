@@ -1,14 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Testimonials from '../components/Testimonials.astro';
 import ROICalculator from '../components/ROICalculator.astro';
 ---
 
 <BaseLayout
   title="Facware — Custom Software & Integrations for Mid-Market Operations"
-  description="Facware eliminates the integration tax — the hidden cost of duct-taped software — by building purpose-built systems that reduce manual operations by 40%+ for mid-market businesses in Mexico and the US Southwest."
+  description="Facware helps mid-market businesses in Mexico and the US Southwest automate workflows, integrate systems, and build custom software for more reliable operations."
   canonicalURL="https://facware.com/"
-  ogDescription="We build automated, integrated systems that cut manual ops by 40%+ — scoped to your outcome, not our billing cycle."
+  ogDescription="We build automated, integrated systems for operations teams that need clearer workflows, connected data, and a practical path to improvement."
   preloadHeroImage={true}
 >
   <Fragment slot="head">
@@ -21,7 +20,7 @@ import ROICalculator from '../components/ROICalculator.astro';
       .btn-group{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
     </style>
 
-    <!-- Organization + LocalBusiness + AggregateRating + Reviews -->
+    <!-- Organization + LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,7 +35,7 @@ import ROICalculator from '../components/ROICalculator.astro';
         "height": 512
       },
       "image": "https://facware.com/assets/images/facware/og-image.jpg",
-      "description": "Facware builds custom software, ERP integrations, and process automation for mid-market businesses in Mexico and the US Southwest, reducing manual operations by 40% or more.",
+      "description": "Facware builds custom software, ERP integrations, and process automation for mid-market businesses in Mexico and the US Southwest.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Chihuahua",
@@ -65,39 +64,7 @@ import ROICalculator from '../components/ROICalculator.astro';
         "url": "https://facware.com/contact.html",
         "availableLanguage": ["English", "Spanish"]
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "ratingCount": "4",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Javier Domínguez" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Facware mapped our entire ERP-to-warehouse workflow, automated the reconciliation, and had it live in 6 weeks. We cut our ops overhead by nearly half — it paid for itself in the first quarter."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Monica Blews" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "What impressed me most was how they scoped the project around a specific outcome, not hours. We knew exactly what we'd get and when. No surprises, no scope creep — just delivery."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Abbie Ferguson" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "We'd tried two agencies before Facware. Both times the project dragged, scope crept, and we got a half-finished product. With Facware, it shipped clean. One team, one accountable partner."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Diego Navarro" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-          "reviewBody": "The integration between our systems that we thought would take months was done in 3 weeks. The team already understood our cross-border workflow context from day one — no lengthy onboarding required."
-        }
-      ]
+      "sameAs": ["https://www.linkedin.com/company/18322494/"]
     }
     </script>
 
@@ -112,7 +79,7 @@ import ROICalculator from '../components/ROICalculator.astro';
           "name": "How long does a custom software or integration project take?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most integrations and automations are delivered in 3–6 weeks. Complex custom software projects typically run 6–12 weeks. Every engagement is outcome-scoped with a defined delivery timeline agreed before we start."
+            "text": "Project timelines depend on the systems involved and the outcome being delivered. Every engagement is scoped with a defined delivery timeline before work begins."
           }
         },
         {
@@ -157,9 +124,9 @@ import ROICalculator from '../components/ROICalculator.astro';
     <div class="container hero-inner">
       <span class="hero-eyebrow">Custom Software &amp; Integrations — Chihuahua &amp; US Southwest</span>
       <h1 id="hero-heading">Your software stack is costing you more than you realize</h1>
-      <p class="hero-sub">We build automated, integrated systems that cut manual ops by 40%+ — scoped to your outcome, not our billing cycle.</p>
+      <p class="hero-sub">We build automated, integrated systems that reduce manual work, connect critical data, and support better operational decisions.</p>
       <div class="btn-group">
-        <a href="#contact-us" class="btn btn-primary">Get a free operations assessment &rarr;</a>
+        <a href="#contact-us" class="btn btn-primary" data-assessment-cta>Book a free operations assessment &rarr;</a>
         <a href="#facware_problem" class="btn btn-outline-white">See if this fits you</a>
       </div>
       <p class="hero-reassurance">No pitch deck. No commitment. 30 minutes, on your schedule.</p>
@@ -171,20 +138,20 @@ import ROICalculator from '../components/ROICalculator.astro';
     <div class="container">
       <dl class="stats-grid">
         <div class="stat-item">
-          <dt class="stat-label">Reduction in manual ops</dt>
-          <dd class="stat-num">40%+</dd>
+          <dt class="stat-label">Approach</dt>
+          <dd class="stat-num">Outcome-led</dd>
         </div>
         <div class="stat-item">
-          <dt class="stat-label">Faster than US agencies</dt>
-          <dd class="stat-num">2&times;</dd>
+          <dt class="stat-label">Focus</dt>
+          <dd class="stat-num">Operations</dd>
         </div>
         <div class="stat-item">
-          <dt class="stat-label">Client satisfaction rating</dt>
-          <dd class="stat-num">4.6/5.0</dd>
+          <dt class="stat-label">Service area</dt>
+          <dd class="stat-num">Mexico + US</dd>
         </div>
         <div class="stat-item">
-          <dt class="stat-label">Outcome-scoped projects</dt>
-          <dd class="stat-num">100%</dd>
+          <dt class="stat-label">First step</dt>
+          <dd class="stat-num">Assessment</dd>
         </div>
       </dl>
     </div>
@@ -206,7 +173,7 @@ import ROICalculator from '../components/ROICalculator.astro';
         <article class="card">
           <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-05-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
           <h3 class="card-title">Manual work eating your margin</h3>
-          <p class="card-text">Your team spends 10&ndash;20 hrs/week on reporting, data entry, and reconciliation. That's $30K&ndash;$80K/yr in labor that a custom integration would eliminate in one engagement.</p>
+          <p class="card-text">Reporting, data entry, and reconciliation consume attention that should go to customers and operations. Repeated manual handoffs also make errors harder to spot and resolve.</p>
         </article>
         <article class="card">
           <div class="card-icon"><img src="/assets/images/icons/mitech-box-image-style-05-image-06-60x60.webp" width="60" height="60" alt="" loading="lazy"></div>
@@ -302,20 +269,20 @@ import ROICalculator from '../components/ROICalculator.astro';
     </div>
   </section>
 
-  <!-- PROVEN RESULTS -->
+  <!-- OUTCOME-FOCUSED ENGAGEMENTS -->
   <section class="section results-section" aria-labelledby="results-heading">
     <div class="container">
       <div class="results-grid">
         <div class="results-content">
-          <p class="section-eyebrow">Proven Results</p>
-          <h2 id="results-heading">Real outcomes, not slide-deck promises</h2>
+          <p class="section-eyebrow">What to expect</p>
+          <h2 id="results-heading">A practical path from operational friction to improvement</h2>
           <ul class="results-list" role="list">
-            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>40%+ reduction</strong> in manual operational hours post-integration</span></li>
-            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>2&times; faster</strong> time-to-deploy vs. comparable US agencies</span></li>
-            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>4.6/5.0 client rating</strong> across all completed engagements</span></li>
-            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>100% outcome-scoped</strong> — every project has a defined, measurable result before we start</span></li>
+            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>Start with the workflow</strong> — identify the handoffs, bottlenecks, and information gaps worth addressing.</span></li>
+            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>Define the outcome</strong> — align scope with the operational change the work needs to deliver.</span></li>
+            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>Plan before building</strong> — agree on the approach, priorities, and delivery path before implementation begins.</span></li>
+            <li><span class="check" aria-hidden="true">&#10003;</span><span><strong>Improve with context</strong> — design around the systems and team your business already relies on.</span></li>
           </ul>
-          <a href="#contact-us" class="btn btn-primary" style="margin-top:8px">See if we're a fit &rarr;</a>
+          <a href="#contact-us" class="btn btn-primary" style="margin-top:8px" data-assessment-cta>Book a free operations assessment &rarr;</a>
         </div>
         <div class="results-image">
           <img src="/assets/images/facware/resources_facware.png" alt="Facware results illustration" loading="lazy" width="600" height="450">
@@ -324,41 +291,8 @@ import ROICalculator from '../components/ROICalculator.astro';
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- PLANNING TOOL -->
   <ROICalculator />
-  <Testimonials />
-
-  <!-- LOGO TICKER -->
-  <section class="logos-section" aria-label="Clients we have worked with">
-    <div class="container">
-      <p class="logos-label">Trusted by teams across Mexico &amp; the US Southwest</p>
-    </div>
-    <div class="logos-ticker">
-      <div class="logos-track" aria-hidden="true">
-        <img src="/assets/images/facware/customers/festa.png" alt="Festa" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/grammarschool.jpg" alt="Grammar School" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/scrapadvisor.png" alt="ScrapAdvisor" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/proffer.png" alt="Proffer" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/sista.png" alt="Sista" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/vikingsdrywall.png" alt="Vikings Drywall" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/partyzone.png" alt="Party Zone" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/buildbinder.png" alt="BuildBinder" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/3pillar_logo.jpeg" alt="3Pillar" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/tiempo_development.jpeg" alt="Tiempo Development" height="38" loading="lazy">
-        <!-- Duplicate set for seamless loop -->
-        <img src="/assets/images/facware/customers/festa.png" alt="" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/grammarschool.jpg" alt="" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/scrapadvisor.png" alt="" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/proffer.png" alt="" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/sista.png" alt="" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/vikingsdrywall.png" alt="" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/partyzone.png" alt="" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/buildbinder.png" alt="" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/3pillar_logo.jpeg" alt="" height="38" loading="lazy">
-        <img src="/assets/images/facware/customers/tiempo_development.jpeg" alt="" height="38" loading="lazy">
-      </div>
-    </div>
-  </section>
 
   <!-- CONTACT CTA -->
   <section class="contact-section" id="contact-us" aria-labelledby="contact-heading">
@@ -366,11 +300,8 @@ import ROICalculator from '../components/ROICalculator.astro';
       <div class="contact-grid">
         <aside class="contact-trust" aria-label="Why clients trust Facware">
           <div class="trust-rating">
-            <span class="trust-score">4.6<span class="trust-denom">/5.0</span></span>
-            <div class="trust-stars" aria-label="Approximately 4.6 out of 5 stars" role="img">
-              <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i>
-            </div>
-            <p class="trust-sub">Avg. client satisfaction rating</p>
+            <i class="fas fa-clipboard-check" aria-hidden="true" style="font-size:2rem;color:#086AD8"></i>
+            <p class="trust-sub">Start with a structured review of your operations</p>
           </div>
           <ul class="trust-list" role="list">
             <li>
@@ -383,7 +314,7 @@ import ROICalculator from '../components/ROICalculator.astro';
             </li>
             <li>
               <i class="fas fa-shield-alt" aria-hidden="true"></i>
-              <div><strong>Fixed scope, guaranteed</strong><span>No billing surprises, ever</span></div>
+              <div><strong>Clear next steps</strong><span>Discuss priorities before committing to a build</span></div>
             </li>
           </ul>
         </aside>
@@ -395,7 +326,7 @@ import ROICalculator from '../components/ROICalculator.astro';
             class="btn btn-primary btn-lg"
             href="/contact.html#contact-form"
           >
-            Book my free 30-min assessment &rarr;
+            Book a free operations assessment &rarr;
           </a>
         </div>
       </div>

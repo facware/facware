@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="5 ERP Integration Challenges to Resolve Before Development | Facware"
+  description="Prepare an ERP integration by clarifying data ownership, exceptions, synchronization timing, access, and operational accountability."
+  canonicalURL="https://facware.com/blog/erp-integration-challenges.html"
+>
+  <div class="page-hero"><div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><i class="fas fa-chevron-right" aria-hidden="true"></i><a href="/blog.html">Blog</a><i class="fas fa-chevron-right" aria-hidden="true"></i><span aria-current="page">ERP integration</span></nav>
+    <h1>5 ERP Integration Challenges to Resolve Before Development</h1>
+    <div class="post-meta"><span><i class="fas fa-user" aria-hidden="true"></i> Facware Team</span><span><i class="fas fa-calendar-alt" aria-hidden="true"></i> November 11, 2026</span><span><i class="fas fa-clock" aria-hidden="true"></i> 6 min read</span></div>
+  </div></div>
+  <section class="prose-section" aria-label="Article content"><div class="container"><article class="prose">
+    <p class="lead">Most integration problems are not caused by the connector. They begin when teams have not agreed on what the data means, who owns it, and what should happen when systems disagree.</p>
+    <h2>1. No clear system of record</h2>
+    <p>For each entity—customer, product, order, inventory position, invoice—identify which system creates it, which system can change it, and which systems consume it. “Both systems own it” is usually a conflict waiting to happen.</p>
+    <h2>2. Undefined data rules</h2>
+    <p>Field mapping is more than matching names. Agree on identifiers, required fields, status values, units, currencies, dates, and what to do with incomplete records.</p>
+    <h2>3. Synchronization timing does not match operations</h2>
+    <p>Some workflows need near-real-time updates; others are safer and less expensive in scheduled batches. Set the timing from the business consequence of stale information, not from a default technical preference.</p>
+    <h2>4. Exceptions have no owner</h2>
+    <p>Every integration needs a plan for rejected records, duplicate IDs, unavailable endpoints, and partial updates. Define who sees the exception, how they correct it, and how the corrected data returns to the flow.</p>
+    <h2>5. Access and support are an afterthought</h2>
+    <p>Confirm API access, rate limits, credentials, audit requirements, and vendor constraints during discovery. Document monitoring and escalation before launch, not after the first failed synchronization.</p>
+    <div class="highlight-box"><p><strong>Integration-readiness question:</strong> Can the business explain what should happen when an order exists in one system but not the other? If not, that is a discovery decision, not a development detail.</p></div>
+    <h2>Start with a workflow map</h2>
+    <p>A short workshop with operations and system owners can surface these decisions before scope expands. Explore <a href="/services/erp-integration.html">ERP and system integration services</a>, or <a href="/contact.html#contact-form" data-assessment-cta>book a free operations assessment</a> to map the priority workflow.</p>
+  </article></div></section>
+</BaseLayout>
